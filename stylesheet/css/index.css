@@ -2,3 +2,12 @@
 #protocol .protocol-image {
   width: 20%;
 }
+/* line 32, ../sass/index.scss */
+#protocol .btn-protocol {
+  margin-top: 5%;
+}
+
+/* line 38, ../sass/index.scss */
+.btn-download {
+  font-size: 13px;
+}

@@ -24,17 +24,18 @@
     }
 }
 
-#protocol {
-	.protocol-image {
-		width: 20%;
-	}
-
-	.btn-protocol {
-		margin-top: 5%;
-	}
-
+.navbar-protocol {
+    background: #2c3e50;
 }
 
-.btn-download {
-		font-size: 13px;
-	}
+.navbar-protocol .navbar-header .navbar-brand {
+    color: #ecf0f1;
+}
+
+.navbar-protocol .nav > li>a,
+.navbar-protocol .nav>li>a:focus {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    color: #ecf0f1;
+}
