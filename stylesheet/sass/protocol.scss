@@ -24,7 +24,7 @@
     }
 }
 
-.protocol-body {
+.protocol-1-body {
     background: #3498db;
 
     .navbar-protocol {
@@ -47,4 +47,156 @@
         color: white;
     }
 
+    .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+        background-color: #2980b9;
+    }
+
+    #instruction {
+        padding-bottom: 50px;
+    }
+
+    #schedule-table {
+        padding-top: 0px;
+        table {
+            border-bottom: 1px solid white;
+            .td-drug-name {
+                width: 6%;
+            }
+            .td-hour {
+                width: 0.5%;
+            }
+            .td-border-right {
+                border-right: 1px solid white;
+            }
+            
+            th {
+                text-align: center;
+            }
+            td {
+                text-align: center;
+            }
+        }
+    }
+
+    .exercise-button-row {
+        margin-top: 20px;
+    }
+}
+
+.protocol-2-body {
+    background: #2ecc71;
+
+    .navbar-protocol {
+        background: #2c3e50;
+    }
+
+    .navbar-protocol .navbar-header .navbar-brand {
+        color: #ecf0f1;
+    }
+
+    .navbar-protocol .nav > li>a,
+    .navbar-protocol .nav>li>a:focus {
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 700;
+        color: #ecf0f1;
+    }
+
+    .protocol-instruction-text {
+        color: white;
+    }
+
+    .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+        background-color: #27ae60;
+    }
+
+    #instruction {
+        padding-bottom: 50px;
+    }
+
+    #schedule-table {
+        padding-top: 0px;
+        table {
+            border-bottom: 1px solid white;
+            .td-drug-name {
+                width: 6%;
+            }
+            .td-hour {
+                width: 0.5%;
+            }
+            .td-border-right {
+                border-right: 1px solid white;
+            }
+            
+            th {
+                text-align: center;
+            }
+            td {
+                text-align: center;
+            }
+        }
+    }
+
+    .exercise-button-row {
+        margin-top: 20px;
+    }
+}
+
+.protocol-3-body {
+    background: #e67e22;
+
+    .navbar-protocol {
+        background: #2c3e50;
+    }
+
+    .navbar-protocol .navbar-header .navbar-brand {
+        color: #ecf0f1;
+    }
+
+    .navbar-protocol .nav > li>a,
+    .navbar-protocol .nav>li>a:focus {
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 700;
+        color: #ecf0f1;
+    }
+
+    .protocol-instruction-text {
+        color: white;
+    }
+
+    .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+        background-color: #d35400;
+    }
+
+    #instruction {
+        padding-bottom: 50px;
+    }
+
+    #schedule-table {
+        padding-top: 0px;
+        table {
+            border-bottom: 1px solid white;
+            .td-drug-name {
+                width: 6%;
+            }
+            .td-hour {
+                width: 0.5%;
+            }
+            .td-border-right {
+                border-right: 1px solid white;
+            }
+            
+            th {
+                text-align: center;
+            }
+            td {
+                text-align: center;
+            }
+        }
+    }
+
+    .exercise-button-row {
+        margin-top: 20px;
+    }
 }
