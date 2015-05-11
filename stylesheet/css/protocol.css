@@ -1,18 +1,24 @@
 /* line 27, ../sass/protocol.scss */
-.navbar-protocol {
+.protocol-body {
+  background: #3498db;
+}
+/* line 30, ../sass/protocol.scss */
+.protocol-body .navbar-protocol {
   background: #2c3e50;
 }
-
-/* line 31, ../sass/protocol.scss */
-.navbar-protocol .navbar-header .navbar-brand {
+/* line 34, ../sass/protocol.scss */
+.protocol-body .navbar-protocol .navbar-header .navbar-brand {
   color: #ecf0f1;
 }
-
-/* line 35, ../sass/protocol.scss */
-.navbar-protocol .nav > li > a,
-.navbar-protocol .nav > li > a:focus {
+/* line 38, ../sass/protocol.scss */
+.protocol-body .navbar-protocol .nav > li > a,
+.protocol-body .navbar-protocol .nav > li > a:focus {
   text-transform: uppercase;
   font-size: 13px;
   font-weight: 700;
   color: #ecf0f1;
+}
+/* line 46, ../sass/protocol.scss */
+.protocol-body .protocol-instruction-text {
+  color: white;
 }
