@@ -1,0 +1,25 @@
+/* line 27, ../sass/signup.scss */
+.form-signup {
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 30px 70px 50px 70px;
+}
+/* line 31, ../sass/signup.scss */
+.form-signup .signup-welcome {
+  margin-bottom: 40px;
+}
+/* line 34, ../sass/signup.scss */
+.form-signup .signup-form-input {
+  margin-top: 20px;
+}
+/* line 37, ../sass/signup.scss */
+.form-signup .signup-button-row {
+  margin-top: 40px;
+}
+/* line 40, ../sass/signup.scss */
+.form-signup .btn-full {
+  height: 40px;
+  width: 100%;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
