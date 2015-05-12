@@ -1,0 +1,46 @@
+@import "compass/css3";
+
+@mixin lg {
+    @media only screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media only screen and (max-width: 1199px) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media only screen and (max-width: 991px) {
+        @content;
+    }
+}
+
+@mixin xs {
+    @media only screen and (max-width: 767px) {
+        @content;
+    }
+}
+
+.form-signin {
+    border-radius: 30px;
+    background: rgba(255,255,255,0.6);
+    padding: 30px 70px 50px 70px;
+    .signin-welcome {
+        margin-bottom: 40px;
+    }
+    .signin-form-input {
+        margin-top: 20px;
+    }
+    .signin-button-row {
+        margin-top: 40px;
+    }
+    .btn-full {
+        height: 40px;
+        width: 100%;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+}
