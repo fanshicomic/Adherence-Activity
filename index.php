@@ -1,3 +1,9 @@
+<?php
+require_once($_SERVER['DOCUMENT_ROOT'] .'/pharmacy/project1/php/controller/navbar_controller.php');
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,19 +51,7 @@
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="page-scroll" href="signup.html">Sign Up</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="signin.html">Sign In</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
+            <?php show_navbar(); ?>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
@@ -127,7 +121,7 @@
                         <img class="protocol-image wow bounceIn text-primary" src="img/pills-blue-icon.png">
                         <h3>protocol 1</h3>
                         <p class="text-muted">Drug name: Truvada, Reyataz & Norvir</p>
-                        <a href="protocol_1.html" class="btn btn-primary btn-md btn-protocol">View</a>
+                        <a href="php/view/protocol_1.php" class="btn btn-primary btn-md btn-protocol">View</a>
                     </div>
                 </div>
                 <div class="col-lg-4 text-center">
@@ -135,7 +129,7 @@
                         <img class="protocol-image wow bounceIn text-primary" src="img/pills-green-icon.png">
                         <h3>protocol 2</h3>
                         <p class="text-muted">Drug name: Fuzeon, Kaletra & Combivir</p>
-                        <a href="protocol_2.html" class="btn btn-primary btn-md btn-protocol">View</a>
+                        <a href="php/view/protocol_2.php" class="btn btn-primary btn-md btn-protocol">View</a>
                     </div>
                 </div>
                 <div class="col-lg-4 text-center">
@@ -143,7 +137,7 @@
                         <img class="protocol-image wow bounceIn text-primary" src="img/pills-orange-icon.png">
                         <h3>protocol 3</h3>
                         <p class="text-muted">Drug name: Atripla</p>
-                        <a href="protocol_3.html" class="btn btn-primary btn-md btn-protocol">View</a>
+                        <a href="php/view/protocol_3.php" class="btn btn-primary btn-md btn-protocol">View</a>
                     </div>
                 </div>
             </div>

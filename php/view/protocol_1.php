@@ -1,3 +1,9 @@
+<?php
+	require_once($_SERVER['DOCUMENT_ROOT'] .'/pharmacy/project1/php/controller/navbar_controller.php');
+	if (session_status() == PHP_SESSION_NONE) {
+	    session_start();
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,26 +17,26 @@
 	<!-- <link rel="icon" href="image/favicon.ico"> -->
 
 	<!-- JQuery -->
-	<script src="plugin/jQuery/jquery-2.1.3.min.js"></script>
+	<script src="../../plugin/jQuery/jquery-2.1.3.min.js"></script>
 
 	<!--Bootstrap-->
-    <link type="text/css" rel="stylesheet" href="plugin/Bootstrap/css/bootstrap.min.css">
-    <script src="plugin/Bootstrap/js/bootstrap.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="../../plugin/Bootstrap/css/bootstrap.min.css">
+    <script src="../../plugin/Bootstrap/js/bootstrap.min.js"></script>
 	
 	<!-- Font Awesome -->
-	<link type="text/css" rel="stylesheet" href="plugin/Font-Awesome/css/font-awesome.min.css">
+	<link type="text/css" rel="stylesheet" href="../../plugin/Font-Awesome/css/font-awesome.min.css">
 
 	<!-- Plugin CSS -->
-    <link rel="stylesheet" href="stylesheet/css/animate.min.css" type="text/css">
-    <link rel="stylesheet" href="stylesheet/css/creative.css" type="text/css">
+    <link rel="stylesheet" href="../../stylesheet/css/animate.min.css" type="text/css">
+    <link rel="stylesheet" href="../../stylesheet/css/creative.css" type="text/css">
 
 	<!-- Customized Stylesheet -->
-	<link type="text/css" rel="stylesheet" href="stylesheet/css/font.css">
-	<link type="text/css" rel="stylesheet" href="stylesheet/css/protocol.css">
+	<link type="text/css" rel="stylesheet" href="../../stylesheet/css/font.css">
+	<link type="text/css" rel="stylesheet" href="../../stylesheet/css/protocol.css">
 	
 </head>
 
-<body id="page-top" class="protocol-2-body">
+<body id="page-top" class="protocol-1-body">
 	<nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-protocol">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -41,23 +47,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll protocol-to-home" href="index.html">Home</a>
+                <a class="navbar-brand page-scroll protocol-to-home" href="../../index.php">Home</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="page-scroll" href="#about">Sign Up</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#services">Sign In</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
+            <?php show_navbar(); ?>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
@@ -66,10 +60,10 @@
     <section id="instruction">
     	<div class="container protocol-instruction-text">
     		<div class="row text-center">
-    			<h1>Protocol 2</h1>
+    			<h1>Protocol 1</h1>
     			<div class="text-left col-lg-8 col-lg-offset-2">
-	    			<h3>Drug name: Fuzeon, Kaletra & Combivir</h3>
-	                <p>Instructions: Take one tablet each every 12 hourly.</p>
+	    			<h3>Drug name: Truvada, Reyataz & Norvir</h3>
+	                <p>Instructions: Take one Truvada tablet every day; Take two Reyataz tablets every day; Take one Norvir tablet with Reyataz every day.</p>
             	</div>
     		</div>
     	</div>
@@ -198,7 +192,7 @@
     		</div>
     	</div>
     </section>
-
+    
     <!-- Plugin JavaScript -->
     <script src="javascript/creative/jquery.easing.min.js"></script>
     <script src="javascript/creative/jquery.fittext.js"></script>

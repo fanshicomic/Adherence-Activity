@@ -1,12 +1,22 @@
+$(function() {
+	$('.btn-signup').click(function() {
+		signup();
+	})
+});
+
 function signup() {
-	var id = $('#user-id').val();
-	var password = $('#user-password').val();
-	var password_confirmation = $('#user-password-confirmation').val();
+	var id = $('#signup-user-id').val();
+	var password = $('#signup-user-password').val();
+	var password_confirmation = $('#signup-user-password-confirmation').val();
 	var user_existing = is_user_existing(id);
 	var valid_user_id = is_valid_user_id(id);
 	var valid_password = is_valid_password(password, password_confirmation);
 	if (!user_existing && valid_user_id && valid_password) {
+		$('#warning-msg').html('');
 		var success = create_user(id, password);
+	} else {
+		$('#warning-msg').html('Invalid User Name or Password');
+		$('#warning-msg').css('color', 'red');
 	}
 }
 

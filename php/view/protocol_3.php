@@ -1,3 +1,9 @@
+<?php
+	require_once($_SERVER['DOCUMENT_ROOT'] .'/pharmacy/project1/php/controller/navbar_controller.php');
+	if (session_status() == PHP_SESSION_NONE) {
+	    session_start();
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,19 +20,19 @@
 	<script src="plugin/jQuery/jquery-2.1.3.min.js"></script>
 
 	<!--Bootstrap-->
-    <link type="text/css" rel="stylesheet" href="plugin/Bootstrap/css/bootstrap.min.css">
-    <script src="plugin/Bootstrap/js/bootstrap.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="../../plugin/Bootstrap/css/bootstrap.min.css">
+    <script src="../../plugin/Bootstrap/js/bootstrap.min.js"></script>
 	
 	<!-- Font Awesome -->
-	<link type="text/css" rel="stylesheet" href="plugin/Font-Awesome/css/font-awesome.min.css">
+	<link type="text/css" rel="stylesheet" href="../../plugin/Font-Awesome/css/font-awesome.min.css">
 
 	<!-- Plugin CSS -->
-    <link rel="stylesheet" href="stylesheet/css/animate.min.css" type="text/css">
-    <link rel="stylesheet" href="stylesheet/css/creative.css" type="text/css">
+    <link rel="stylesheet" href="../../stylesheet/css/animate.min.css" type="text/css">
+    <link rel="stylesheet" href="../../stylesheet/css/creative.css" type="text/css">
 
 	<!-- Customized Stylesheet -->
-	<link type="text/css" rel="stylesheet" href="stylesheet/css/font.css">
-	<link type="text/css" rel="stylesheet" href="stylesheet/css/protocol.css">
+	<link type="text/css" rel="stylesheet" href="../../stylesheet/css/font.css">
+	<link type="text/css" rel="stylesheet" href="../../stylesheet/css/protocol.css">
 	
 </head>
 
@@ -41,23 +47,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll protocol-to-home" href="index.html">Home</a>
+                <a class="navbar-brand page-scroll protocol-to-home" href="../../index.php">Home</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="page-scroll" href="#about">Sign Up</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#services">Sign In</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
+            <?php show_navbar(); ?>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
