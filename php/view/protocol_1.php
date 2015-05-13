@@ -87,27 +87,27 @@
 				    <tbody class="schedule-tbody">
 				      <tr>
 				        <td class="td-drug-name td-border-right">Drug Name</td>
-				        <td class="td-hour">6</td>
-				        <td class="td-hour">7</td>
-				        <td class="td-hour">8</td>
-				        <td class="td-hour">9</td>
-				        <td class="td-hour">10</td>
-				        <td class="td-hour td-border-right">11</td>
-				        <td class="td-hour">12</td>
-				        <td class="td-hour">1</td>
-				        <td class="td-hour">2</td>
-				        <td class="td-hour">3</td>
-				        <td class="td-hour">4</td>
-				        <td class="td-hour">5</td>
-				        <td class="td-hour">6</td>
-				        <td class="td-hour">7</td>
-				        <td class="td-hour">8</td>
-				        <td class="td-hour">9</td>
-				        <td class="td-hour">10</td>
-				        <td class="td-hour td-border-right">11</td>
-				        <td class="td-hour">12</td>
-				        <td class="td-hour">1</td>
-				        <td class="td-hour ">2</td>
+				        <td class="td-hour hour">6</td>
+				        <td class="td-hour hour">7</td>
+				        <td class="td-hour hour">8</td>
+				        <td class="td-hour hour">9</td>
+				        <td class="td-hour hour">10</td>
+				        <td class="td-hour td-border-right hour">11</td>
+				        <td class="td-hour hour">12</td>
+				        <td class="td-hour hour">1</td>
+				        <td class="td-hour hour">2</td>
+				        <td class="td-hour hour">3</td>
+				        <td class="td-hour hour">4</td>
+				        <td class="td-hour hour">5</td>
+				        <td class="td-hour hour">6</td>
+				        <td class="td-hour hour">7</td>
+				        <td class="td-hour hour">8</td>
+				        <td class="td-hour hour">9</td>
+				        <td class="td-hour hour">10</td>
+				        <td class="td-hour td-border-right hour">11</td>
+				        <td class="td-hour hour">12</td>
+				        <td class="td-hour hour">1</td>
+				        <td class="td-hour hour">2</td>
 				      </tr>
 				      <tr>
 				        <td class="td-drug-name td-border-right">Truvada (citrus twist tic tac)</td>
@@ -186,10 +186,10 @@
     		</div>
     		<div class="row text-center exercise-button-row">
     			<div class="col-lg-4 col-lg-offset-2">
-    				<a href="#" class="btn btn-primary btn-lg btn-new-exercise">New Exercise</a>
+    				<a href="#" class="btn btn-primary btn-lg btn-new-exercise" protocol='1'>New Exercise</a>
     			</div>
     			<div class="col-lg-4">
-    				<a href="#" class="btn btn-default btn-lg btn-continue-exercise">Continue Exercise</a>
+    				<a href="#" class="btn btn-default btn-lg btn-continue-exercise" protocol='1'>Continue Exercise</a>
     				<label>Already take this exercise?</label>
     			</div>
     		</div>

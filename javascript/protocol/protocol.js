@@ -1,16 +1,21 @@
 $(function() {
 	$('.btn-new-exercise').click(function() {
-		new_exercise();
+		new_exercise(this);
 	});
-
 	$('.btn-continue-exercise').click(function() {
 		continue_exercise();
+	});
+	$('.btn-cancel-exercise').click(function() {
+		cancel_plan_exercise();
+	});
+	$('.btn-plan-exercise').click(function() {
+		plan_exercise(this);
 	});
 
 	$('.td-clickable').html('<i class="fa fa-check fa-2x hour-check transparent"></i>');
 });
 
-function new_exercise() {
+function new_exercise(btn) {
 	var res;
 	$.ajax({
 		async	: false,
@@ -26,14 +31,13 @@ function new_exercise() {
 		}
 	});
 	if (res) {
+		var protocol = $(btn).attr('protocol');
 		var new_buttons = '<div class="col-lg-4 col-lg-offset-2">';
     	new_buttons += '<a href="#" class="btn btn-default btn-lg btn-cancel-exercise">Cancel</a></div>';
     	new_buttons += '<div class="col-lg-4">';
-    	new_buttons += '<a href="#" class="btn btn-primary btn-lg btn-plan-exercise">Plan Schedule And Start</a>';
+    	new_buttons += '<a href="#" class="btn btn-primary btn-lg btn-plan-exercise" protocol="'+ protocol + '">Plan Schedule And Start</a>';
 		$('.exercise-button-row').html(new_buttons);
-		$('.btn-cancel-exercise').click(function() {
-			cancel_plan_exercise();
-		});
+		register_button_event();
 		prepare_plan_table();
 	} else {
 		window.location.href='signin.php';
@@ -49,23 +53,72 @@ function prepare_plan_table() {
 
 function cancel_plan_exercise() {
 	var new_buttons = '<div class="col-lg-4 col-lg-offset-2">';
-    	new_buttons += '<a href="#" class="btn btn-primary btn-lg btn-new-exercise">New Exercise</a></div>';
-    	new_buttons += '<div class="col-lg-4">';
-    	new_buttons += '<a href="#" class="btn btn-default btn-lg btn-continue-exercise">Continue Exercise</a>';
-    	new_buttons += '<label>Already take this exercise?</label>';
-		$('.exercise-button-row').html(new_buttons);
-		$('.btn-new-exercise').click(function() {
-			new_exercise();
-		});
-		$('.td-clickable').html('<i class="fa fa-check fa-2x hour-check transparent"></i>');
+    new_buttons += '<a href="#" class="btn btn-primary btn-lg btn-new-exercise">New Exercise</a></div>';
+    new_buttons += '<div class="col-lg-4">';
+    new_buttons += '<a href="#" class="btn btn-default btn-lg btn-continue-exercise">Continue Exercise</a>';
+    new_buttons += '<label>Already take this exercise?</label>';
+	$('.exercise-button-row').html(new_buttons);
+	register_button_event();
+	$('.td-clickable').html('<i class="fa fa-check fa-2x hour-check transparent"></i>');
 }
 
 function toggle_check(check) {
 	if ($(check).hasClass('off')) {
 		$(check).removeClass('off');
 		$(check).addClass('on');
-	} else {
+	} else if ($(check).hasClass('on')) {
 		$(check).removeClass('on');
 		$(check).addClass('off');
 	}
+}
+
+function plan_exercise(btn) {
+	var protocol = $(btn).attr('protocol');
+	if(is_drug_number_correct(protocol) && is_adherence_requirement_valid(protocol)) {
+		console.log("Yeah!");
+	}
+}
+
+function is_drug_number_correct(protocol) {
+	if (protocol == '1') {
+		var truvada = $('.truvada .on').length;
+		var reyataz = $('.reyataz .on').length;
+		var norvir = $('.norvir .on').length;
+		return truvada == 1 && reyataz == 1 && norvir == 1;
+	} else if (protocol == '2') {
+
+	} else if (protocol == '3') {
+
+	} else {
+
+	}
+}
+
+function is_adherence_requirement_valid(protocol) {
+	if (protocol == '1') {
+		var truvada = $('.hour').eq($('.truvada .on').parent().index()).html();
+		var norvir = $('.hour').eq($('.norvir .on').parent().index()).html();
+		return truvada == norvir;
+	} else if (protocol == '2') {
+
+	} else if (protocol == '3') {
+
+	} else {
+
+	}
+}
+
+function register_button_event() {
+	$('.btn-new-exercise').click(function() {
+		new_exercise(this);
+	});
+	$('.btn-continue-exercise').click(function() {
+		continue_exercise();
+	});
+	$('.btn-cancel-exercise').click(function() {
+		cancel_plan_exercise();
+	});
+	$('.btn-plan-exercise').click(function() {
+		plan_exercise(this);
+	});
 }
