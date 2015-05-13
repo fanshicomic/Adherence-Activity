@@ -1,4 +1,5 @@
 $(function() {
+	$.getScript('../signin/signin.js', function() {});
 	$('.btn-signup').click(function() {
 		signup();
 	})
@@ -14,6 +15,9 @@ function signup() {
 	if (!user_existing && valid_user_id && valid_password) {
 		$('#warning-msg').html('');
 		var success = create_user(id, password);
+		if (success) {
+			signin_and_redirect_user(id);
+		}
 	} else {
 		$('#warning-msg').html('Invalid User Name or Password');
 		$('#warning-msg').css('color', 'red');
