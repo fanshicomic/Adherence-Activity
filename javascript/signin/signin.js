@@ -48,7 +48,7 @@ function signin_and_redirect_user(id) {
     			   		 id: id},
     	success	: function(data) {
     		if (data == 1) {
-    			window.location.url(../../index.php);
+    			window.location.href= '../../index.php';
     		} else {
     			$('#warning-msg').html('You have alerady logged in, please log out first.');
 				$('#warning-msg').css('color', 'red');

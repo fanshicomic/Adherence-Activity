@@ -1,5 +1,5 @@
 $(function() {
-	$.getScript('../signin/signin.js', function() {});
+	$.getScript('/pharmacy/project1/javascript/signin/signin.js', function() {});
 	$('.btn-signup').click(function() {
 		signup();
 	})
@@ -11,7 +11,7 @@ function signup() {
 	var password_confirmation = $('#signup-user-password-confirmation').val();
 	var user_existing = is_user_existing(id);
 	var valid_user_id = is_valid_user_id(id);
-	var valid_password = is_valid_password(password, password_confirmation);
+	var valid_password = is_same_password(password, password_confirmation);
 	if (!user_existing && valid_user_id && valid_password) {
 		$('#warning-msg').html('');
 		var success = create_user(id, password);
@@ -45,16 +45,19 @@ function is_user_existing(id) {
 }
 
 function is_valid_user_id(id) {
-	if (id == "") {
+	if (id == "") {	
 		return false;
 	} else {
 		return true;
 	}
 }
 
-function is_valid_password(password, password_confirmation) {
-	if (password != "")
+function is_same_password(password, password_confirmation) {
+	if (password != "") {
 		return password == password_confirmation;
+	} else {
+		
+	}
 }
 
 function create_user(id, password) {
