@@ -4,9 +4,9 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 
 function show_navbar() {
-	if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
-		$uid = $_SESSION['uid'];
-		echo '<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">';
+    if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
+        $uid = $_SESSION['uid'];
+        echo '<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">';
         echo '<ul class="nav navbar-nav navbar-right">';
         echo '<li><a class="page-scroll" href="#">' . $uid . '</a></li>';
         echo '<li><a class="page-scroll" href="/pharmacy/project1/php/model/logout.php">Log out</a></li>';

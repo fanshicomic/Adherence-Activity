@@ -183,10 +183,10 @@
     		</div>
     		<div class="row text-center exercise-button-row">
     			<div class="col-lg-4 col-lg-offset-2">
-    				<a href="#" class="btn btn-primary btn-lg">New Exercise</a>
+    				<a href="#" class="btn btn-primary btn-lg btn-new-exercise">New Exercise</a>
     			</div>
     			<div class="col-lg-4">
-    				<a href="#" class="btn btn-default btn-lg">Continue Exercise</a>
+    				<a href="#" class="btn btn-default btn-lg btn-continue-exercise">Continue Exercise</a>
     				<label>Already take this exercise?</label>
     			</div>
     		</div>
@@ -194,11 +194,14 @@
     </section>
 
     <!-- Plugin JavaScript -->
-    <script src="javascript/creative/jquery.easing.min.js"></script>
-    <script src="javascript/creative/jquery.fittext.js"></script>
-    <script src="javascript/creative/wow.min.js"></script>
+    <script src="../../javascript/creative/jquery.easing.min.js"></script>
+    <script src="../../javascript/creative/jquery.fittext.js"></script>
+    <script src="../../javascript/creative/wow.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="javascript/creative/creative.js"></script>
+    <script src="../../javascript/creative/creative.js"></script>
+
+    <!-- Custon JavaScript -->
+    <script src="../../javascript/protocol/protocol.js"></script>
 </body>
 </html>
