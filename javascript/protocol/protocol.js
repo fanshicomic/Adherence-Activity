@@ -37,6 +37,7 @@ function new_exercise(btn) {
     	new_buttons += '<div class="col-lg-4">';
     	new_buttons += '<a href="#" class="btn btn-primary btn-lg btn-plan-exercise" protocol="'+ protocol + '">Plan Schedule And Start</a>';
 		$('.exercise-button-row').html(new_buttons);
+		$('h4').append(' click the check to mark the time of the day you plan to take your “medicine.”');
 		register_button_event();
 		prepare_plan_table();
 	} else {
@@ -59,6 +60,7 @@ function cancel_plan_exercise() {
     new_buttons += '<label>Already take this exercise?</label>';
 	$('.exercise-button-row').html(new_buttons);
 	register_button_event();
+	$('h4').html('Instruction:');
 	$('.td-clickable').html('<i class="fa fa-check fa-2x hour-check transparent"></i>');
 }
 
@@ -86,9 +88,13 @@ function is_drug_number_correct(protocol) {
 		var norvir = $('.norvir .on').length;
 		return truvada == 1 && reyataz == 1 && norvir == 1;
 	} else if (protocol == '2') {
-
+		var kaletra = $('.kaletra .on').length;
+		var combivir = $('.combivir .on').length;
+		var fuzeon = $('.fuzeon .on').length;
+		return kaletra == 2 && combivir == 2 && fuzeon == 2;
 	} else if (protocol == '3') {
-
+		var atripla = $('.atripla .on').length;
+		return atripla == 1;
 	} else {
 
 	}
@@ -100,9 +106,15 @@ function is_adherence_requirement_valid(protocol) {
 		var norvir = $('.hour').eq($('.norvir .on').parent().index()).html();
 		return truvada == norvir;
 	} else if (protocol == '2') {
-
+		var kaletra_1 = $('.hour').eq($($('.kaletra .on')[0]).parent().index()).html();
+		var kaletra_2 = $('.hour').eq($($('.kaletra .on')[1]).parent().index()).html();
+		var combivir_1 = $('.hour').eq($($('.combivir .on')[0]).parent().index()).html();
+		var combivir_2 = $('.hour').eq($($('.combivir .on')[1]).parent().index()).html();
+		var fuzeon_1 = $('.hour').eq($($('.fuzeon .on')[0]).parent().index()).html();
+		var fuzeon_2 = $('.hour').eq($($('.fuzeon .on')[1]).parent().index()).html();
+		return kaletra_1 == kaletra_2 && combivir_1 == combivir_2 && fuzeon_1 == fuzeon_2;
 	} else if (protocol == '3') {
-
+		return true;
 	} else {
 
 	}

@@ -86,7 +86,7 @@
 				    </thead>
 				    <tbody class="schedule-tbody">
 				      <tr>
-				        <td class="td-drug-name td-border-right">Drug Name</td>
+				        <td class="td-drug-name td-border-right hour">Drug Name</td>
 				        <td class="td-hour hour">6</td>
 				        <td class="td-hour hour">7</td>
 				        <td class="td-hour hour">8</td>

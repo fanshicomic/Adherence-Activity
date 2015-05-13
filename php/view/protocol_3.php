@@ -61,9 +61,10 @@
     	<div class="container protocol-instruction-text">
     		<div class="row text-center">
     			<h1>Protocol 3</h1>
-    			<div class="text-left col-lg-8 col-lg-offset-2">
+    			<div class="text-left col-lg-10 col-lg-offset-1">
 	    			<h3>Drug name: Atripla</h3>
-	                <p>Instructions: Take one tablet every day at bedtime on an empty stomach.</p>
+	                <h4>Instructions:</h4>
+	                <p>Atripla: Take one tablet every day at bedtime on an empty stomach.</p>
             	</div>
     		</div>
     	</div>
@@ -81,112 +82,64 @@
 				        <th class="td-hour" colspan="3">AM</th>
 				      </tr>
 				    </thead>
-				    <tbody>
+				    <tbody class="schedule-tbody">
 				      <tr>
-				        <td class="td-drug-name td-border-right">Drug Name</td>
-				        <td class="td-hour">6</td>
-				        <td class="td-hour">7</td>
-				        <td class="td-hour">8</td>
-				        <td class="td-hour">9</td>
-				        <td class="td-hour">10</td>
-				        <td class="td-hour td-border-right">11</td>
-				        <td class="td-hour">12</td>
-				        <td class="td-hour">1</td>
-				        <td class="td-hour">2</td>
-				        <td class="td-hour">3</td>
-				        <td class="td-hour">4</td>
-				        <td class="td-hour">5</td>
-				        <td class="td-hour">6</td>
-				        <td class="td-hour">7</td>
-				        <td class="td-hour">8</td>
-				        <td class="td-hour">9</td>
-				        <td class="td-hour">10</td>
-				        <td class="td-hour td-border-right">11</td>
-				        <td class="td-hour">12</td>
-				        <td class="td-hour">1</td>
-				        <td class="td-hour ">2</td>
+				        <td class="td-drug-name td-border-right houc">Drug Name</td>
+				        <td class="td-hour hour">6</td>
+				        <td class="td-hour hour">7</td>
+				        <td class="td-hour hour">8</td>
+				        <td class="td-hour hour">9</td>
+				        <td class="td-hour hour">10</td>
+				        <td class="td-hour td-border-right hour">11</td>
+				        <td class="td-hour hour">12</td>
+				        <td class="td-hour hour">1</td>
+				        <td class="td-hour hour">2</td>
+				        <td class="td-hour hour">3</td>
+				        <td class="td-hour hour">4</td>
+				        <td class="td-hour hour">5</td>
+				        <td class="td-hour hour">6</td>
+				        <td class="td-hour hour">7</td>
+				        <td class="td-hour hour">8</td>
+				        <td class="td-hour hour">9</td>
+				        <td class="td-hour hour">10</td>
+				        <td class="td-hour td-border-right hour">11</td>
+				        <td class="td-hour hour">12</td>
+				        <td class="td-hour hour">1</td>
+				        <td class="td-hour hour">2</td>
 				      </tr>
 				      <tr>
-				        <td class="td-drug-name td-border-right">Truvada (citrus twist tic tac): Take or discard one tablet once a day with or without food.</td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour td-border-right"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour td-border-right"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				      </tr>
-				      <tr>
-				        <td class="td-drug-name td-border-right">Reyataz (orange tic tac): Take or discard two tablets once a day with food.</td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour td-border-right"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour td-border-right"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				      </tr>
-				      <tr>
-				        <td class="td-drug-name td-border-right">Norvir (wintergreen tic tac): Take or discard one tablet once a day with Reyataz.</td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour td-border-right"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour td-border-right"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				      </tr>
+				        <td class="td-drug-name td-border-right">Atripla (orange tatripla</td>
+				        <td class="td-hour td-clickable atripla"></td>
+				        <td class="td-hour td-clickable atripla"></td>
+				        <td class="td-hour td-clickable atripla"></td>
+				        <td class="td-hour td-clickable atripla"></td>
+				        <td class="td-hour td-clickable atripla"></td>
+				        <td class="td-hour td-border-right td-clickable atripla"></td>
+				        <td class="td-hour td-clickable atripla"></td>
+				        <td class="td-hour td-clickable atripla"></td>
+				        <td class="td-hour td-clickable atripla"></td>
+				        <td class="td-hour td-clickable atripla"></td>
+				        <td class="td-hour td-clickable td-clickable atripla"></td>
+				        <td class="td-hour td-clickable atripla"></td>
+				        <td class="td-hour td-clickable atripla"></td>
+				        <td class="td-hour td-clickable atripla"></td>
+				        <td class="td-hour td-clickable atripla"></td>
+				        <td class="td-hour td-clickable atripla"></td>
+				        <td class="td-hour td-clickable atripla"></td>
+				        <td class="td-hour td-border-right td-clickable atripla"></td>
+				        <td class="td-hour td-clickable atripla"></td>
+				        <td class="td-hour td-clickable atripla"></td>
+				        <td class="td-hour td-clickable atripla"></td>
+				      </tr>			
 				    </tbody>
 				  </table>
     		</div>
     		<div class="row text-center exercise-button-row">
     			<div class="col-lg-4 col-lg-offset-2">
-    				<a href="#" class="btn btn-primary btn-lg btn-new-exercise">New Exercise</a>
+    				<a href="#" class="btn btn-primary btn-lg btn-new-exercise" protocol='3'>New Exercise</a>
     			</div>
     			<div class="col-lg-4">
-    				<a href="#" class="btn btn-default btn-lg btn-continue-exercise">Continue Exercise</a>
+    				<a href="#" class="btn btn-default btn-lg btn-continue-exercise" protocol='3'>Continue Exercise</a>
     				<label>Already take this exercise?</label>
     			</div>
     		</div>
