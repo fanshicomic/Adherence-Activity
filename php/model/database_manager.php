@@ -67,5 +67,16 @@
     	return $password == $password_hash;
     }
 
+    function get_user_id($user_name) {
+        $query = "SELECT UID FROM USER WHERE USER_NAME = '$user_name'";
+        $data = fetch_data($query);
+        if ($data) {
+            if (array_key_exists('UID', $data)) {
+                return $data['UID'];
+            } 
+        }
+        return false;
+    }
+
 
 ?>

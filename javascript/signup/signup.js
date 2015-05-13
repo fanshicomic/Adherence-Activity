@@ -18,7 +18,7 @@ function signup() {
 		if (success) {
 			signin_and_redirect_user(id);
 		}
-	} else {
+	} else { 
 		$('#warning-msg').html('Invalid User Name or Password');
 		$('#warning-msg').css('color', 'red');
 	}
