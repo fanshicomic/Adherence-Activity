@@ -19,8 +19,7 @@ function signup() {
 			signin_and_redirect_user(id);
 		}
 	} else { 
-		$('#warning-msg').html('Invalid User Name or Password');
-		$('#warning-msg').css('color', 'red');
+		
 	}
 }
 
@@ -35,6 +34,8 @@ function is_user_existing(id) {
     			   		 id: id},
     	success	: function(data) {
     		if (data == 1) {
+    			$('#warning-msg').html('This username has been taken');
+				$('#warning-msg').css('color', 'red');
     			res = true;
     		} else {
     			res = false;
@@ -45,7 +46,9 @@ function is_user_existing(id) {
 }
 
 function is_valid_user_id(id) {
-	if (id == "") {	
+	if (id == "") {
+		$('#warning-msg').html('Invalid User Name');
+		$('#warning-msg').css('color', 'red');	
 		return false;
 	} else {
 		return true;
@@ -54,9 +57,16 @@ function is_valid_user_id(id) {
 
 function is_same_password(password, password_confirmation) {
 	if (password != "") {
-		return password == password_confirmation;
+		if (password == password_confirmation)
+			return true;
+		else {
+			$('#warning-msg').html('Passwords should be the same');
+			$('#warning-msg').css('color', 'red');	
+			return false;
+		}
 	} else {
-		
+		$('#warning-msg').html('Passwords should not be empty');
+		$('#warning-msg').css('color', 'red');
 	}
 }
 

@@ -29,7 +29,7 @@ function new_exercise() {
 		var new_buttons = '<div class="col-lg-4 col-lg-offset-2">';
     	new_buttons += '<a href="#" class="btn btn-default btn-lg btn-cancel-exercise">Cancel</a></div>';
     	new_buttons += '<div class="col-lg-4">';
-    	new_buttons += '<a href="#" class="btn btn-primary btn-lg btn-plan-exercise">Plan Schedule</a>';
+    	new_buttons += '<a href="#" class="btn btn-primary btn-lg btn-plan-exercise">Plan Schedule And Start</a>';
 		$('.exercise-button-row').html(new_buttons);
 		$('.btn-cancel-exercise').click(function() {
 			cancel_plan_exercise();
