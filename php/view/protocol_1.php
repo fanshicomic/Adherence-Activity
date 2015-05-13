@@ -63,7 +63,10 @@
     			<h1>Protocol 1</h1>
     			<div class="text-left col-lg-8 col-lg-offset-2">
 	    			<h3>Drug name: Truvada, Reyataz & Norvir</h3>
-	                <p>Instructions: Take one Truvada tablet every day; Take two Reyataz tablets every day; Take one Norvir tablet with Reyataz every day.</p>
+	                <h4>Instructions:</h4>
+	                <p>Truvada: Take or discard one tablet once a day with or without food.
+	                <br>Reyataz: Take or discard two tablets once a day with food.
+	                <br>Norvir: Take or discard one tablet once a day with Reyataz.</p>
             	</div>
     		</div>
     	</div>
@@ -81,7 +84,7 @@
 				        <th class="td-hour" colspan="3">AM</th>
 				      </tr>
 				    </thead>
-				    <tbody>
+				    <tbody class="schedule-tbody">
 				      <tr>
 				        <td class="td-drug-name td-border-right">Drug Name</td>
 				        <td class="td-hour">6</td>
@@ -107,86 +110,86 @@
 				        <td class="td-hour ">2</td>
 				      </tr>
 				      <tr>
-				        <td class="td-drug-name td-border-right">Truvada (citrus twist tic tac): Take or discard one tablet once a day with or without food.</td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour td-border-right"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour td-border-right"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
+				        <td class="td-drug-name td-border-right">Truvada (citrus twist tic tac)</td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-border-right td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-border-right td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
 				      </tr>
 				      <tr>
-				        <td class="td-drug-name td-border-right">Reyataz (orange tic tac): Take or discard two tablets once a day with food.</td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour td-border-right"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour td-border-right"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
+				        <td class="td-drug-name td-border-right">Reyataz (orange tic tac)</td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-border-right td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-border-right td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
 				      </tr>
 				      <tr>
-				        <td class="td-drug-name td-border-right">Norvir (wintergreen tic tac): Take or discard one tablet once a day with Reyataz.</td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour td-border-right"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour td-border-right"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
-				        <td class="td-hour"></td>
+				        <td class="td-drug-name td-border-right">Norvir (wintergreen tic tac)</td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-border-right td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-border-right td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
+				        <td class="td-hour td-clickable"></td>
 				      </tr>
 				    </tbody>
 				  </table>
     		</div>
-    		<div class="row text-center exercise-button-row p1-button-row">
+    		<div class="row text-center exercise-button-row">
     			<div class="col-lg-4 col-lg-offset-2">
-    				<a href="#" class="btn btn-primary btn-lg btn-new-exercise p1">New Exercise</a>
+    				<a href="#" class="btn btn-primary btn-lg btn-new-exercise">New Exercise</a>
     			</div>
     			<div class="col-lg-4">
-    				<a href="#" class="btn btn-default btn-lg btn-continue-exercise p1">Continue Exercise</a>
+    				<a href="#" class="btn btn-default btn-lg btn-continue-exercise">Continue Exercise</a>
     				<label>Already take this exercise?</label>
     			</div>
     		</div>

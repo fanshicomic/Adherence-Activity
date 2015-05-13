@@ -23,6 +23,21 @@
         @content;
     }
 }
+.hour-check {
+    cursor: pointer;
+}
+
+.off {
+    color: #95A5A6;
+}
+
+.on {
+    color: yellow;
+}
+
+.transparent {
+    color: rgba(0,0,0,0);
+}
 
 .protocol-1-body {
     background: #3498db;
@@ -52,7 +67,7 @@
     }
 
     #instruction {
-        padding-bottom: 50px;
+        padding-bottom: 30px;
     }
 
     #schedule-table {
