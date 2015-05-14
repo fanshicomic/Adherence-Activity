@@ -146,7 +146,25 @@ function save_schedule(protocol) {
 	    		if (data == 1) {
 	    			swal("Success!", "Your schedule for this protocol has been saved!", "success")
 	    		} else {
-	    			sweetAlert("Oops...", "You have already taken this exercise!", "error");
+	    			swal({   
+	    				title: "Oops...",   
+	    				text: "You have already taken this exercise, would you like to continue?",   
+	    				type: "warning",   
+	    				showCancelButton: true,   
+	    				confirmButtonColor: "#DD6B55",   
+	    				confirmButtonText: "Bring me to my exercise",   
+	    				cancelButtonText: "No, thanks",   
+	    				closeOnConfirm: false,   
+	    				closeOnCancel: false }, 
+	    				function(isConfirm){   
+	    					if (isConfirm) {     
+	    						 
+	    					} else {     
+	    						swal("Cancelled", 
+	    							"The action has been cancelled", 
+	    						"error");   
+	    					} 
+	    				});
 	    		}
 			}
 		});
