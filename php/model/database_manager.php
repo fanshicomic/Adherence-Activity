@@ -101,4 +101,48 @@
         }
     }
 
+    function add_protocol_2($kaletra_1, $kaletra_2, $combivir_1, $combivir_2, $fuzeon_1, $fuzeon_2) {
+        $p2_id = uniqid();
+        $uid = get_user_id($_SESSION['uid']);
+        $date = date("Y-m-d");
+        $query_protocol_2 = "INSERT INTO PROTOCOL_2 (P2ID, UID, KALETRA_1, KALETRA_2, COMBIVIR_1, COMBIVIR_2, FUZEON_1, FUZEON_2) VALUES ('$p2_id', '$uid', '$kaletra_1', '$kaletra_2', '$combivir_1', '$combivir_2', '$fuzeon_1', '$fuzeon_2')";
+        $query_protocol_inst_2 = "INSERT INTO PROTOCOL_INSTANCE_2 (P2ID, DAY) VALUES ('$p2_id', '$date')";
+        $query_user = "UPDATE USER SET P2ID = '$p2_id' WHERE UID = '$uid'";
+        $res = update_data($query_protocol_2) && update_data($query_protocol_inst_2) && update_data($query_user);
+        return $res;
+    }
+
+    function exist_protocol_2() {
+        $uid = get_user_id($_SESSION['uid']);
+        $query = "SELECT * FROM PROTOCOL_2 WHERE UID = '$uid'";
+        $data = fetch_data($query);
+        if ($data) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function add_protocol_3($atripla) {
+        $p3_id = uniqid();
+        $uid = get_user_id($_SESSION['uid']);
+        $date = date("Y-m-d");
+        $query_protocol_3 = "INSERT INTO PROTOCOL_3 (P3ID, UID, ATRIPLA_1) VALUES ('$p3_id', '$uid', '$atripla')";
+        $query_protocol_inst_3 = "INSERT INTO PROTOCOL_INSTANCE_3 (P3ID, DAY) VALUES ('$p3_id', '$date')";
+        $query_user = "UPDATE USER SET P3ID = '$p3_id' WHERE UID = '$uid'";
+        $res = update_data($query_protocol_3) && update_data($query_protocol_inst_3) && update_data($query_user);
+        return $res;
+    }
+
+    function exist_protocol_3() {
+        $uid = get_user_id($_SESSION['uid']);
+        $query = "SELECT * FROM PROTOCOL_3 WHERE UID = '$uid'";
+        $data = fetch_data($query);
+        if ($data) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 ?>

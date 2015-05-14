@@ -6,7 +6,7 @@
 		$command = secureString($_REQUEST['command']);
 
 	}
-	if ($command == 'new_exercise') {
+	if ($command == 'is_logged_in') {
 		if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
         	echo true;
         } else {
@@ -34,9 +34,22 @@
 			$combivir_2 = secureString($_REQUEST['combivir_2']);
 			$fuzeon_1 = secureString($_REQUEST['fuzeon_1']);
 			$fuzeon_2 = secureString($_REQUEST['fuzeon_2']);
-		
+			$existed = exist_protocol_2();
+			if (!$existed) {
+				$res = add_protocol_2($kaletra_1, $kaletra_2, $combivir_1, $combivir_2, $fuzeon_1, $fuzeon_2);
+				echo true;
+			} else {
+				echo false;
+			}
 		} else if ($protocol == 3) {
 			$atripla = secureString($_REQUEST['atripla']);
+			$existed = exist_protocol_3();
+			if (!$existed) {
+				$res = add_protocol_3($atripla);
+				echo true;
+			} else {
+				echo false;
+			}
 		} else {
 			echo false;
 		}

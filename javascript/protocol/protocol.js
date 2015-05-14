@@ -4,7 +4,7 @@ $(function() {
 		new_exercise(this);
 	});
 	$('.btn-continue-exercise').click(function() {
-		continue_exercise();
+		continue_exercise(this);
 	});
 	$('.btn-cancel-exercise').click(function() {
 		cancel_plan_exercise();
@@ -22,7 +22,7 @@ function new_exercise(btn) {
 		async	: false,
 		type	:'POST', 
     	url		: "/pharmacy/project1/php/model/protocol_manager.php",
-    	data    : {command : 'new_exercise'},
+    	data    : {command : 'is_logged_in'},
     	success	: function(data) {
     		if (data == 1) {
     			res = true;
@@ -199,9 +199,37 @@ function save_schedule(protocol) {
 	    			   	fuzeon_2 : fuzeon_2},
 	    	success	: function(data) {
 	    		if (data == 1) {
-	    			
+	    			// swal("Success!", "Your schedule for this protocol has been saved!", "success");
+	    			swal({   
+	    				title: "Success!",   
+	    				text: "Your schedule for this protocol has been saved!",   
+	    				type: "success",   
+	    				confirmButtonColor: "#DD6B55",   
+	    				confirmButtonText: "OK",   
+	    				closeOnConfirm: false }, 
+	    				function(){
+	    					window.location.href = '/pharmacy/project1/php/view/protocol_2_exercise.php';
+	    				});
 	    		} else {
-	    			
+	    			swal({   
+	    				title: "Oops...",   
+	    				text: "You have already taken this exercise, would you like to continue?",   
+	    				type: "warning",   
+	    				showCancelButton: true,   
+	    				confirmButtonColor: "#DD6B55",   
+	    				confirmButtonText: "Bring me to my exercise",   
+	    				cancelButtonText: "No, thanks",   
+	    				closeOnConfirm: false,   
+	    				closeOnCancel: false }, 
+	    				function(isConfirm){   
+	    					if (isConfirm) {     
+	    						 
+	    					} else {     
+	    						swal("Cancelled", 
+	    							"The action has been cancelled", 
+	    						"error");   
+	    					} 
+	    				});
 	    		}
 			}
 		});
@@ -216,9 +244,37 @@ function save_schedule(protocol) {
 	    			   	atripla : atripla},
 	    	success	: function(data) {
 	    		if (data == 1) {
-	    			
+	    			// swal("Success!", "Your schedule for this protocol has been saved!", "success");
+	    			swal({   
+	    				title: "Success!",   
+	    				text: "Your schedule for this protocol has been saved!",   
+	    				type: "success",   
+	    				confirmButtonColor: "#DD6B55",   
+	    				confirmButtonText: "OK",   
+	    				closeOnConfirm: false }, 
+	    				function(){
+	    					window.location.href = '/pharmacy/project1/php/view/protocol_3_exercise.php';
+	    				});
 	    		} else {
-	    			
+	    			swal({   
+	    				title: "Oops...",   
+	    				text: "You have already taken this exercise, would you like to continue?",   
+	    				type: "warning",   
+	    				showCancelButton: true,   
+	    				confirmButtonColor: "#DD6B55",   
+	    				confirmButtonText: "Bring me to my exercise",   
+	    				cancelButtonText: "No, thanks",   
+	    				closeOnConfirm: false,   
+	    				closeOnCancel: false }, 
+	    				function(isConfirm){   
+	    					if (isConfirm) {     
+	    						 
+	    					} else {     
+	    						swal("Cancelled", 
+	    							"The action has been cancelled", 
+	    						"error");   
+	    					} 
+	    				});
 	    		}
 			}
 		});
@@ -227,12 +283,35 @@ function save_schedule(protocol) {
 	}
 }
 
+function continue_exercise(btn) {
+	var res;
+	$.ajax({
+		async	: false,
+		type	:'POST', 
+    	url		: "/pharmacy/project1/php/model/protocol_manager.php",
+    	data    : {command : 'is_logged_in'},
+    	success	: function(data) {
+    		if (data == 1) {
+    			res = true;
+    		} else {
+    			res = false;
+    		}
+		}
+	});
+	if (res) {
+		var protocol = $(btn).attr('protocol');
+		window.location.href='protocol_' + protocol + '_exercise.php';
+	} else {
+		window.location.href='signin.php';
+	}
+}
+
 function register_button_event() {
 	$('.btn-new-exercise').click(function() {
 		new_exercise(this);
 	});
 	$('.btn-continue-exercise').click(function() {
-		continue_exercise();
+		continue_exercise(this);
 	});
 	$('.btn-cancel-exercise').click(function() {
 		cancel_plan_exercise();

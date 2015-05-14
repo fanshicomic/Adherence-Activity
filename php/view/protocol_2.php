@@ -26,6 +26,10 @@
 	<!-- Font Awesome -->
 	<link type="text/css" rel="stylesheet" href="../../plugin/Font-Awesome/css/font-awesome.min.css">
 
+	<!-- SweetAlert -->
+    <script src="../../plugin/SweetAlert/sweetalert.min.js"></script> 
+    <link rel="stylesheet" type="text/css" href="../../plugin/SweetAlert/sweetalert.css">
+
 	<!-- Plugin CSS -->
     <link rel="stylesheet" href="../../stylesheet/css/animate.min.css" type="text/css">
     <link rel="stylesheet" href="../../stylesheet/css/creative.css" type="text/css">
