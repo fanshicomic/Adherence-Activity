@@ -1,0 +1,84 @@
+@import "compass/css3";
+
+@mixin lg {
+    @media only screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media only screen and (max-width: 1199px) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media only screen and (max-width: 991px) {
+        @content;
+    }
+}
+
+@mixin xs {
+    @media only screen and (max-width: 767px) {
+        @content;
+    }
+}
+
+.hour-check {
+    cursor: pointer;
+}
+
+.off {
+    color: #95A5A6;
+}
+
+.on {
+    color: yellow;
+}
+
+.exercise-1-body {
+    background: #3498db;
+    color: white;
+}
+
+.day-table {
+    width: 100%;
+    margin-top: 20px;
+    .timeline {
+        color: #BDC3C7;
+    }
+}
+
+.checked {
+    color: yellow;
+}
+
+.non-checked {
+    color: #BDC3C7;
+}
+
+#schedule-table {
+    padding-top: 0px;
+    table {
+        border-bottom: 1px solid white;
+        .td-drug-name {
+            width: 6%;
+        }
+        .td-hour {
+            width: 0.5%;
+        }
+        .td-border-right {
+            border-right: 1px solid white;
+        }
+            
+        th {
+            text-align: center;
+        }
+        td {
+            text-align: center;
+        }
+    }
+}
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+    background-color: #2980b9;
+}

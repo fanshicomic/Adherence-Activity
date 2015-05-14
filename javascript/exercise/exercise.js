@@ -1,5 +1,4 @@
 $(function() {
-
 	$('.btn-new-exercise').click(function() {
 		new_exercise(this);
 	});
@@ -13,7 +12,7 @@ $(function() {
 		plan_exercise(this);
 	});
 
-	$('.td-clickable').html('<i class="fa fa-check fa-2x hour-check transparent"></i>');
+	$('.td-clickable').html('<i class="fa fa-check fa-2x hour-check off"></i>');
 });
 
 function new_exercise(btn) {

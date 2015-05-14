@@ -1,0 +1,74 @@
+/* line 27, ../sass/exercise.scss */
+.hour-check {
+  cursor: pointer;
+}
+
+/* line 31, ../sass/exercise.scss */
+.off {
+  color: #95A5A6;
+}
+
+/* line 35, ../sass/exercise.scss */
+.on {
+  color: yellow;
+}
+
+/* line 39, ../sass/exercise.scss */
+.exercise-1-body {
+  background: #3498db;
+  color: white;
+}
+
+/* line 44, ../sass/exercise.scss */
+.day-table {
+  width: 100%;
+  margin-top: 20px;
+}
+/* line 47, ../sass/exercise.scss */
+.day-table .timeline {
+  color: #BDC3C7;
+}
+
+/* line 52, ../sass/exercise.scss */
+.checked {
+  color: yellow;
+}
+
+/* line 56, ../sass/exercise.scss */
+.non-checked {
+  color: #BDC3C7;
+}
+
+/* line 60, ../sass/exercise.scss */
+#schedule-table {
+  padding-top: 0px;
+}
+/* line 62, ../sass/exercise.scss */
+#schedule-table table {
+  border-bottom: 1px solid white;
+}
+/* line 64, ../sass/exercise.scss */
+#schedule-table table .td-drug-name {
+  width: 6%;
+}
+/* line 67, ../sass/exercise.scss */
+#schedule-table table .td-hour {
+  width: 0.5%;
+}
+/* line 70, ../sass/exercise.scss */
+#schedule-table table .td-border-right {
+  border-right: 1px solid white;
+}
+/* line 74, ../sass/exercise.scss */
+#schedule-table table th {
+  text-align: center;
+}
+/* line 77, ../sass/exercise.scss */
+#schedule-table table td {
+  text-align: center;
+}
+
+/* line 82, ../sass/exercise.scss */
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #2980b9;
+}
