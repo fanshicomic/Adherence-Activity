@@ -77,6 +77,28 @@
         }
         return false;
     }
+    //------------------------------protocol-------------------------------------- 
 
+    function add_protocol_1($truvada, $reyataz, $norvir) {
+        $p1_id = uniqid();
+        $uid = get_user_id($_SESSION['uid']);
+        $date = date("Y-m-d");
+        $query_protocol_1 = "INSERT INTO PROTOCOL_1 (P1ID, UID, TRUVADA_1, REYATAZ_1, NORVIR_1) VALUES ('$p1_id', '$uid', '$truvada', '$reyataz', '$norvir')";
+        $query_protocol_inst_1 = "INSERT INTO PROTOCOL_INSTANCE_1 (P1ID, DAY) VALUES ('$p1_id', '$date')";
+        $query_user = "UPDATE USER SET P1ID = '$p1_id' WHERE UID = '$uid'";
+        $res = update_data($query_protocol_1) && update_data($query_protocol_inst_1) && update_data($query_user);
+        return $res;
+    }
+
+    function exist_protocol_1() {
+        $uid = get_user_id($_SESSION['uid']);
+        $query = "SELECT * FROM PROTOCOL_1 WHERE UID = '$uid'";
+        $data = fetch_data($query);
+        if ($data) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 ?>

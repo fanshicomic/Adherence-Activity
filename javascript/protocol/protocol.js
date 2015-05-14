@@ -1,4 +1,5 @@
 $(function() {
+
 	$('.btn-new-exercise').click(function() {
 		new_exercise(this);
 	});
@@ -79,9 +80,9 @@ function toggle_check(check) {
 function plan_exercise(btn) {
 	var protocol = $(btn).attr('protocol');
 	if (is_drug_number_correct(protocol) && is_adherence_requirement_valid(protocol)) {
-		console.log("Yeah!");
 		$('.warning-msg').removeClass('warning');
 		$('.warning-msg').addClass('transparent');
+		save_schedule(protocol);
 	} else {
 		$('.warning-msg').removeClass('transparent');
 		$('.warning-msg').addClass('warning');
@@ -122,6 +123,77 @@ function is_adherence_requirement_valid(protocol) {
 		return kaletra_1 == kaletra_2 && combivir_1 == combivir_2 && fuzeon_1 == fuzeon_2;
 	} else if (protocol == '3') {
 		return true;
+	} else {
+
+	}
+}
+
+function save_schedule(protocol) {
+	if (protocol == '1') {
+		var truvada = $('.hour').eq($('.truvada .on').parent().index()).html();
+		var reyataz = $('.hour').eq($('.reyataz .on').parent().index()).html();
+		var norvir = $('.hour').eq($('.norvir .on').parent().index()).html();
+		$.ajax({
+			async	: false,
+			type	:'POST', 
+	    	url		: "/pharmacy/project1/php/model/protocol_manager.php",
+	    	data    : {	command : 'save_schedule',
+	    				protocol: protocol,
+	    			   	truvada : truvada,
+	    			   	reyataz : reyataz,
+	    			   	 norvir : norvir},
+	    	success	: function(data) {
+	    		if (data == 1) {
+	    			swal("Success!", "Your schedule for this protocol has been saved!", "success")
+	    		} else {
+	    			sweetAlert("Oops...", "You have already taken this exercise!", "error");
+	    		}
+			}
+		});
+	} else if (protocol == '2') {
+		var kaletra_1 = $('.hour').eq($($('.kaletra .on')[0]).parent().index()).html();
+		var kaletra_2 = $('.hour').eq($($('.kaletra .on')[1]).parent().index()).html();
+		var combivir_1 = $('.hour').eq($($('.combivir .on')[0]).parent().index()).html();
+		var combivir_2 = $('.hour').eq($($('.combivir .on')[1]).parent().index()).html();
+		var fuzeon_1 = $('.hour').eq($($('.fuzeon .on')[0]).parent().index()).html();
+		var fuzeon_2 = $('.hour').eq($($('.fuzeon .on')[1]).parent().index()).html();
+		$.ajax({
+			async	: false,
+			type	:'POST', 
+	    	url		: "/pharmacy/project1/php/model/protocol_manager.php",
+	    	data    : {	command : 'save_schedule',
+	    				protocol: protocol,
+	    			   	kaletra_1 : kaletra_1,
+	    			   	kaletra_2 : kaletra_2,
+	    			   	combivir_1 : combivir_1,
+	    			   	combivir_2 : combivir_2,
+	    			   	fuzeon_1 : fuzeon_1,
+	    			   	fuzeon_2 : fuzeon_2},
+	    	success	: function(data) {
+	    		if (data == 1) {
+	    			
+	    		} else {
+	    			
+	    		}
+			}
+		});
+	} else if (protocol == '3') {
+		var atripla = $('.hour').eq($('.atripla .on').parent().index()).html();
+		$.ajax({
+			async	: false,
+			type	:'POST', 
+	    	url		: "/pharmacy/project1/php/model/protocol_manager.php",
+	    	data    : {	command : 'save_schedule',
+	    				protocol: protocol,
+	    			   	atripla : atripla},
+	    	success	: function(data) {
+	    		if (data == 1) {
+	    			
+	    		} else {
+	    			
+	    		}
+			}
+		});
 	} else {
 
 	}
