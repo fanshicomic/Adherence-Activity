@@ -144,7 +144,17 @@ function save_schedule(protocol) {
 	    			   	 norvir : norvir},
 	    	success	: function(data) {
 	    		if (data == 1) {
-	    			swal("Success!", "Your schedule for this protocol has been saved!", "success")
+	    			// swal("Success!", "Your schedule for this protocol has been saved!", "success");
+	    			swal({   
+	    				title: "Success!",   
+	    				text: "Your schedule for this protocol has been saved!",   
+	    				type: "success",   
+	    				confirmButtonColor: "#DD6B55",   
+	    				confirmButtonText: "OK",   
+	    				closeOnConfirm: false }, 
+	    				function(){
+	    					window.location.href = '/pharmacy/project1/php/view/protocol_1_exercise.php';
+	    				});
 	    		} else {
 	    			swal({   
 	    				title: "Oops...",   
