@@ -62,6 +62,8 @@ function cancel_plan_exercise() {
 	register_button_event();
 	$('h4').html('Instruction:');
 	$('.td-clickable').html('<i class="fa fa-check fa-2x hour-check transparent"></i>');
+	$('.warning-msg').removeClass('warning');
+	$('.warning-msg').addClass('transparent');
 }
 
 function toggle_check(check) {
@@ -76,8 +78,13 @@ function toggle_check(check) {
 
 function plan_exercise(btn) {
 	var protocol = $(btn).attr('protocol');
-	if(is_drug_number_correct(protocol) && is_adherence_requirement_valid(protocol)) {
+	if (is_drug_number_correct(protocol) && is_adherence_requirement_valid(protocol)) {
 		console.log("Yeah!");
+		$('.warning-msg').removeClass('warning');
+		$('.warning-msg').addClass('transparent');
+	} else {
+		$('.warning-msg').removeClass('transparent');
+		$('.warning-msg').addClass('warning');
 	}
 }
 
@@ -102,9 +109,9 @@ function is_drug_number_correct(protocol) {
 
 function is_adherence_requirement_valid(protocol) {
 	if (protocol == '1') {
-		var truvada = $('.hour').eq($('.truvada .on').parent().index()).html();
+		var reyataz = $('.hour').eq($('.reyataz .on').parent().index()).html();
 		var norvir = $('.hour').eq($('.norvir .on').parent().index()).html();
-		return truvada == norvir;
+		return reyataz == norvir;
 	} else if (protocol == '2') {
 		var kaletra_1 = $('.hour').eq($($('.kaletra .on')[0]).parent().index()).html();
 		var kaletra_2 = $('.hour').eq($($('.kaletra .on')[1]).parent().index()).html();

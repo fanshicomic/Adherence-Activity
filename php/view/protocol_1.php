@@ -67,6 +67,7 @@
 	                <p>Truvada: Take or discard one tablet once a day with or without food.
 	                <br>Reyataz: Take or discard two tablets once a day with food.
 	                <br>Norvir: Take or discard one tablet once a day with Reyataz.</p>
+	                <p class="warning-msg transparent">Your schedule seems violate some rules. Please read the instruction carefully.</p>
             	</div>
     		</div>
     	</div>

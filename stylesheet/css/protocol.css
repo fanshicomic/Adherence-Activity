@@ -1,36 +1,46 @@
-/* line 26, ../sass/protocol.scss */
+/* line 27, ../sass/protocol.scss */
+section {
+  padding-top: 60px;
+}
+
+/* line 31, ../sass/protocol.scss */
 .hour-check {
   cursor: pointer;
 }
 
-/* line 30, ../sass/protocol.scss */
+/* line 35, ../sass/protocol.scss */
 .off {
   color: #95A5A6;
 }
 
-/* line 34, ../sass/protocol.scss */
+/* line 39, ../sass/protocol.scss */
 .on {
   color: yellow;
 }
 
-/* line 38, ../sass/protocol.scss */
+/* line 43, ../sass/protocol.scss */
 .transparent {
   color: transparent;
 }
 
-/* line 42, ../sass/protocol.scss */
+/* line 47, ../sass/protocol.scss */
+.warning {
+  color: yellow;
+}
+
+/* line 51, ../sass/protocol.scss */
 .protocol-1-body {
   background: #3498db;
 }
-/* line 45, ../sass/protocol.scss */
+/* line 54, ../sass/protocol.scss */
 .protocol-1-body .navbar-protocol {
   background: #2c3e50;
 }
-/* line 49, ../sass/protocol.scss */
+/* line 58, ../sass/protocol.scss */
 .protocol-1-body .navbar-protocol .navbar-header .navbar-brand {
   color: #ecf0f1;
 }
-/* line 53, ../sass/protocol.scss */
+/* line 62, ../sass/protocol.scss */
 .protocol-1-body .navbar-protocol .nav > li > a,
 .protocol-1-body .navbar-protocol .nav > li > a:focus {
   text-transform: uppercase;
@@ -38,64 +48,64 @@
   font-weight: 700;
   color: #ecf0f1;
 }
-/* line 61, ../sass/protocol.scss */
+/* line 70, ../sass/protocol.scss */
 .protocol-1-body .protocol-instruction-text {
   color: white;
 }
-/* line 65, ../sass/protocol.scss */
+/* line 74, ../sass/protocol.scss */
 .protocol-1-body .table-hover tbody tr:hover td, .protocol-1-body .table-hover tbody tr:hover th {
   background-color: #2980b9;
 }
-/* line 69, ../sass/protocol.scss */
+/* line 78, ../sass/protocol.scss */
 .protocol-1-body #instruction {
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
-/* line 73, ../sass/protocol.scss */
+/* line 82, ../sass/protocol.scss */
 .protocol-1-body #schedule-table {
   padding-top: 0px;
 }
-/* line 75, ../sass/protocol.scss */
+/* line 84, ../sass/protocol.scss */
 .protocol-1-body #schedule-table table {
   border-bottom: 1px solid white;
 }
-/* line 77, ../sass/protocol.scss */
+/* line 86, ../sass/protocol.scss */
 .protocol-1-body #schedule-table table .td-drug-name {
   width: 6%;
 }
-/* line 80, ../sass/protocol.scss */
+/* line 89, ../sass/protocol.scss */
 .protocol-1-body #schedule-table table .td-hour {
   width: 0.5%;
 }
-/* line 83, ../sass/protocol.scss */
+/* line 92, ../sass/protocol.scss */
 .protocol-1-body #schedule-table table .td-border-right {
   border-right: 1px solid white;
 }
-/* line 87, ../sass/protocol.scss */
+/* line 96, ../sass/protocol.scss */
 .protocol-1-body #schedule-table table th {
   text-align: center;
 }
-/* line 90, ../sass/protocol.scss */
+/* line 99, ../sass/protocol.scss */
 .protocol-1-body #schedule-table table td {
   text-align: center;
 }
-/* line 96, ../sass/protocol.scss */
+/* line 105, ../sass/protocol.scss */
 .protocol-1-body .exercise-button-row {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
-/* line 101, ../sass/protocol.scss */
+/* line 110, ../sass/protocol.scss */
 .protocol-2-body {
   background: #2ecc71;
 }
-/* line 104, ../sass/protocol.scss */
+/* line 113, ../sass/protocol.scss */
 .protocol-2-body .navbar-protocol {
   background: #2c3e50;
 }
-/* line 108, ../sass/protocol.scss */
+/* line 117, ../sass/protocol.scss */
 .protocol-2-body .navbar-protocol .navbar-header .navbar-brand {
   color: #ecf0f1;
 }
-/* line 112, ../sass/protocol.scss */
+/* line 121, ../sass/protocol.scss */
 .protocol-2-body .navbar-protocol .nav > li > a,
 .protocol-2-body .navbar-protocol .nav > li > a:focus {
   text-transform: uppercase;
@@ -103,64 +113,64 @@
   font-weight: 700;
   color: #ecf0f1;
 }
-/* line 120, ../sass/protocol.scss */
+/* line 129, ../sass/protocol.scss */
 .protocol-2-body .protocol-instruction-text {
   color: white;
 }
-/* line 124, ../sass/protocol.scss */
+/* line 133, ../sass/protocol.scss */
 .protocol-2-body .table-hover tbody tr:hover td, .protocol-2-body .table-hover tbody tr:hover th {
   background-color: #27ae60;
 }
-/* line 128, ../sass/protocol.scss */
+/* line 137, ../sass/protocol.scss */
 .protocol-2-body #instruction {
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
-/* line 132, ../sass/protocol.scss */
+/* line 141, ../sass/protocol.scss */
 .protocol-2-body #schedule-table {
   padding-top: 0px;
 }
-/* line 134, ../sass/protocol.scss */
+/* line 143, ../sass/protocol.scss */
 .protocol-2-body #schedule-table table {
   border-bottom: 1px solid white;
 }
-/* line 136, ../sass/protocol.scss */
+/* line 145, ../sass/protocol.scss */
 .protocol-2-body #schedule-table table .td-drug-name {
   width: 6%;
 }
-/* line 139, ../sass/protocol.scss */
+/* line 148, ../sass/protocol.scss */
 .protocol-2-body #schedule-table table .td-hour {
   width: 0.5%;
 }
-/* line 142, ../sass/protocol.scss */
+/* line 151, ../sass/protocol.scss */
 .protocol-2-body #schedule-table table .td-border-right {
   border-right: 1px solid white;
 }
-/* line 146, ../sass/protocol.scss */
+/* line 155, ../sass/protocol.scss */
 .protocol-2-body #schedule-table table th {
   text-align: center;
 }
-/* line 149, ../sass/protocol.scss */
+/* line 158, ../sass/protocol.scss */
 .protocol-2-body #schedule-table table td {
   text-align: center;
 }
-/* line 155, ../sass/protocol.scss */
+/* line 164, ../sass/protocol.scss */
 .protocol-2-body .exercise-button-row {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
-/* line 160, ../sass/protocol.scss */
+/* line 169, ../sass/protocol.scss */
 .protocol-3-body {
   background: #e67e22;
 }
-/* line 163, ../sass/protocol.scss */
+/* line 172, ../sass/protocol.scss */
 .protocol-3-body .navbar-protocol {
   background: #2c3e50;
 }
-/* line 167, ../sass/protocol.scss */
+/* line 176, ../sass/protocol.scss */
 .protocol-3-body .navbar-protocol .navbar-header .navbar-brand {
   color: #ecf0f1;
 }
-/* line 171, ../sass/protocol.scss */
+/* line 180, ../sass/protocol.scss */
 .protocol-3-body .navbar-protocol .nav > li > a,
 .protocol-3-body .navbar-protocol .nav > li > a:focus {
   text-transform: uppercase;
@@ -168,47 +178,48 @@
   font-weight: 700;
   color: #ecf0f1;
 }
-/* line 179, ../sass/protocol.scss */
+/* line 188, ../sass/protocol.scss */
 .protocol-3-body .protocol-instruction-text {
   color: white;
 }
-/* line 183, ../sass/protocol.scss */
+/* line 192, ../sass/protocol.scss */
 .protocol-3-body .table-hover tbody tr:hover td, .protocol-3-body .table-hover tbody tr:hover th {
   background-color: #d35400;
 }
-/* line 187, ../sass/protocol.scss */
+/* line 196, ../sass/protocol.scss */
 .protocol-3-body #instruction {
+  padding-top: 100px;
   padding-bottom: 30px;
 }
-/* line 191, ../sass/protocol.scss */
+/* line 201, ../sass/protocol.scss */
 .protocol-3-body #schedule-table {
   padding-top: 0px;
 }
-/* line 193, ../sass/protocol.scss */
+/* line 203, ../sass/protocol.scss */
 .protocol-3-body #schedule-table table {
   border-bottom: 1px solid white;
 }
-/* line 195, ../sass/protocol.scss */
+/* line 205, ../sass/protocol.scss */
 .protocol-3-body #schedule-table table .td-drug-name {
   width: 6%;
 }
-/* line 198, ../sass/protocol.scss */
+/* line 208, ../sass/protocol.scss */
 .protocol-3-body #schedule-table table .td-hour {
   width: 0.5%;
 }
-/* line 201, ../sass/protocol.scss */
+/* line 211, ../sass/protocol.scss */
 .protocol-3-body #schedule-table table .td-border-right {
   border-right: 1px solid white;
 }
-/* line 205, ../sass/protocol.scss */
+/* line 215, ../sass/protocol.scss */
 .protocol-3-body #schedule-table table th {
   text-align: center;
 }
-/* line 208, ../sass/protocol.scss */
+/* line 218, ../sass/protocol.scss */
 .protocol-3-body #schedule-table table td {
   text-align: center;
 }
-/* line 214, ../sass/protocol.scss */
+/* line 224, ../sass/protocol.scss */
 .protocol-3-body .exercise-button-row {
-  margin-top: 20px;
+  margin-top: 10px;
 }

@@ -65,6 +65,7 @@
 	    			<h3>Drug name: Atripla</h3>
 	                <h4>Instructions:</h4>
 	                <p>Atripla: Take one tablet every day at bedtime on an empty stomach.</p>
+	                <p class="warning-msg transparent">Your schedule seems violate some rules. Please read the instruction carefully.</p>
             	</div>
     		</div>
     	</div>

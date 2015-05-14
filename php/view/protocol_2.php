@@ -67,6 +67,7 @@
 	                <p>Truvada: Take one tablet every 12 hours.
 	                <br>Reyataz: Take one tablet every 12 hours.
 	                <br>Fuzeon: Mix a packet with 8 oz of water, let stand for 10 minutes, and then drink it. Take it every 12 hours.</p>
+	                <p class="warning-msg transparent">Your schedule seems violate some rules. Please read the instruction carefully.</p>
             	</div>
     		</div>
     	</div>

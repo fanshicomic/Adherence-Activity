@@ -23,6 +23,11 @@
         @content;
     }
 }
+
+section {
+    padding-top: 60px;
+}
+
 .hour-check {
     cursor: pointer;
 }
@@ -37,6 +42,10 @@
 
 .transparent {
     color: rgba(0,0,0,0);
+}
+
+.warning {
+    color: yellow;
 }
 
 .protocol-1-body {
@@ -67,7 +76,7 @@
     }
 
     #instruction {
-        padding-bottom: 30px;
+        padding-bottom: 20px;
     }
 
     #schedule-table {
@@ -94,7 +103,7 @@
     }
 
     .exercise-button-row {
-        margin-top: 20px;
+        margin-top: 10px;
     }
 }
 
@@ -126,7 +135,7 @@
     }
 
     #instruction {
-        padding-bottom: 30px;
+        padding-bottom: 20px;
     }
 
     #schedule-table {
@@ -153,7 +162,7 @@
     }
 
     .exercise-button-row {
-        margin-top: 20px;
+        margin-top: 10px;
     }
 }
 
@@ -185,6 +194,7 @@
     }
 
     #instruction {
+        padding-top: 100px;
         padding-bottom: 30px;
     }
 
@@ -212,6 +222,6 @@
     }
 
     .exercise-button-row {
-        margin-top: 20px;
+        margin-top: 10px;
     }
 }
