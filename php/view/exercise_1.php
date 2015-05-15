@@ -4,6 +4,7 @@
 	if (session_status() == PHP_SESSION_NONE) {
 	    session_start();
 	}
+	user_validation(1);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +42,7 @@
 	
 </head>
 
-<body id="page-top" class="exercise-1-body">
+<body id="page-top" class="exercise-1-body" day="1">
 	<nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-protocol">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -68,39 +69,13 @@
     			<h1>Protocol 1</h1>
     			<div class="text-left col-lg-6 col-lg-offset-3">
     				<div class="row text-center">
-		    			<table class="day-table">
-		    				<tbody>
-		    					<!-- <?php show_day_table(); ?> -->
-		    					<tr>
-		    						<td class="td-day"><i class="fa fa-check-circle-o fa-2x checked"></i></td>
-		    						<td class="timeline">---------</td>
-		    						<td class="td-day"><i class="fa fa-check-circle-o fa-2x checked"></i></td>
-		    						<td class="timeline">---------</td>
-		    						<td class="td-day"><i class="fa fa-check-circle-o fa-2x checked"></i></td>
-		    						<td class="timeline">---------</td>
-		    						<td class="td-day"><i class="fa fa-circle-o fa-2x non-checked"></i></td>
-		    						<td class="timeline">---------</td>
-		    						<td class="td-day"><i class="fa fa-circle-o fa-2x non-checked"></i></td>
-		    						<td class="timeline">---------</td>
-		    						<td class="td-day"><i class="fa fa-circle-o fa-2x non-checked"></i></td>
-		    						<td class="timeline">---------</td>
-		    						<td class="td-day"><i class="fa fa-circle-o fa-2x non-checked"></i></td>
-		    					</tr>
-		    					<tr>
-		    						<td>Day 1</td>
-		    						<td class="timeline"></td>
-		    						<td>Day 2</td>
-		    						<td class="timeline"></td>
-		    						<td>Day 3</td>
-		    						<td class="timeline"></td>
-		    						<td>Day 4</td>
-		    						<td class="timeline"></td>
-		    						<td>Day 5</td>
-		    						<td class="timeline"></td>
-		    						<td>Day 6</td>
-		    						<td class="timeline"></td>
-		    						<td>Day 7</td>
-		    					</tr>
+    					<div class="text-left">
+    						<h4>Instructions:</h4>
+		                	<p>White checks show the hours you planned to take "medicine". It is only for you reference. Please choose the hour that you took your medicine.</p>
+		                </div>
+		    			<table class="day-table" exercise="1">
+		    				<tbody class="day-table-tbody">
+		    					<?php show_day_table(1); ?>
 		    				</tbody>
 		    			</table>
 	    			</div>
@@ -109,7 +84,7 @@
     	</div>
     </section>
 
-    <section id="schedule-table">
+    <section id="schedule-table" exercise="1" day="1">
     	<div class="container protocol-instruction-text">
     		<div class="row text-center">
     			<table class="table table-condensed table-hover">
@@ -131,103 +106,30 @@
 				        <td class="td-hour hour">10</td>
 				        <td class="td-hour td-border-right hour">11</td>
 				        <td class="td-hour hour">12</td>
+				        <td class="td-hour hour">13</td>
+				        <td class="td-hour hour">14</td>
+				        <td class="td-hour hour">15</td>
+				        <td class="td-hour hour">16</td>
+				        <td class="td-hour hour">17</td>
+				        <td class="td-hour hour">18</td>
+				        <td class="td-hour hour">19</td>
+				        <td class="td-hour hour">20</td>
+				        <td class="td-hour hour">21</td>
+				        <td class="td-hour hour">22</td>
+				        <td class="td-hour td-border-right hour">23</td>
+				        <td class="td-hour hour">0</td>
 				        <td class="td-hour hour">1</td>
 				        <td class="td-hour hour">2</td>
-				        <td class="td-hour hour">3</td>
-				        <td class="td-hour hour">4</td>
-				        <td class="td-hour hour">5</td>
-				        <td class="td-hour hour">6</td>
-				        <td class="td-hour hour">7</td>
-				        <td class="td-hour hour">8</td>
-				        <td class="td-hour hour">9</td>
-				        <td class="td-hour hour">10</td>
-				        <td class="td-hour td-border-right hour">11</td>
-				        <td class="td-hour hour">12</td>
-				        <td class="td-hour hour">1</td>
-				        <td class="td-hour hour">2</td>
 				      </tr>
-				      <tr>
-				        <td class="td-drug-name td-border-right">Truvada (citrus twist tic tac)</td>
-				        <td class="td-hour td-clickable truvada"></td>
-				        <td class="td-hour td-clickable truvada"></td>
-				        <td class="td-hour td-clickable truvada"></td>
-				        <td class="td-hour td-clickable truvada"></td>
-				        <td class="td-hour td-clickable truvada"></td>
-				        <td class="td-hour td-border-right td-clickable truvada"></td>
-				        <td class="td-hour td-clickable truvada"></td>
-				        <td class="td-hour td-clickable truvada"></td>
-				        <td class="td-hour td-clickable truvada"></td>
-				        <td class="td-hour td-clickable truvada"></td>
-				        <td class="td-hour td-clickable td-clickable truvada"></td>
-				        <td class="td-hour td-clickable truvada"></td>
-				        <td class="td-hour td-clickable truvada"></td>
-				        <td class="td-hour td-clickable truvada"></td>
-				        <td class="td-hour td-clickable truvada"></td>
-				        <td class="td-hour td-clickable truvada"></td>
-				        <td class="td-hour td-clickable truvada"></td>
-				        <td class="td-hour td-border-right td-clickable truvada"></td>
-				        <td class="td-hour td-clickable truvada"></td>
-				        <td class="td-hour td-clickable truvada"></td>
-				        <td class="td-hour td-clickable truvada"></td>
-				      </tr>
-				      <tr>
-				        <td class="td-drug-name td-border-right">Reyataz (orange tic tac)</td>
-				        <td class="td-hour td-clickable reyataz"></td>
-				        <td class="td-hour td-clickable reyataz"></td>
-				        <td class="td-hour td-clickable reyataz"></td>
-				        <td class="td-hour td-clickable reyataz"></td>
-				        <td class="td-hour td-clickable reyataz"></td>
-				        <td class="td-hour td-border-right td-clickable reyataz"></td>
-				        <td class="td-hour td-clickable reyataz"></td>
-				        <td class="td-hour td-clickable reyataz"></td>
-				        <td class="td-hour td-clickable reyataz"></td>
-				        <td class="td-hour td-clickable reyataz"></td>
-				        <td class="td-hour td-clickable reyataz"></td>
-				        <td class="td-hour td-clickable reyataz"></td>
-				        <td class="td-hour td-clickable reyataz"></td>
-				        <td class="td-hour td-clickable reyataz"></td>
-				        <td class="td-hour td-clickable reyataz"></td>
-				        <td class="td-hour td-clickable reyataz"></td>
-				        <td class="td-hour td-clickable reyataz"></td>
-				        <td class="td-hour td-border-right td-clickable reyataz"></td>
-				        <td class="td-hour td-clickable reyataz"></td>
-				        <td class="td-hour td-clickable reyataz"></td>
-				        <td class="td-hour td-clickable reyataz"></td>
-				      </tr>
-				      <tr>
-				        <td class="td-drug-name td-border-right">Norvir (wintergreen tic tac)</td>
-				        <td class="td-hour td-clickable norvir"></td>
-				        <td class="td-hour td-clickable norvir"></td>
-				        <td class="td-hour td-clickable norvir"></td>
-				        <td class="td-hour td-clickable norvir"></td>
-				        <td class="td-hour td-clickable norvir"></td>
-				        <td class="td-hour td-border-right td-clickable norvir"></td>
-				        <td class="td-hour td-clickable norvir"></td>
-				        <td class="td-hour td-clickable norvir"></td>
-				        <td class="td-hour td-clickable norvir"></td>
-				        <td class="td-hour td-clickable norvir"></td>
-				        <td class="td-hour td-clickable norvir"></td>
-				        <td class="td-hour td-clickable norvir"></td>
-				        <td class="td-hour td-clickable norvir"></td>
-				        <td class="td-hour td-clickable norvir"></td>
-				        <td class="td-hour td-clickable norvir"></td>
-				        <td class="td-hour td-clickable norvir"></td>
-				        <td class="td-hour td-clickable norvir"></td>
-				        <td class="td-hour td-border-right td-clickable norvir"></td>
-				        <td class="td-hour td-clickable norvir"></td>
-				        <td class="td-hour td-clickable norvir"></td>
-				        <td class="td-hour td-clickable norvir"></td>
-				      </tr>
+				      <?php show_truvada_table(); ?>
+				      <?php show_reyataz_table(); ?>
+				      <?php show_norvir_table(); ?>
 				    </tbody>
 				  </table>
     		</div>
     		<div class="row text-center exercise-button-row">
-    			<div class="col-lg-4 col-lg-offset-2">
-    				<a href="#" class="btn btn-primary btn-lg btn-new-exercise" protocol='1'>New Exercise</a>
-    			</div>
-    			<div class="col-lg-4">
-    				<a href="#" class="btn btn-default btn-lg btn-continue-exercise" protocol='1'>Continue Exercise</a>
-    				<label>Already take this exercise?</label>
+    			<div class="col-lg-8 col-lg-offset-2 update-button">
+    				<?php show_update_button(1); ?>
     			</div>
     		</div>
     	</div>

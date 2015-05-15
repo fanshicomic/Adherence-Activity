@@ -24,6 +24,10 @@
     }
 }
 
+section {
+    padding-bottom: 30px;
+}
+
 .hour-check {
     cursor: pointer;
 }
@@ -36,9 +40,32 @@
     color: yellow;
 }
 
+.transparent {
+    color: rgba(0,0,0,0);
+}
+
+.td-clickable.hour-mark {
+    .on {
+        color: yellow;
+    } 
+    .off {
+        color: white;
+    }
+}
+
+.td-non-clickable.hour-mark {
+    color: yellow;
+}
+
 .exercise-1-body {
     background: #3498db;
     color: white;
+    .today {
+        color: #00fd4d;
+    }
+    .norvir {
+        border-bottom: 1px solid white;
+    }
 }
 
 .day-table {
@@ -46,6 +73,9 @@
     margin-top: 20px;
     .timeline {
         color: #BDC3C7;
+    }
+    .td-day {
+        cursor: pointer;
     }
 }
 
@@ -61,6 +91,7 @@
     padding-top: 0px;
     table {
         border-bottom: 1px solid white;
+        margin-bottom: 30px;
         .td-drug-name {
             width: 6%;
         }

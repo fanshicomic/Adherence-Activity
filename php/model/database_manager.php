@@ -77,14 +77,13 @@
         }
         return false;
     }
-    //------------------------------protocol-------------------------------------- 
+    //------------------------------PROTOCOL-------------------------------------- 
 
     function add_protocol_1($truvada, $reyataz, $norvir) {
         $p1_id = uniqid();
         $uid = get_user_id($_SESSION['uid']);
-        $date = date("Y-m-d");
         $query_protocol_1 = "INSERT INTO PROTOCOL_1 (P1ID, UID, TRUVADA_1, REYATAZ_1, NORVIR_1) VALUES ('$p1_id', '$uid', '$truvada', '$reyataz', '$norvir')";
-        $query_protocol_inst_1 = "INSERT INTO PROTOCOL_INSTANCE_1 (P1ID, DAY) VALUES ('$p1_id', '$date')";
+        $query_protocol_inst_1 = "INSERT INTO PROTOCOL_INSTANCE_1 (P1ID, DAY) VALUES ('$p1_id', 1), ('$p1_id', 2), ('$p1_id', 3), ('$p1_id', 4), ('$p1_id', 5), ('$p1_id', 6), ('$p1_id', 7)";
         $query_user = "UPDATE USER SET P1ID = '$p1_id' WHERE UID = '$uid'";
         $res = update_data($query_protocol_1) && update_data($query_protocol_inst_1) && update_data($query_user);
         return $res;
@@ -104,9 +103,8 @@
     function add_protocol_2($kaletra_1, $kaletra_2, $combivir_1, $combivir_2, $fuzeon_1, $fuzeon_2) {
         $p2_id = uniqid();
         $uid = get_user_id($_SESSION['uid']);
-        $date = date("Y-m-d");
         $query_protocol_2 = "INSERT INTO PROTOCOL_2 (P2ID, UID, KALETRA_1, KALETRA_2, COMBIVIR_1, COMBIVIR_2, FUZEON_1, FUZEON_2) VALUES ('$p2_id', '$uid', '$kaletra_1', '$kaletra_2', '$combivir_1', '$combivir_2', '$fuzeon_1', '$fuzeon_2')";
-        $query_protocol_inst_2 = "INSERT INTO PROTOCOL_INSTANCE_2 (P2ID, DAY) VALUES ('$p2_id', '$date')";
+        $query_protocol_inst_2 = "INSERT INTO PROTOCOL_INSTANCE_2 (P2ID, DAY) VALUES ('$p2_id', 1), ('$p2_id', 2), ('$p2_id', 3), ('$p2_id', 4), ('$p2_id', 5), ('$p2_id', 6), ('$p2_id', 7)";
         $query_user = "UPDATE USER SET P2ID = '$p2_id' WHERE UID = '$uid'";
         $res = update_data($query_protocol_2) && update_data($query_protocol_inst_2) && update_data($query_user);
         return $res;
@@ -126,9 +124,8 @@
     function add_protocol_3($atripla) {
         $p3_id = uniqid();
         $uid = get_user_id($_SESSION['uid']);
-        $date = date("Y-m-d");
         $query_protocol_3 = "INSERT INTO PROTOCOL_3 (P3ID, UID, ATRIPLA_1) VALUES ('$p3_id', '$uid', '$atripla')";
-        $query_protocol_inst_3 = "INSERT INTO PROTOCOL_INSTANCE_3 (P3ID, DAY) VALUES ('$p3_id', '$date')";
+        $query_protocol_inst_3 = "INSERT INTO PROTOCOL_INSTANCE_3 (P3ID, DAY) VALUES ('$p3_id', 1), ('$p3_id', 2), ('$p3_id', 3), ('$p3_id', 4), ('$p3_id', 5), ('$p3_id', 6), ('$p3_id', 7)";
         $query_user = "UPDATE USER SET P3ID = '$p3_id' WHERE UID = '$uid'";
         $res = update_data($query_protocol_3) && update_data($query_protocol_inst_3) && update_data($query_user);
         return $res;
@@ -145,4 +142,37 @@
         }
     }
 
+    function get_user_pid($protocol) {
+        $uid = get_user_id($_SESSION['uid']);
+        $query = "SELECT * FROM PROTOCOL_". $protocol ." WHERE UID = '$uid'";
+        $data = fetch_data($query);
+        return $data["P". $protocol . "ID"];
+    }
+    //---------------------------------EXERCISE----------------------------------
+    function is_checked($exercise, $day) {
+        $query = "SELECT DATE FROM PROTOCOL_INSTANCE_$exercise WHERE DAY = $day";
+        $res = fetch_data($query);
+        $date = $res['DATE'];
+        return $date !== NULL;
+    }
+
+    function get_date($exercise, $day) {
+        $query = "SELECT DATE FROM PROTOCOL_INSTANCE_$exercise WHERE DAY = $day";
+        $res = fetch_data($query);
+        $date = $res['DATE'];
+        return $date;
+    }
+
+    function is_day_updated($exercise, $day) {
+        $date = get_date($exercise, $day);
+        return $date !== NULL;
+    }
+
+    function add_exercise_1($day, $truvada, $reyataz, $norvir) {
+        $pid = get_user_pid(1);
+        $date = date("Y-m-d");
+        $query = "UPDATE PROTOCOL_INSTANCE_1 SET DATE = '$date', TRUVADA_1 = '$truvada', REYATAZ_1 = '$reyataz', NORVIR_1 = '$norvir' WHERE P1ID = '$pid' AND DAY = $day";
+        $res = update_data($query);
+        return $res;
+    }
 ?>

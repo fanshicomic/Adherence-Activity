@@ -1,7 +1,9 @@
 <?php
 	require_once ($_SERVER['DOCUMENT_ROOT'] .'/pharmacy/project1/config.php');
 	
-	session_start();
+	if (session_status() == PHP_SESSION_NONE) {
+	    session_start();
+	}
 
 	$db = new mysqli(db_host, db_uid, db_pwd, db_name);
 	if ($db->connect_errno) 

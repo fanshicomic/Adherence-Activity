@@ -91,7 +91,7 @@
 				    </thead>
 				    <tbody class="schedule-tbody">
 				      <tr>
-				        <td class="td-drug-name td-border-right houc">Drug Name</td>
+				        <td class="td-drug-name td-border-right hour">Drug Name</td>
 				        <td class="td-hour hour">6</td>
 				        <td class="td-hour hour">7</td>
 				        <td class="td-hour hour">8</td>
@@ -99,18 +99,18 @@
 				        <td class="td-hour hour">10</td>
 				        <td class="td-hour td-border-right hour">11</td>
 				        <td class="td-hour hour">12</td>
-				        <td class="td-hour hour">1</td>
-				        <td class="td-hour hour">2</td>
-				        <td class="td-hour hour">3</td>
-				        <td class="td-hour hour">4</td>
-				        <td class="td-hour hour">5</td>
-				        <td class="td-hour hour">6</td>
-				        <td class="td-hour hour">7</td>
-				        <td class="td-hour hour">8</td>
-				        <td class="td-hour hour">9</td>
-				        <td class="td-hour hour">10</td>
-				        <td class="td-hour td-border-right hour">11</td>
-				        <td class="td-hour hour">12</td>
+				        <td class="td-hour hour">13</td>
+				        <td class="td-hour hour">14</td>
+				        <td class="td-hour hour">15</td>
+				        <td class="td-hour hour">16</td>
+				        <td class="td-hour hour">17</td>
+				        <td class="td-hour hour">18</td>
+				        <td class="td-hour hour">19</td>
+				        <td class="td-hour hour">20</td>
+				        <td class="td-hour hour">21</td>
+				        <td class="td-hour hour">22</td>
+				        <td class="td-hour td-border-right hour">23</td>
+				        <td class="td-hour hour">0</td>
 				        <td class="td-hour hour">1</td>
 				        <td class="td-hour hour">2</td>
 				      </tr>
@@ -126,7 +126,7 @@
 				        <td class="td-hour td-clickable kaletra"></td>
 				        <td class="td-hour td-clickable kaletra"></td>
 				        <td class="td-hour td-clickable kaletra"></td>
-				        <td class="td-hour td-clickable td-clickable kaletra"></td>
+				        <td class="td-hour td-clickablekaletra"></td>
 				        <td class="td-hour td-clickable kaletra"></td>
 				        <td class="td-hour td-clickable kaletra"></td>
 				        <td class="td-hour td-clickable kaletra"></td>
