@@ -66,6 +66,23 @@ section {
     .norvir {
         border-bottom: 1px solid white;
     }
+    .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+        background-color: #2980b9;
+    }
+}
+
+.exercise-2-body {
+    background: #2ECC71;
+    color: white;
+    .today {
+        color: #00fd4d;
+    }
+    .fuzeon {
+        border-bottom: 1px solid white;
+    }
+    .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+        background-color: #27AE60;
+    }
 }
 
 .day-table {

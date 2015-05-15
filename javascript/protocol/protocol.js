@@ -284,6 +284,7 @@ function save_schedule(protocol) {
 }
 
 function continue_exercise(btn) {
+	var protocol = $(btn).attr('protocol');
 	var res;
 	$.ajax({
 		async	: false,
@@ -295,14 +296,29 @@ function continue_exercise(btn) {
     			res = true;
     		} else {
     			res = false;
+    			window.location.href='signin.php';
     		}
 		}
 	});
 	if (res) {
-		var protocol = $(btn).attr('protocol');
-		window.location.href='exercise_' + protocol + '.php';
-	} else {
-		window.location.href='signin.php';
+		$.ajax({
+			async	: false,
+			type	:'POST', 
+	    	url		: "/pharmacy/project1/php/model/protocol_manager.php",
+	    	data    : {command : 'can_continue',
+	    				protocol : protocol},
+	    	success	: function(data) {
+	    		if (data == 1) {
+	    			var protocol = $(btn).attr('protocol');
+					window.location.href='exercise_' + protocol + '.php';
+	    		} else {
+	    			swal("Sorry", 
+	    							"Please plan your schedule first", 
+	    						"error"); 
+	    		}
+			}
+		});
+		
 	}
 }
 

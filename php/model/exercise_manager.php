@@ -31,18 +31,18 @@
 			$combivir_2 = secureString($_REQUEST['combivir_2']);
 			$fuzeon_1 = secureString($_REQUEST['fuzeon_1']);
 			$fuzeon_2 = secureString($_REQUEST['fuzeon_2']);
-			$existed = exist_exercise_2();
-			if (!$existed) {
-				$res = add_exercise_2($kaletra_1, $kaletra_2, $combivir_1, $combivir_2, $fuzeon_1, $fuzeon_2);
-				echo true;
+			$checked = is_day_updated($exercise, $day);
+			if (!$checked) {
+				$res = add_exercise_2($day, $kaletra_1, $kaletra_2, $combivir_1, $combivir_2, $fuzeon_1, $fuzeon_2);
+				echo $res;
 			} else {
 				echo false;
 			}
 		} else if ($exercise == 3) {
 			$atripla = secureString($_REQUEST['atripla']);
-			$existed = exist_exercise_3();
-			if (!$existed) {
-				$res = add_exercise_3($atripla);
+			$checked = is_day_updated($exercise, $day);
+			if (!$checked) {
+				$res = add_exercise_3($day, $atripla);
 				echo true;
 			} else {
 				echo false;
@@ -50,6 +50,12 @@
 		} else {
 			echo false;
 		}
+	}
+
+	if ($command == "get_day") {
+		$exercise = secureString($_REQUEST['exercise']);
+		$day = $_SESSION['E' . $exercise];
+		echo $day;
 	}
 
 	if ($command == "change_day") {

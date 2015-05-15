@@ -56,4 +56,17 @@
 		}
 	}
 
+	if($command == 'can_continue') {
+		$protocol = secureString($_REQUEST['protocol']);
+		if ($protocol == 1) {
+			echo exist_protocol_1();
+		} else if ($protocol == 2) {
+			echo exist_protocol_2();
+		} else if ($protocol == 3) {
+			echo exist_protocol_3();
+		} else {
+			echo false;
+		}
+	}
+
 ?>

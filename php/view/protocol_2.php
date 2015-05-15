@@ -126,7 +126,7 @@
 				        <td class="td-hour td-clickable kaletra"></td>
 				        <td class="td-hour td-clickable kaletra"></td>
 				        <td class="td-hour td-clickable kaletra"></td>
-				        <td class="td-hour td-clickablekaletra"></td>
+				        <td class="td-hour td-clickable kaletra"></td>
 				        <td class="td-hour td-clickable kaletra"></td>
 				        <td class="td-hour td-clickable kaletra"></td>
 				        <td class="td-hour td-clickable kaletra"></td>

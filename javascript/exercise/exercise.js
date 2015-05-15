@@ -12,7 +12,25 @@ $(function() {
 	$('.td-day').click(function() {
 		change_day(this);
 	});
+	var e = $('#schedule-table').attr('exercise');
+	console.log(e);
+	change_day_attr(e, get_day(e));
 });
+
+function get_day(exercise) {
+	var res;
+	$.ajax({
+			async	: false,
+			type	:'POST', 
+	    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+	    	data    : {	command : 'get_day',
+	    				exercise: exercise},
+	    	success	: function(data) {
+	    		res = data;
+			}
+		});
+	return res;
+}
 
 function toggle_check(check) {
 	if ($(check).hasClass('off')) {
@@ -29,6 +47,8 @@ function toggle_check(check) {
 function update_exercise(btn) {
 	var exercise = $(btn).attr('exercise');
 	var day = $(btn).attr('day');
+	console.log(exercise);
+	console.log(day);
 	if (is_drug_number_correct(exercise)) {
 		swal({   
 		    title: "Update Confirmation",   
@@ -97,19 +117,20 @@ function save_exercise(exercise, day) {
 	    		}
 			}
 		});
-	} else if (protocol == '2') {
-		var kaletra_1 = $('.hour').eq($($('.kaletra .on')[0]).parent().index()).html();
-		var kaletra_2 = $('.hour').eq($($('.kaletra .on')[1]).parent().index()).html();
-		var combivir_1 = $('.hour').eq($($('.combivir .on')[0]).parent().index()).html();
-		var combivir_2 = $('.hour').eq($($('.combivir .on')[1]).parent().index()).html();
-		var fuzeon_1 = $('.hour').eq($($('.fuzeon .on')[0]).parent().index()).html();
-		var fuzeon_2 = $('.hour').eq($($('.fuzeon .on')[1]).parent().index()).html();
+	} else if (exercise == '2') {
+		var kaletra_1 = get_drug_taken_hour('kaletra', 0);
+		var kaletra_2 = get_drug_taken_hour('kaletra', 1);
+		var combivir_1 = get_drug_taken_hour('combivir', 0);
+		var combivir_2 = get_drug_taken_hour('combivir', 1);
+		var fuzeon_1 = get_drug_taken_hour('fuzeon', 0);
+		var fuzeon_2 = get_drug_taken_hour('fuzeon', 1);
 		$.ajax({
 			async	: false,
 			type	:'POST', 
-	    	url		: "/pharmacy/project1/php/model/protocol_manager.php",
-	    	data    : {	command : 'save_schedule',
-	    				protocol: protocol,
+	    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+	    	data    : {	command : 'save_exercise',
+	    				exercise: exercise,
+	    					day	: day,
 	    			   	kaletra_1 : kaletra_1,
 	    			   	kaletra_2 : kaletra_2,
 	    			   	combivir_1 : combivir_1,
@@ -118,82 +139,27 @@ function save_exercise(exercise, day) {
 	    			   	fuzeon_2 : fuzeon_2},
 	    	success	: function(data) {
 	    		if (data == 1) {
-	    			// swal("Success!", "Your schedule for this protocol has been saved!", "success");
-	    			swal({   
-	    				title: "Success!",   
-	    				text: "Your schedule for this protocol has been saved!",   
-	    				type: "success",   
-	    				confirmButtonColor: "#DD6B55",   
-	    				confirmButtonText: "OK",   
-	    				closeOnConfirm: false }, 
-	    				function(){
-	    					window.location.href = '/pharmacy/project1/php/view/exercise_2.php';
-	    				});
+	    			swal("Success!", "Your table has been saved!", "success");
 	    		} else {
-	    			swal({   
-	    				title: "Oops...",   
-	    				text: "You have already taken this exercise, would you like to continue?",   
-	    				type: "warning",   
-	    				showCancelButton: true,   
-	    				confirmButtonColor: "#DD6B55",   
-	    				confirmButtonText: "Bring me to my exercise",   
-	    				cancelButtonText: "No, thanks",   
-	    				closeOnConfirm: false,   
-	    				closeOnCancel: false }, 
-	    				function(isConfirm){   
-	    					if (isConfirm) {     
-	    						 
-	    					} else {     
-	    						swal("Cancelled", 
-	    							"The action has been cancelled", 
-	    						"error");   
-	    					} 
-	    				});
-	    		}
+	    			sweetAlert("Oops...", "Something in database went wrong!", "error");
+	    		}	
 			}
 		});
-	} else if (protocol == '3') {
-		var atripla = $('.hour').eq($('.atripla .on').parent().index()).html();
+	} else if (exercise == '3') {
+		var atripla = get_drug_taken_hour('atripla', 0);
 		$.ajax({
 			async	: false,
 			type	:'POST', 
-	    	url		: "/pharmacy/project1/php/model/protocol_manager.php",
-	    	data    : {	command : 'save_schedule',
-	    				protocol: protocol,
+	    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+	    	data    : {	command : 'save_exercise',
+	    				exercise: exercise,
 	    			   	atripla : atripla},
 	    	success	: function(data) {
 	    		if (data == 1) {
-	    			// swal("Success!", "Your schedule for this protocol has been saved!", "success");
-	    			swal({   
-	    				title: "Success!",   
-	    				text: "Your schedule for this protocol has been saved!",   
-	    				type: "success",   
-	    				confirmButtonColor: "#DD6B55",   
-	    				confirmButtonText: "OK",   
-	    				closeOnConfirm: false }, 
-	    				function(){
-	    					window.location.href = '/pharmacy/project1/php/view/exercise_3.php';
-	    				});
+	    			swal("Success!", "Your table has been saved!", "success");
 	    		} else {
-	    			swal({   
-	    				title: "Oops...",   
-	    				text: "You have already taken this exercise, would you like to continue?",   
-	    				type: "warning",   
-	    				showCancelButton: true,   
-	    				confirmButtonColor: "#DD6B55",   
-	    				confirmButtonText: "Bring me to my exercise",   
-	    				cancelButtonText: "No, thanks",   
-	    				closeOnConfirm: false,   
-	    				closeOnCancel: false }, 
-	    				function(isConfirm){   
-	    					if (isConfirm) {     
-	    						 
-	    					} else {     
-	    						swal("Cancelled", 
-	    							"The action has been cancelled", 
-	    						"error");   
-	    					} 
-	    				});
+	    			console.log(data);
+	    			sweetAlert("Oops...", "Something in database went wrong!", "error");
 	    		}
 			}
 		});
@@ -221,7 +187,7 @@ function change_day(btn) {
     			  exercise : exercise,
     				   day : day},
     	success	: function(data) {
-    		change_day_attr(day);
+    		change_day_attr(exercise, day);
     		change_day_table();
     		change_exercise_table();
     		change_update_button();
@@ -229,8 +195,8 @@ function change_day(btn) {
 	});
 }
 
-function change_day_attr(day) {
-	$('.exercise-1-body').attr('day', day);
+function change_day_attr(exercise, day) {
+	$('.exercise-'+ exercise+ '-body').attr('day', day);
 	$('#schedule-table').attr('day', day);
 }
 

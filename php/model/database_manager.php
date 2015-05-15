@@ -171,7 +171,24 @@
     function add_exercise_1($day, $truvada, $reyataz, $norvir) {
         $pid = get_user_pid(1);
         $date = date("Y-m-d");
-        $query = "UPDATE PROTOCOL_INSTANCE_1 SET DATE = '$date', TRUVADA_1 = '$truvada', REYATAZ_1 = '$reyataz', NORVIR_1 = '$norvir' WHERE P1ID = '$pid' AND DAY = $day";
+        $query = "UPDATE PROTOCOL_INSTANCE_1 SET DATE = '$date', TRUVADA_1 = " .$truvada. ", REYATAZ_1 = " .$reyataz.", NORVIR_1 = ".$norvir." WHERE P1ID = '$pid' AND DAY = $day";
+        $res = update_data($query);
+        return $res;
+    }
+
+    function add_exercise_2($day, $kaletra_1, $kaletra_2, $combivir_1, $combivir_2, $fuzeon_1, $fuzeon_2) {
+        $pid = get_user_pid(2);
+        $date = date("Y-m-d");
+        $query = "UPDATE PROTOCOL_INSTANCE_2 SET DATE = '$date', KALETRA_1 = ".$kaletra_1.", KALETRA_2 = ".$kaletra_2.", COMBIVIR_1 = ".$combivir_1.", COMBIVIR_2 = ".$combivir_2.", FUZEON_1 = ".$fuzeon_1.", FUZEON_2 = ".$fuzeon_2." WHERE P2ID = '$pid' AND DAY = $day";
+        echo $query;
+        $res = update_data($query);
+        return $res;
+    }
+
+    function add_exercise_3($day, $atripla) {
+        $pid = get_user_pid(3);
+        $date = date("Y-m-d");
+        $query = "UPDATE PROTOCOL_INSTANCE_3 SET DATE = '$date', ATRIPLA_1 = '$atripla' WHERE P3ID = '$pid' AND DAY = $day";
         $res = update_data($query);
         return $res;
     }

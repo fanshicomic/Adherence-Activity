@@ -5,13 +5,21 @@
 		if (has_exercise($exercise)) {
 			check_day($exercise);
 		} else {
-			header("Location: /pharmacy/project1/php/view/protocol_1.php");
+			header("Location: /pharmacy/project1/php/view/protocol_".$exercise,".php");
 		}
 	}
 
 	function has_exercise($exercise) {
 		if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
-			return exist_protocol_1();
+			if($exercise == 1) {
+				return exist_protocol_1();
+			} else if ($exercise == 2) {
+				return exist_protocol_2();
+			} else if ($exercise == 3) {
+				return exist_protocol_3();
+			} else {
+
+			}
 		} else {
 			return false;
 		}
@@ -275,6 +283,225 @@
 
 	function show_norvir_table() {
 		echo get_norvir_table();
+	}
+
+	function get_kaletra_table() {
+		$uid = secureString($_SESSION['uid']);
+		$p2_id = get_user_pid(2);
+		if (is_day_updated(2, $_SESSION['E2'])) {
+			$query1 = "SELECT KALETRA_1 FROM PROTOCOL_INSTANCE_2 WHERE P2ID = '$p2_id' AND DAY = ".$_SESSION['E2'];
+			$res1 = fetch_data($query1);
+			$hour1 = $res1['KALETRA_1'];
+			$query2 = "SELECT KALETRA_2 FROM PROTOCOL_INSTANCE_2 WHERE P2ID = '$p2_id' AND DAY = ".$_SESSION['E2'];
+			$res2 = fetch_data($query2);
+			$hour2 = $res2['KALETRA_2'];
+			$table = '<tr><td class="td-drug-name td-border-right">Kaletra (spearmints tic tac)</td>';
+			for ($i = 6; $i < 24; $i++) {
+				if ($i == $hour1 || $i == $hour2) {
+					if ($i == 11 || $i == 23) {
+						$table = $table . '<td class="td-hour td-border-right td-non-clickable hour-mark kaletra"></td>';
+					} else {
+						$table = $table . '<td class="td-hour td-non-clickable hour-mark kaletra"></td>';
+					}
+				} else {
+					if ($i == 11 || $i == 23) {
+						$table = $table . '<td class="td-hour td-border-right td-non-clickable kaletra"></td>';
+					} else {
+						$table = $table . '<td class="td-hour td-non-clickable kaletra"></td>';
+					}
+				}
+			}
+			for ($i = 0; $i < 3; $i++) {
+				if ($i == $hour1 || $i == $hour2) {
+					$table = $table . '<td class="td-hour td-non-clickable hour-mark kaletra"></td>';
+				} else {
+					$table = $table . '<td class="td-hour td-non-clickable kaletra"></td>';
+				}
+			}
+			$table = $table . '<tr>';
+		} else {
+			$query1 = "SELECT KALETRA_1 FROM PROTOCOL_2 WHERE P2ID = '$p2_id'";
+			$res1 = fetch_data($query1);
+			$hour1 = $res1['KALETRA_1'];
+			$query2 = "SELECT KALETRA_2 FROM PROTOCOL_2 WHERE P2ID = '$p2_id'";
+			$res2 = fetch_data($query2);
+			$hour2 = $res2['KALETRA_2'];
+			$table = '<tr><td class="td-drug-name td-border-right">Kaletra (spearmints tic tac)</td>';
+			for ($i = 6; $i < 24; $i++) {
+				if ($i == $hour1 || $i == $hour2) {
+					if ($i == 11 || $i == 23) {
+						$table = $table . '<td class="td-hour td-border-right td-clickable hour-mark kaletra"></td>';
+					} else {
+						$table = $table . '<td class="td-hour td-clickable hour-mark kaletra"></td>';
+					}
+				} else {
+					if ($i == 11 || $i == 23) {
+						$table = $table . '<td class="td-hour td-border-right td-clickable kaletra"></td>';
+					} else {
+						$table = $table . '<td class="td-hour td-clickable kaletra"></td>';
+					}
+				}
+			}
+			for ($i = 0; $i < 3; $i++) {
+				if ($i == $hour1 || $i == $hour2) {
+					$table = $table . '<td class="td-hour td-clickable hour-mark kaletra"></td>';
+				} else {
+					$table = $table . '<td class="td-hour td-clickable kaletra"></td>';
+				}
+			}
+			$table = $table . '<tr>';
+		}
+		return $table;
+	}
+
+	function show_kaletra_table() {
+		echo get_kaletra_table();
+	}
+
+	function get_combivir_table() {
+		$uid = secureString($_SESSION['uid']);
+		$p2_id = get_user_pid(2);
+		if (is_day_updated(2, $_SESSION['E2'])) {
+			$query1 = "SELECT COMBIVIR_1 FROM PROTOCOL_INSTANCE_2 WHERE P2ID = '$p2_id' AND DAY = ".$_SESSION['E2'];
+			$res1 = fetch_data($query1);
+			$hour1 = $res1['COMBIVIR_1'];
+			$query2 = "SELECT COMBIVIR_2 FROM PROTOCOL_INSTANCE_2 WHERE P2ID = '$p2_id' AND DAY = ".$_SESSION['E2'];
+			$res2 = fetch_data($query2);
+			$hour2 = $res2['COMBIVIR_2'];
+			$table = '<tr><td class="td-drug-name td-border-right">Combivir (cinnamon tic tac)</td>';
+			for ($i = 6; $i < 24; $i++) {
+				if ($i == $hour1 || $i == $hour2) {
+					if ($i == 11 || $i == 23) {
+						$table = $table . '<td class="td-hour td-border-right td-non-clickable hour-mark combivir"></td>';
+					} else {
+						$table = $table . '<td class="td-hour td-non-clickable hour-mark combivir"></td>';
+					}
+				} else {
+					if ($i == 11 || $i == 23) {
+						$table = $table . '<td class="td-hour td-border-right td-non-clickable combivir"></td>';
+					} else {
+						$table = $table . '<td class="td-hour td-non-clickable combivir"></td>';
+					}
+				}
+			}
+			for ($i = 0; $i < 3; $i++) {
+				if ($i == $hour1 || $i == $hour2) {
+					$table = $table . '<td class="td-hour td-non-clickable hour-mark combivir"></td>';
+				} else {
+					$table = $table . '<td class="td-hour td-non-clickable combivir"></td>';
+				}
+			}
+			$table = $table . '<tr>';
+		} else {
+			$query1 = "SELECT COMBIVIR_1 FROM PROTOCOL_2 WHERE P2ID = '$p2_id'";
+			$res1 = fetch_data($query1);
+			$hour1 = $res1['COMBIVIR_1'];
+			$query2 = "SELECT COMBIVIR_2 FROM PROTOCOL_2 WHERE P2ID = '$p2_id'";
+			$res2 = fetch_data($query2);
+			$hour2 = $res2['COMBIVIR_2'];
+			$table = '<tr><td class="td-drug-name td-border-right">Combivir  (cinnamon tic tac)</td>';
+			for ($i = 6; $i < 24; $i++) {
+				if ($i == $hour1 || $i == $hour2) {
+					if ($i == 11 || $i == 23) {
+						$table = $table . '<td class="td-hour td-border-right td-clickable hour-mark combivir"></td>';
+					} else {
+						$table = $table . '<td class="td-hour td-clickable hour-mark combivir"></td>';
+					}
+				} else {
+					if ($i == 11 || $i == 23) {
+						$table = $table . '<td class="td-hour td-border-right td-clickable combivir"></td>';
+					} else {
+						$table = $table . '<td class="td-hour td-clickable combivir"></td>';
+					}
+				}
+			}
+			for ($i = 0; $i < 3; $i++) {
+				if ($i == $hour1 || $i == $hour2) {
+					$table = $table . '<td class="td-hour td-clickable hour-mark combivir"></td>';
+				} else {
+					$table = $table . '<td class="td-hour td-clickable combivir"></td>';
+				}
+			}
+			$table = $table . '<tr>';
+		}
+		return $table;
+	}
+
+	function show_combivir_table() {
+		echo get_combivir_table();
+	}
+
+	function get_fuzeon_table() {
+		$uid = secureString($_SESSION['uid']);
+		$p2_id = get_user_pid(2);
+		if (is_day_updated(2, $_SESSION['E2'])) {
+			$query1 = "SELECT FUZEON_1 FROM PROTOCOL_INSTANCE_2 WHERE P2ID = '$p2_id' AND DAY = ".$_SESSION['E2'];
+			$res1 = fetch_data($query1);
+			$hour1 = $res1['FUZEON_1'];
+			$query2 = "SELECT FUZEON_2 FROM PROTOCOL_INSTANCE_2 WHERE P2ID = '$p2_id' AND DAY = ".$_SESSION['E2'];
+			$res2 = fetch_data($query2);
+			$hour2 = $res2['FUZEON_2'];
+			$table = '<tr><td class="td-drug-name td-border-right fuzeon">Fuzeon (Kool-Aid)</td>';
+			for ($i = 6; $i < 24; $i++) {
+				if ($i == $hour1 || $i == $hour2) {
+					if ($i == 11 || $i == 23) {
+						$table = $table . '<td class="td-hour td-border-right td-non-clickable hour-mark fuzeon"></td>';
+					} else {
+						$table = $table . '<td class="td-hour td-non-clickable hour-mark fuzeon"></td>';
+					}
+				} else {
+					if ($i == 11 || $i == 23) {
+						$table = $table . '<td class="td-hour td-border-right td-non-clickable fuzeon"></td>';
+					} else {
+						$table = $table . '<td class="td-hour td-non-clickable fuzeon"></td>';
+					}
+				}
+			}
+			for ($i = 0; $i < 3; $i++) {
+				if ($i == $hour1 || $i == $hour2) {
+					$table = $table . '<td class="td-hour td-non-clickable hour-mark fuzeon"></td>';
+				} else {
+					$table = $table . '<td class="td-hour td-non-clickable fuzeon"></td>';
+				}
+			}
+			$table = $table . '<tr>';
+		} else {
+			$query1 = "SELECT FUZEON_1 FROM PROTOCOL_2 WHERE P2ID = '$p2_id'";
+			$res1 = fetch_data($query1);
+			$hour1 = $res1['FUZEON_1'];
+			$query2 = "SELECT FUZEON_2 FROM PROTOCOL_2 WHERE P2ID = '$p2_id'";
+			$res2 = fetch_data($query2);
+			$hour2 = $res2['FUZEON_2'];
+			$table = '<tr><td class="td-drug-name td-border-right fuzeon">Fuzeon (Kool-Aid)</td>';
+			for ($i = 6; $i < 24; $i++) {
+				if ($i == $hour1 || $i == $hour2) {
+					if ($i == 11 || $i == 23) {
+						$table = $table . '<td class="td-hour td-border-right td-clickable hour-mark fuzeon"></td>';
+					} else {
+						$table = $table . '<td class="td-hour td-clickable hour-mark fuzeon"></td>';
+					}
+				} else {
+					if ($i == 11 || $i == 23) {
+						$table = $table . '<td class="td-hour td-border-right td-clickable fuzeon"></td>';
+					} else {
+						$table = $table . '<td class="td-hour td-clickable fuzeon"></td>';
+					}
+				}
+			}
+			for ($i = 0; $i < 3; $i++) {
+				if ($i == $hour1 || $i == $hour2) {
+					$table = $table . '<td class="td-hour td-clickable hour-mark fuzeon"></td>';
+				} else {
+					$table = $table . '<td class="td-hour td-clickable fuzeon"></td>';
+				}
+			}
+			$table = $table . '<tr>';
+		}
+		return $table;
+	}
+
+	function show_fuzeon_table() {
+		echo get_fuzeon_table();
 	}	
 
 	function show_update_button($exercise) {
@@ -282,14 +509,13 @@
 		if (is_checked($exercise, $current)) {
 			echo '';
 		} else {
-			$btn = '<a href="#" class="btn btn-primary btn-lg btn-update-exercise" exercise="1" day='.$current.'>Update</a>';
+			$btn = '<a href="#" class="btn btn-primary btn-lg btn-update-exercise" exercise='.$exercise.' day='.$current.'>Update</a>';
 			echo $btn;
 		}
 	}
 
 	function show_exercise_table($exercise) {
-		if ($exercise == 1) {
-			$table = '<tr>';
+		$table = '<tr>';
 			$table = $table .'<td class="td-drug-name td-border-right hour">Drug Name</td>';
 			$table = $table .'<td class="td-hour hour">6</td>';
 			$table = $table .'<td class="td-hour hour">7</td>';
@@ -312,11 +538,14 @@
 			$table = $table .'<td class="td-hour hour">0</td>';
 			$table = $table .'<td class="td-hour hour">1</td>';
 			$table = $table .'<td class="td-hour hour">2</td></tr>';
+		if ($exercise == 1) {	
 			$table = $table . get_truvada_table();
 			$table = $table . get_reyataz_table();
 			$table = $table . get_norvir_table();
-		} else if (true) {
-
+		} else if ($exercise == 2) {
+			$table = $table . get_kaletra_table();
+			$table = $table . get_combivir_table();
+			$table = $table . get_fuzeon_table();
 		} else {
 
 		}
