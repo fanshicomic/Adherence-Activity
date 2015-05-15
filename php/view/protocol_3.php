@@ -113,7 +113,7 @@
 				        <td class="td-hour hour">2</td>
 				      </tr>
 				      <tr>
-				        <td class="td-drug-name td-border-right">Atripla (orange tatripla</td>
+				        <td class="td-drug-name td-border-right">Atripla (orange tic tac)</td>
 				        <td class="td-hour td-clickable atripla"></td>
 				        <td class="td-hour td-clickable atripla"></td>
 				        <td class="td-hour td-clickable atripla"></td>

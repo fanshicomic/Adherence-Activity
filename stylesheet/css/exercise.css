@@ -74,60 +74,78 @@ section {
 }
 
 /* line 88, ../sass/exercise.scss */
+.exercise-3-body {
+  background: #E67E22;
+  color: white;
+}
+/* line 91, ../sass/exercise.scss */
+.exercise-3-body .today {
+  color: #00fd4d;
+}
+/* line 94, ../sass/exercise.scss */
+.exercise-3-body .atripla {
+  border-bottom: 1px solid white;
+}
+/* line 97, ../sass/exercise.scss */
+.exercise-3-body .table-hover tbody tr:hover td, .exercise-3-body .table-hover tbody tr:hover th {
+  background-color: #D35400;
+}
+
+/* line 102, ../sass/exercise.scss */
 .day-table {
   width: 100%;
   margin-top: 20px;
 }
-/* line 91, ../sass/exercise.scss */
+/* line 105, ../sass/exercise.scss */
 .day-table .timeline {
   color: #BDC3C7;
 }
-/* line 94, ../sass/exercise.scss */
+/* line 108, ../sass/exercise.scss */
 .day-table .td-day {
   cursor: pointer;
 }
 
-/* line 99, ../sass/exercise.scss */
+/* line 113, ../sass/exercise.scss */
 .checked {
   color: yellow;
 }
 
-/* line 103, ../sass/exercise.scss */
+/* line 117, ../sass/exercise.scss */
 .non-checked {
   color: #BDC3C7;
 }
 
-/* line 107, ../sass/exercise.scss */
+/* line 121, ../sass/exercise.scss */
 #schedule-table {
   padding-top: 0px;
 }
-/* line 109, ../sass/exercise.scss */
+/* line 123, ../sass/exercise.scss */
 #schedule-table table {
   border-bottom: 1px solid white;
   margin-bottom: 30px;
 }
-/* line 112, ../sass/exercise.scss */
+/* line 126, ../sass/exercise.scss */
 #schedule-table table .td-drug-name {
   width: 6%;
 }
-/* line 115, ../sass/exercise.scss */
+/* line 129, ../sass/exercise.scss */
 #schedule-table table .td-hour {
   width: 0.5%;
 }
-/* line 118, ../sass/exercise.scss */
+/* line 132, ../sass/exercise.scss */
 #schedule-table table .td-border-right {
   border-right: 1px solid white;
 }
-/* line 122, ../sass/exercise.scss */
+/* line 136, ../sass/exercise.scss */
 #schedule-table table th {
   text-align: center;
 }
-/* line 125, ../sass/exercise.scss */
+/* line 139, ../sass/exercise.scss */
 #schedule-table table td {
   text-align: center;
 }
 
-/* line 130, ../sass/exercise.scss */
+/* line 144, ../sass/exercise.scss */
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
   background-color: #2980b9;
 }

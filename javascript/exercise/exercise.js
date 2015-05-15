@@ -13,7 +13,6 @@ $(function() {
 		change_day(this);
 	});
 	var e = $('#schedule-table').attr('exercise');
-	console.log(e);
 	change_day_attr(e, get_day(e));
 });
 
@@ -47,8 +46,6 @@ function toggle_check(check) {
 function update_exercise(btn) {
 	var exercise = $(btn).attr('exercise');
 	var day = $(btn).attr('day');
-	console.log(exercise);
-	console.log(day);
 	if (is_drug_number_correct(exercise)) {
 		swal({   
 		    title: "Update Confirmation",   
@@ -112,7 +109,6 @@ function save_exercise(exercise, day) {
 	    		if (data == 1) {
 	    			swal("Success!", "Your table has been saved!", "success");
 	    		} else {
-	    			console.log(data);
 	    			sweetAlert("Oops...", "Something in database went wrong!", "error");
 	    		}
 			}
@@ -153,6 +149,7 @@ function save_exercise(exercise, day) {
 	    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
 	    	data    : {	command : 'save_exercise',
 	    				exercise: exercise,
+	    					day	: day,
 	    			   	atripla : atripla},
 	    	success	: function(data) {
 	    		if (data == 1) {
@@ -172,7 +169,7 @@ function get_drug_taken_hour(drug, number) {
 	if ($($('.' + drug + ' .on')[number]).parent().index() != -1) {
 		return $('.hour').eq($($('.' + drug + ' .on')[number]).parent().index()).html();
 	} else {
-		return null;
+		return -1;
 	}
 }
 

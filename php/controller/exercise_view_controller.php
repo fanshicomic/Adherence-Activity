@@ -92,6 +92,7 @@
 			$query = "SELECT TRUVADA_1 FROM PROTOCOL_INSTANCE_1 WHERE P1ID = '$p1_id' AND DAY = ".$_SESSION['E1'];
 			$res = fetch_data($query);
 			$hour = $res['TRUVADA_1'];
+			$hour = $hour === NULL ? -1 : $hour;
 			$table = '<tr><td class="td-drug-name td-border-right">Truvada (citrus twist tic tac)</td>';
 			for ($i = 6; $i < 24; $i++) {
 				if ($i == $hour) {
@@ -162,6 +163,7 @@
 			$query = "SELECT REYATAZ_1 FROM PROTOCOL_INSTANCE_1 WHERE P1ID = '$p1_id' AND DAY = ".$_SESSION['E1'];
 			$res = fetch_data($query);
 			$hour = $res['REYATAZ_1'];
+			$hour = $hour === NULL ? -1 : $hour;
 			$table = '<tr><td class="td-drug-name td-border-right">Reyataz (orange tic tac)</td>';
 			for ($i = 6; $i < 24; $i++) {
 				if ($i == $hour) {
@@ -229,6 +231,7 @@
 			$query = "SELECT NORVIR_1 FROM PROTOCOL_INSTANCE_1 WHERE P1ID = '$p1_id' AND DAY = ".$_SESSION['E1'];
 			$res = fetch_data($query);
 			$hour = $res['NORVIR_1'];
+			$hour = $hour === NULL ? -1 : $hour;
 			$table = '<tr><td class="td-drug-name td-border-right norvir">Norvir (wintergreen tic tac)</td>';
 			for ($i = 6; $i < 24; $i++) {
 				if ($i == $hour) {
@@ -292,9 +295,11 @@
 			$query1 = "SELECT KALETRA_1 FROM PROTOCOL_INSTANCE_2 WHERE P2ID = '$p2_id' AND DAY = ".$_SESSION['E2'];
 			$res1 = fetch_data($query1);
 			$hour1 = $res1['KALETRA_1'];
+			$hour1 = $hour1 === NULL ? -1 : $hour1;
 			$query2 = "SELECT KALETRA_2 FROM PROTOCOL_INSTANCE_2 WHERE P2ID = '$p2_id' AND DAY = ".$_SESSION['E2'];
 			$res2 = fetch_data($query2);
 			$hour2 = $res2['KALETRA_2'];
+			$hour2 = $hour2 === NULL ? -1 : $hour2;
 			$table = '<tr><td class="td-drug-name td-border-right">Kaletra (spearmints tic tac)</td>';
 			for ($i = 6; $i < 24; $i++) {
 				if ($i == $hour1 || $i == $hour2) {
@@ -323,9 +328,11 @@
 			$query1 = "SELECT KALETRA_1 FROM PROTOCOL_2 WHERE P2ID = '$p2_id'";
 			$res1 = fetch_data($query1);
 			$hour1 = $res1['KALETRA_1'];
+			$hour1 = $hour1 === NULL ? -1 : $hour1;
 			$query2 = "SELECT KALETRA_2 FROM PROTOCOL_2 WHERE P2ID = '$p2_id'";
 			$res2 = fetch_data($query2);
 			$hour2 = $res2['KALETRA_2'];
+			$hour2 = $hour2 === NULL ? -1 : $hour2;
 			$table = '<tr><td class="td-drug-name td-border-right">Kaletra (spearmints tic tac)</td>';
 			for ($i = 6; $i < 24; $i++) {
 				if ($i == $hour1 || $i == $hour2) {
@@ -365,9 +372,11 @@
 			$query1 = "SELECT COMBIVIR_1 FROM PROTOCOL_INSTANCE_2 WHERE P2ID = '$p2_id' AND DAY = ".$_SESSION['E2'];
 			$res1 = fetch_data($query1);
 			$hour1 = $res1['COMBIVIR_1'];
+			$hour1 = $hour1 === NULL ? -1 : $hour1;
 			$query2 = "SELECT COMBIVIR_2 FROM PROTOCOL_INSTANCE_2 WHERE P2ID = '$p2_id' AND DAY = ".$_SESSION['E2'];
 			$res2 = fetch_data($query2);
 			$hour2 = $res2['COMBIVIR_2'];
+			$hour2 = $hour2 === NULL ? -1 : $hour2;
 			$table = '<tr><td class="td-drug-name td-border-right">Combivir (cinnamon tic tac)</td>';
 			for ($i = 6; $i < 24; $i++) {
 				if ($i == $hour1 || $i == $hour2) {
@@ -438,9 +447,11 @@
 			$query1 = "SELECT FUZEON_1 FROM PROTOCOL_INSTANCE_2 WHERE P2ID = '$p2_id' AND DAY = ".$_SESSION['E2'];
 			$res1 = fetch_data($query1);
 			$hour1 = $res1['FUZEON_1'];
+			$hour1 = $hour1 === NULL ? -1 : $hour1;
 			$query2 = "SELECT FUZEON_2 FROM PROTOCOL_INSTANCE_2 WHERE P2ID = '$p2_id' AND DAY = ".$_SESSION['E2'];
 			$res2 = fetch_data($query2);
 			$hour2 = $res2['FUZEON_2'];
+			$hour2 = $hour2 === NULL ? -1 : $hour2;
 			$table = '<tr><td class="td-drug-name td-border-right fuzeon">Fuzeon (Kool-Aid)</td>';
 			for ($i = 6; $i < 24; $i++) {
 				if ($i == $hour1 || $i == $hour2) {
@@ -504,6 +515,74 @@
 		echo get_fuzeon_table();
 	}	
 
+	function get_atripla_table() {
+		$uid = secureString($_SESSION['uid']);
+		$p3_id = get_user_pid(3);
+		if (is_day_updated(3, $_SESSION['E3'])) {
+			$query = "SELECT ATRIPLA_1 FROM PROTOCOL_INSTANCE_3 WHERE P3ID = '$p3_id' AND DAY = ".$_SESSION['E3'];
+			$res = fetch_data($query);
+			$hour = $res['ATRIPLA_1'];
+			$hour = $hour === NULL ? -1 : $hour;
+			$table = '<tr><td class="td-drug-name td-border-right atripla">Atripla (orange tic tac)</td>';
+			for ($i = 6; $i < 24; $i++) {
+				if ($i == $hour) {
+					if ($i == 11 || $i == 23) {
+						$table = $table . '<td class="td-hour td-border-right td-non-clickable hour-mark atripla"></td>';
+					} else {
+						$table = $table . '<td class="td-hour td-non-clickable hour-mark atripla"></td>';
+					}
+				} else {
+					if ($i == 11 || $i == 23) {
+						$table = $table . '<td class="td-hour td-border-right td-non-clickable atripla"></td>';
+					} else {
+						$table = $table . '<td class="td-hour td-non-clickable atripla"></td>';
+					}
+				}
+			}
+			for ($i = 0; $i < 3; $i++) {
+				if ($i == $hour) {
+					$table = $table . '<td class="td-hour td-non-clickable hour-mark atripla"></td>';
+				} else {
+					$table = $table . '<td class="td-hour td-non-clickable atripla"></td>';
+				}
+			}
+			$table = $table . '<tr>';
+		} else {
+			$query = "SELECT ATRIPLA_1 FROM PROTOCOL_3 WHERE P3ID = '$p3_id'";
+			$res = fetch_data($query);
+			$hour = $res['ATRIPLA_1'];
+			$table = '<tr><td class="td-drug-name td-border-right atripla">Atripla (orange tic tac)</td>';
+			for ($i = 6; $i < 24; $i++) {
+				if ($i == $hour) {
+					if ($i == 11 || $i == 23) {
+						$table = $table . '<td class="td-hour td-border-right td-clickable hour-mark atripla"></td>';
+					} else {
+						$table = $table . '<td class="td-hour td-clickable hour-mark atripla"></td>';
+					}
+				} else {
+					if ($i == 11 || $i == 23) {
+						$table = $table . '<td class="td-hour td-border-right td-clickable atripla"></td>';
+					} else {
+						$table = $table . '<td class="td-hour td-clickable atripla"></td>';
+					}
+				}
+			}
+			for ($i = 0; $i < 3; $i++) {
+				if ($i == $hour) {
+					$table = $table . '<td class="td-hour td-clickable hour-mark atripla"></td>';
+				} else {
+					$table = $table . '<td class="td-hour td-clickable atripla"></td>';
+				}
+			}
+			$table = $table . '<tr>';
+		}
+		return $table;
+	}
+
+	function show_atripla_table() {
+		echo get_atripla_table();
+	}
+
 	function show_update_button($exercise) {
 		$current = $_SESSION['E'.$exercise];
 		if (is_checked($exercise, $current)) {
@@ -546,8 +625,10 @@
 			$table = $table . get_kaletra_table();
 			$table = $table . get_combivir_table();
 			$table = $table . get_fuzeon_table();
+		} else if ($exercise == 3) {
+			$table = $table . get_atripla_table();
 		} else {
-
+			$table ='';
 		}
 		echo $table;
 	}

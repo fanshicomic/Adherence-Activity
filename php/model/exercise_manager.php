@@ -43,7 +43,7 @@
 			$checked = is_day_updated($exercise, $day);
 			if (!$checked) {
 				$res = add_exercise_3($day, $atripla);
-				echo true;
+				echo $res;
 			} else {
 				echo false;
 			}

@@ -85,6 +85,20 @@ section {
     }
 }
 
+.exercise-3-body {
+    background: #E67E22;
+    color: white;
+    .today {
+        color: #00fd4d;
+    }
+    .atripla {
+        border-bottom: 1px solid white;
+    }
+    .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+        background-color: #D35400;
+    }
+}
+
 .day-table {
     width: 100%;
     margin-top: 20px;
