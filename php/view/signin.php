@@ -71,7 +71,7 @@
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-            	<div class="container=fluid">
+            	<div class="container-fluid">
             		<div class="row text-center">
 		                <div class="form-group form-signin col-lg-8 col-lg-offset-2">
 		                	<h2 class="signin-welcome">Sign In</h2>

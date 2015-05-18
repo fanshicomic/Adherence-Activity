@@ -8,7 +8,7 @@ function show_navbar() {
         $uid = $_SESSION['uid'];
         echo '<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">';
         echo '<ul class="nav navbar-nav navbar-right">';
-        echo '<li><a class="page-scroll" href="#">' . $uid . '</a></li>';
+        echo '<li><a class="page-scroll" href="/pharmacy/project1/php/view/user.php">' . $uid . '</a></li>';
         echo '<li><a class="page-scroll" href="/pharmacy/project1/php/model/logout.php">Log out</a></li>';
         echo '<li><a class="page-scroll" href="#contact">Contact</a></li>';
         echo '</ul></div>';

@@ -3,7 +3,7 @@
 	
 	function user_validation($exercise) {
 		if (has_exercise($exercise)) {
-			check_day($exercise);
+			update_current_day($exercise);
 		} else {
 			header("Location: /pharmacy/project1/php/view/protocol_".$exercise,".php");
 		}
@@ -25,32 +25,41 @@
 		}
 	}
 
-	function check_day($exercise) {
+	function update_current_day($exercise) {
 		if (isset($_SESSION['E'.$exercise])) {
 
 		} else {
-			$date = get_date($exercise, 1);
-			$current;
-			if ($date === NULL) {
-				$current = 1;
-			} else {
-				$day1 = strtotime($date);
-				$day1_y = date('Y', $day1);
-				$day1_m = date('m', $day1);
-				$day1_d = date('d', $day1);
-				$today_y = date('Y');
-				$today_m = date('m');
-				$today_d = date('d');
-				if ($day1_y == $today_y && $day1_m == $today_m && $today_d - $day1_d >= 0 && $today_d - $day1_d <= 6) {
-					$current = $today_d - $day1_d + 1;
-				} else {
-					$current = 1;
-				}
+			$date = get_current_date($exercise, 1);
+			if ($date == -1) {
+				$date = 1;
 			}
-			$_SESSION['E'.$exercise] = $current;
+			$_SESSION['E'.$exercise] = $date;
 		}
+	}
+
+	function get_current_day($exercise) {
+		$date = get_date($exercise, 1);
+		$current;
+		if ($date === NULL) {
+			$current = 1;
+		} else {
+			$day1 = strtotime($date);
+			$day1_y = date('Y', $day1);
+			$day1_m = date('m', $day1);
+			$day1_d = date('d', $day1);
+			$today_y = date('Y');
+			$today_m = date('m');
+			$today_d = date('d');
+			if ($day1_y == $today_y && $day1_m == $today_m && $today_d - $day1_d >= 0 && $today_d - $day1_d <= 6) {
+				$current = $today_d - $day1_d + 1;
+			} else {
+				$current = -1;
+			}
+		}
+		return $current;
 		
 	}
+
 	function show_day_table($exercise) {
 		$current = $_SESSION['E'.$exercise];
 		$table = '<tr>';
@@ -585,7 +594,8 @@
 
 	function show_update_button($exercise) {
 		$current = $_SESSION['E'.$exercise];
-		if (is_checked($exercise, $current)) {
+		$today = get_current_day($exercise);
+		if (is_checked($exercise, $current) || $current != $today) {
 			echo '';
 		} else {
 			$btn = '<a href="#" class="btn btn-primary btn-lg btn-update-exercise" exercise='.$exercise.' day='.$current.'>Update</a>';

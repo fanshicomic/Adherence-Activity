@@ -1,0 +1,81 @@
+@import "compass/css3";
+
+@mixin lg {
+    @media only screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media only screen and (max-width: 1199px) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media only screen and (max-width: 991px) {
+        @content;
+    }
+}
+
+@mixin xs {
+    @media only screen and (max-width: 767px) {
+        @content;
+    }
+}
+a {
+    color: white;
+}
+$row-padding-bottom: 10px;
+
+.exercise-row-1 {
+    background: #3498DB;
+    border-radius: 10px;
+    padding-bottom: $row-padding-bottom;
+    margin-bottom: 20px;
+    .col-day {
+        margin-top: 15px;
+    }
+    .col-trash {
+        margin-top: 20px;
+    }
+}
+
+.exercise-row-2 {
+    background: #2ECC71;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding-bottom: $row-padding-bottom;
+    .col-day {
+        margin-top: 15px;
+    }
+    .col-trash {
+        margin-top: 20px;
+    }
+}
+
+.exercise-row-3 {
+    background: #E67E22;
+    border-radius: 10px;
+    padding-bottom: $row-padding-bottom;
+    .col-day {
+        margin-top: 15px;
+    }
+    .col-trash {
+        margin-top: 20px;
+    }
+}
+.form-user {
+    border-radius: 30px;
+    background: rgba(255,255,255,0.7);
+    padding: 30px 70px 50px 70px;
+    .user-welcome {
+        margin-bottom: 40px;
+    }
+    .btn-full {
+        height: 40px;
+        width: 100%;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+}

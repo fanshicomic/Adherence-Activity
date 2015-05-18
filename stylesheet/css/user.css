@@ -1,0 +1,69 @@
+/* line 26, ../sass/user.scss */
+a {
+  color: white;
+}
+
+/* line 31, ../sass/user.scss */
+.exercise-row-1 {
+  background: #3498DB;
+  border-radius: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+/* line 36, ../sass/user.scss */
+.exercise-row-1 .col-day {
+  margin-top: 15px;
+}
+/* line 39, ../sass/user.scss */
+.exercise-row-1 .col-trash {
+  margin-top: 20px;
+}
+
+/* line 44, ../sass/user.scss */
+.exercise-row-2 {
+  background: #2ECC71;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+/* line 49, ../sass/user.scss */
+.exercise-row-2 .col-day {
+  margin-top: 15px;
+}
+/* line 52, ../sass/user.scss */
+.exercise-row-2 .col-trash {
+  margin-top: 20px;
+}
+
+/* line 57, ../sass/user.scss */
+.exercise-row-3 {
+  background: #E67E22;
+  border-radius: 10px;
+  padding-bottom: 10px;
+}
+/* line 61, ../sass/user.scss */
+.exercise-row-3 .col-day {
+  margin-top: 15px;
+}
+/* line 64, ../sass/user.scss */
+.exercise-row-3 .col-trash {
+  margin-top: 20px;
+}
+
+/* line 68, ../sass/user.scss */
+.form-user {
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 30px 70px 50px 70px;
+}
+/* line 72, ../sass/user.scss */
+.form-user .user-welcome {
+  margin-bottom: 40px;
+}
+/* line 75, ../sass/user.scss */
+.form-user .btn-full {
+  height: 40px;
+  width: 100%;
+  font-size: 20px;
+  margin-bottom: 20px;
+}

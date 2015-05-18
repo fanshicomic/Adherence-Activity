@@ -1,5 +1,6 @@
 <?php
     require_once($_SERVER['DOCUMENT_ROOT'] .'/pharmacy/project1/php/controller/navbar_controller.php');
+    require_once($_SERVER['DOCUMENT_ROOT'] .'/pharmacy/project1/php/controller/exercise_view_controller.php');
     if (session_status() == PHP_SESSION_NONE) {
         session_start();
     }
@@ -32,7 +33,7 @@
 
 	<!-- Customized Stylesheet -->
 	<link type="text/css" rel="stylesheet" href="../../stylesheet/css/font.css">
-	<link type="text/css" rel="stylesheet" href="../../stylesheet/css/signup.css">
+	<link type="text/css" rel="stylesheet" href="../../stylesheet/css/user.css">
 </head>
 
 <body>
@@ -61,21 +62,41 @@
             <div class="header-content-inner">
             	<div class="container-fluid">
             		<div class="row text-center">
-		                <div class="form-group form-signup col-lg-8 col-lg-offset-2">
-		                	<h2 class="signup-welcome">Let's get started!</h2>
-		                	<input id="signup-user-id" type="text" class="form-control signup-form-input" placeholder="User ID">
-		                	<input id="signup-user-password" type="password" class="form-control signup-form-input" placeholder="Password">
-		                	<input id="signup-user-password-confirmation" type="password" class="form-control signup-form-input" placeholder="Confirm Password">
-		                	<div class="row text-center signup-button-row">
-                                <p id="warning-msg"></p>
-				    			<div class="col-lg-12">
-				    				<a href="#" class="btn btn-primary btn-full btn-signup">Sign Up</a>
-				    			</div>
-				    			<div class="col-lg-12">
-				    				<label>Already have an account?</label>
-				    				<a href="signin.php">Sign In</a>
-				    			</div>
-				    		</div>
+		                <div class="form-group form-user col-lg-10 col-lg-offset-1">
+		                	<h2 class="user-welcome">Hi <?php echo $_SESSION['uid'];?></h2>
+		                	<div class="row exercise-row-1 text-left">
+                                <div class="col-lg-4">
+                                    <h3><a href="/pharmacy/project1/php/view/exercise_1.php">Exercise 1: </a></h3>
+                                </div>
+                                <div class="col-lg-6 col-day">
+                                    <h4>You are now in Day <?php echo get_current_day(1);?></h4>
+                                </div>
+                                <div class="col-lg-2 col-trash">
+                                    <i class="fa fa-trash-o fa-2x"></i>
+                                </div>
+                            </div>
+                            <div class="row exercise-row-2 text-left">
+                                <div class="col-lg-4">
+                                    <h3><a href="/pharmacy/project1/php/view/exercise_2.php">Exercise 2: </a></h3>
+                                </div>
+                                <div class="col-lg-6 col-day">
+                                    <h4>You are now in Day <?php echo get_current_day(1);?></h4>
+                                </div>
+                                <div class="col-lg-2 col-trash">
+                                    <i class="fa fa-trash-o fa-2x"></i>
+                                </div>
+                            </div>
+                            <div class="row exercise-row-3 text-left">
+                                <div class="col-lg-4">
+                                    <h3><a href="/pharmacy/project1/php/view/exercise_3.php">Exercise 3: </a></h3>
+                                </div>
+                                <div class="col-lg-6 col-day">
+                                    <h4>You are now in Day <?php echo get_current_day(1);?></h4>
+                                </div>
+                                <div class="col-lg-2 col-trash">
+                                    <i class="fa fa-trash-o fa-2x"></i>
+                                </div>
+                            </div>
 		                </div>
 		            </div>		            
 		        </div>

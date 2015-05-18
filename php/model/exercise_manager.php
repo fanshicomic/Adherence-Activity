@@ -13,7 +13,8 @@
 	if ($command == 'save_exercise') {
 		$exercise = secureString($_REQUEST['exercise']);
 		$day = secureString($_REQUEST['day']);
-		if ($exercise == 1) {
+		$today = get_current_day($exercise);
+		if ($exercise == 1 && $day == $today) {
 			$truvada = secureString($_REQUEST['truvada']);
 			$reyataz = secureString($_REQUEST['reyataz']);
 			$norvir = secureString($_REQUEST['norvir']);
@@ -24,7 +25,7 @@
 			} else {
 				echo false;
 			}
-		} else if ($exercise == 2) {
+		} else if ($exercise == 2 && $day == $today) {
 			$kaletra_1 = secureString($_REQUEST['kaletra_1']);
 			$kaletra_2 = secureString($_REQUEST['kaletra_2']);
 			$combivir_1 = secureString($_REQUEST['combivir_1']);
@@ -38,7 +39,7 @@
 			} else {
 				echo false;
 			}
-		} else if ($exercise == 3) {
+		} else if ($exercise == 3 && $day == $today) {
 			$atripla = secureString($_REQUEST['atripla']);
 			$checked = is_day_updated($exercise, $day);
 			if (!$checked) {

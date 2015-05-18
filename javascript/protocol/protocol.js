@@ -153,7 +153,7 @@ function save_schedule(protocol) {
 	    				confirmButtonText: "OK",   
 	    				closeOnConfirm: false }, 
 	    				function(){
-	    					window.location.href = '/pharmacy/project1/php/view/exercise_1.php';
+	    					window.location.href = '/pharmacy/project1/php/view/exercise_'+ protocol +'.php';
 	    				});
 	    		} else {
 	    			swal({   
@@ -168,7 +168,7 @@ function save_schedule(protocol) {
 	    				closeOnCancel: false }, 
 	    				function(isConfirm){   
 	    					if (isConfirm) {     
-	    						 
+	    						 window.location.href = '/pharmacy/project1/php/view/exercise_'+ protocol +'.php';
 	    					} else {     
 	    						swal("Cancelled", 
 	    							"The action has been cancelled", 
