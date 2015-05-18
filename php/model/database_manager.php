@@ -79,6 +79,18 @@
     }
     //------------------------------PROTOCOL-------------------------------------- 
 
+    function exist_protocol($protocol) {
+        if ($protocol == 1) {
+            return exist_protocol_1();
+        } else if ($protocol == 2) {
+            return exist_protocol_2();
+        } else if ($protocol == 3) {
+            return exist_protocol_3();
+        } else {
+            return false;
+        }
+    }
+
     function add_protocol_1($truvada, $reyataz, $norvir) {
         $p1_id = uniqid();
         $uid = get_user_id($_SESSION['uid']);
@@ -147,6 +159,18 @@
         $query = "SELECT * FROM PROTOCOL_". $protocol ." WHERE UID = '$uid'";
         $data = fetch_data($query);
         return $data["P". $protocol . "ID"];
+    }
+
+    function delete_user_record($protocol) {
+        $uid = get_user_id($_SESSION['uid']);
+        $pid = get_user_pid($protocol);
+        $query1 = "DELETE FROM PROTOCOL_". $protocol ." WHERE P".$protocol."ID = '$pid'";
+        $query2 = "DELETE FROM PROTOCOL_INSTANCE_". $protocol ." WHERE P".$protocol."ID = '$pid'";
+        $query3 = "UPDATE USER SET P".$protocol."ID = NULL WHERE UID = '$uid'";
+        $res1 = update_data($query1);
+        $res2 = update_data($query2);
+        $res3 = update_data($query3);
+        return $res1 && $res2 && $res3;
     }
     //---------------------------------EXERCISE----------------------------------
     function is_checked($exercise, $day) {

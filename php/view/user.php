@@ -1,6 +1,6 @@
 <?php
     require_once($_SERVER['DOCUMENT_ROOT'] .'/pharmacy/project1/php/controller/navbar_controller.php');
-    require_once($_SERVER['DOCUMENT_ROOT'] .'/pharmacy/project1/php/controller/exercise_view_controller.php');
+    require_once($_SERVER['DOCUMENT_ROOT'] .'/pharmacy/project1/php/controller/user_view_controller.php');
     if (session_status() == PHP_SESSION_NONE) {
         session_start();
     }
@@ -26,6 +26,10 @@
 	
 	<!-- Font Awesome -->
 	<link type="text/css" rel="stylesheet" href="../../plugin/Font-Awesome/css/font-awesome.min.css">
+
+    <!-- SweetAlert -->
+    <script src="../../plugin/SweetAlert/sweetalert.min.js"></script> 
+    <link rel="stylesheet" type="text/css" href="../../plugin/SweetAlert/sweetalert.css">
 
 	<!-- Plugin CSS -->
     <link rel="stylesheet" href="../../stylesheet/css/animate.min.css" type="text/css">
@@ -69,10 +73,10 @@
                                     <h3><a href="/pharmacy/project1/php/view/exercise_1.php">Exercise 1: </a></h3>
                                 </div>
                                 <div class="col-lg-6 col-day">
-                                    <h4>You are now in Day <?php echo get_current_day(1);?></h4>
+                                    <?php show_exercise_day(1); ?>
                                 </div>
-                                <div class="col-lg-2 col-trash">
-                                    <i class="fa fa-trash-o fa-2x"></i>
+                                <div class="col-lg-2 col-trash text-right">
+                                    <?php show_trash_button(1); ?>
                                 </div>
                             </div>
                             <div class="row exercise-row-2 text-left">
@@ -80,10 +84,10 @@
                                     <h3><a href="/pharmacy/project1/php/view/exercise_2.php">Exercise 2: </a></h3>
                                 </div>
                                 <div class="col-lg-6 col-day">
-                                    <h4>You are now in Day <?php echo get_current_day(1);?></h4>
+                                    <?php show_exercise_day(2); ?>
                                 </div>
-                                <div class="col-lg-2 col-trash">
-                                    <i class="fa fa-trash-o fa-2x"></i>
+                                <div class="col-lg-2 col-trash text-right">
+                                    <?php show_trash_button(2); ?>
                                 </div>
                             </div>
                             <div class="row exercise-row-3 text-left">
@@ -91,10 +95,10 @@
                                     <h3><a href="/pharmacy/project1/php/view/exercise_3.php">Exercise 3: </a></h3>
                                 </div>
                                 <div class="col-lg-6 col-day">
-                                    <h4>You are now in Day <?php echo get_current_day(1);?></h4>
+                                    <?php show_exercise_day(3); ?>
                                 </div>
-                                <div class="col-lg-2 col-trash">
-                                    <i class="fa fa-trash-o fa-2x"></i>
+                                <div class="col-lg-2 col-trash text-right">
+                                    <?php show_trash_button(3); ?>
                                 </div>
                             </div>
 		                </div>
@@ -113,6 +117,6 @@
     <script src="../../javascript/creative/creative.js"></script>
 
     <!-- Custom JavaScript -->
-    <script src="../../javascript/signup/signup.js"></script>
+    <script src="../../javascript/user/user.js"></script>
 </body>
 </html>

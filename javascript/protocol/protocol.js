@@ -120,7 +120,9 @@ function is_adherence_requirement_valid(protocol) {
 		var combivir_2 = $('.hour').eq($($('.combivir .on')[1]).parent().index()).html();
 		var fuzeon_1 = $('.hour').eq($($('.fuzeon .on')[0]).parent().index()).html();
 		var fuzeon_2 = $('.hour').eq($($('.fuzeon .on')[1]).parent().index()).html();
-		return kaletra_2 - kaletra_1 == 12 && combivir_2 - combivir_1 == 12 && fuzeon_2 - fuzeon_1 == 12;
+		return kaletra_2 - kaletra_1 == 12 || kaletra_2 - kaletra_1 == -12 && 
+		combivir_2 - combivir_1 == 12 || combivir_2 - combivir_1 == -12 && 
+		fuzeon_2 - fuzeon_1 == 12 || fuzeon_2 - fuzeon_1 == -12;
 	} else if (protocol == '3') {
 		return true;
 	} else {
