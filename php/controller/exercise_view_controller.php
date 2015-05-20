@@ -29,7 +29,7 @@
 		if (isset($_SESSION['E'.$exercise])) {
 
 		} else {
-			$date = get_current_date($exercise, 1);
+			$date = get_current_day($exercise);
 			if ($date == -1) {
 				$date = 1;
 			}
