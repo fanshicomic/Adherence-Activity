@@ -8,7 +8,11 @@
 			echo '<a href="'.$href.'"><h4>Start exercise</h4></a>';
 		} else {
 			$day = get_current_day($protocol);
-			echo '<h4> You are now in Day ' . $day .'</h4>';
+			if ($day != -1) {
+				echo '<h4> You are now in Day ' . $day .'</h4>';
+			} else {
+				echo '<h4> Your activity has finished. </h4>';
+			}
 		}
 	}
 

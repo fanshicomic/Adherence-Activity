@@ -156,7 +156,7 @@
 
     function get_user_pid($protocol) {
         $uid = get_user_id($_SESSION['uid']);
-        $query = "SELECT * FROM PROTOCOL_". $protocol ." WHERE UID = '$uid'";
+        $query = "SELECT P". $protocol ."ID FROM USER WHERE UID = '$uid'";
         $data = fetch_data($query);
         return $data["P". $protocol . "ID"];
     }
@@ -174,14 +174,16 @@
     }
     //---------------------------------EXERCISE----------------------------------
     function is_checked($exercise, $day) {
-        $query = "SELECT DATE FROM PROTOCOL_INSTANCE_$exercise WHERE DAY = $day";
+        $pid = get_user_pid($exercise);
+        $query = "SELECT DATE FROM PROTOCOL_INSTANCE_$exercise WHERE DAY = $day AND P".$exercise."ID = '$pid'";
         $res = fetch_data($query);
         $date = $res['DATE'];
         return $date !== NULL;
     }
 
     function get_date($exercise, $day) {
-        $query = "SELECT DATE FROM PROTOCOL_INSTANCE_$exercise WHERE DAY = $day";
+        $pid = get_user_pid($exercise);
+        $query = "SELECT DATE FROM PROTOCOL_INSTANCE_$exercise WHERE DAY = $day AND P".$exercise."ID = '$pid'";
         $res = fetch_data($query);
         $date = $res['DATE'];
         return $date;

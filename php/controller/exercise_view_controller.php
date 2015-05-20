@@ -5,7 +5,7 @@
 		if (has_exercise($exercise)) {
 			update_current_day($exercise);
 		} else {
-			header("Location: /pharmacy/project1/php/view/protocol_".$exercise,".php");
+			header("Location: /pharmacy/project1/php/view/protocol_".$exercise.".php");
 		}
 	}
 
