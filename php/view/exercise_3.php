@@ -87,7 +87,14 @@
     <section id="schedule-table" exercise="3" day="1">
     	<div class="container protocol-instruction-text">
     		<div class="row text-center">
-    			<table class="table table-condensed table-hover">
+    			<div class="col-lg-2 col-lg-offset-5">
+    				<label class="drug-name">Atripla</label>
+    				<div class="hour-indicator col-lg-6 col-lg-offset-3 atripla-1"><?php show_drug_taken_time(3, 'ATRIPLA', 1)?></div>
+    				<div class="atripla-update">
+    					<?php show_update_button(3, "ATRIPLA", 1); ?>
+    				</div>
+    			</div>
+    			<!-- <table class="table table-condensed table-hover">
 				    <thead>
 				      <tr>
 				      	<th class="td-drug-name"></th>
@@ -127,9 +134,9 @@
     		</div>
     		<div class="row text-center exercise-button-row">
     			<div class="col-lg-8 col-lg-offset-2 update-button">
-    				<?php show_update_button(3); ?>
+    				
     			</div>
-    		</div>
+    		</div> -->
     	</div>
     </section>
     

@@ -72,90 +72,94 @@ section {
 .exercise-2-body .table-hover tbody tr:hover td, .exercise-2-body .table-hover tbody tr:hover th {
   background-color: #27AE60;
 }
+/* line 86, ../sass/exercise.scss */
+.exercise-2-body section {
+  padding-top: 50px;
+}
 
-/* line 88, ../sass/exercise.scss */
+/* line 91, ../sass/exercise.scss */
 .exercise-3-body {
   background: #E67E22;
   color: white;
 }
-/* line 91, ../sass/exercise.scss */
+/* line 94, ../sass/exercise.scss */
 .exercise-3-body .today {
   color: #00fd4d;
 }
-/* line 94, ../sass/exercise.scss */
+/* line 97, ../sass/exercise.scss */
 .exercise-3-body .atripla {
   border-bottom: 1px solid white;
 }
-/* line 97, ../sass/exercise.scss */
+/* line 100, ../sass/exercise.scss */
 .exercise-3-body .table-hover tbody tr:hover td, .exercise-3-body .table-hover tbody tr:hover th {
   background-color: #D35400;
 }
 
-/* line 102, ../sass/exercise.scss */
+/* line 105, ../sass/exercise.scss */
 .day-table {
   width: 100%;
   margin-top: 20px;
 }
-/* line 105, ../sass/exercise.scss */
+/* line 108, ../sass/exercise.scss */
 .day-table .timeline {
   color: #BDC3C7;
 }
-/* line 108, ../sass/exercise.scss */
+/* line 111, ../sass/exercise.scss */
 .day-table .td-day {
   cursor: pointer;
 }
 
-/* line 113, ../sass/exercise.scss */
+/* line 116, ../sass/exercise.scss */
 .checked {
   color: yellow;
 }
 
-/* line 117, ../sass/exercise.scss */
+/* line 120, ../sass/exercise.scss */
 .non-checked {
   color: #BDC3C7;
 }
 
-/* line 121, ../sass/exercise.scss */
+/* line 124, ../sass/exercise.scss */
 #schedule-table {
   padding-top: 0px;
 }
-/* line 123, ../sass/exercise.scss */
+/* line 126, ../sass/exercise.scss */
 #schedule-table table {
   border-bottom: 1px solid white;
   margin-bottom: 30px;
 }
-/* line 126, ../sass/exercise.scss */
+/* line 129, ../sass/exercise.scss */
 #schedule-table table .td-drug-name {
   width: 6%;
 }
-/* line 129, ../sass/exercise.scss */
+/* line 132, ../sass/exercise.scss */
 #schedule-table table .td-hour {
   width: 0.5%;
 }
-/* line 132, ../sass/exercise.scss */
+/* line 135, ../sass/exercise.scss */
 #schedule-table table .td-border-right {
   border-right: 1px solid white;
 }
-/* line 136, ../sass/exercise.scss */
+/* line 139, ../sass/exercise.scss */
 #schedule-table table th {
   text-align: center;
 }
-/* line 139, ../sass/exercise.scss */
+/* line 142, ../sass/exercise.scss */
 #schedule-table table td {
   text-align: center;
 }
 
-/* line 144, ../sass/exercise.scss */
+/* line 147, ../sass/exercise.scss */
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
   background-color: #2980b9;
 }
 
-/* line 148, ../sass/exercise.scss */
+/* line 151, ../sass/exercise.scss */
 .drug-name {
   font-size: 20px;
 }
 
-/* line 152, ../sass/exercise.scss */
+/* line 155, ../sass/exercise.scss */
 .hour-indicator {
   border-radius: 20px;
   margin-top: 20px;

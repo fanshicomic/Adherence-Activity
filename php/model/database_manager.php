@@ -194,9 +194,14 @@
         return $date !== NULL;
     }
 
-    function update_exercise($exercise, $day, $drug, $index, $hour) {
+    function update_exercise($exercise, $day, $drug, $index) {
         $pid = get_user_pid($exercise);
+        $today = get_current_day($exercise);
         $date = date("Y-m-d");
+        $hour = date('H');
+        if ($today == $day + 1) {
+            $date = date("Y-m-d", mktime(0,0,0,date("Y"), date("m"), date("d") - 1));
+        } 
         $query = "UPDATE PROTOCOL_INSTANCE_$exercise SET DATE = '$date'";
         if ($hour != -1) {
             $query = $query .", ".$drug."_".$index." = " .$hour;

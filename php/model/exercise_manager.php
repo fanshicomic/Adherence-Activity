@@ -13,44 +13,66 @@
 	if ($command == 'save_exercise') {
 		$exercise = secureString($_REQUEST['exercise']);
 		$day = secureString($_REQUEST['day']);
+		$drug = secureString($_REQUEST['drug']);
+		$index = secureString($_REQUEST['index']);
 		$today = get_current_day($exercise);
-		if ($exercise == 1 && $day == $today) {
-			$truvada = secureString($_REQUEST['truvada']);
-			$reyataz = secureString($_REQUEST['reyataz']);
-			$norvir = secureString($_REQUEST['norvir']);
-			$checked = is_day_updated($exercise, $day);
-			if (!$checked) {
-				$res = add_exercise_1($day, $truvada, $reyataz, $norvir);
-				echo $res;
-			} else {
-				echo false;
-			}
-		} else if ($exercise == 2 && $day == $today) {
-			$kaletra_1 = secureString($_REQUEST['kaletra_1']);
-			$kaletra_2 = secureString($_REQUEST['kaletra_2']);
-			$combivir_1 = secureString($_REQUEST['combivir_1']);
-			$combivir_2 = secureString($_REQUEST['combivir_2']);
-			$fuzeon_1 = secureString($_REQUEST['fuzeon_1']);
-			$fuzeon_2 = secureString($_REQUEST['fuzeon_2']);
-			$checked = is_day_updated($exercise, $day);
-			if (!$checked) {
-				$res = add_exercise_2($day, $kaletra_1, $kaletra_2, $combivir_1, $combivir_2, $fuzeon_1, $fuzeon_2);
-				echo $res;
-			} else {
-				echo false;
-			}
-		} else if ($exercise == 3 && $day == $today) {
-			$atripla = secureString($_REQUEST['atripla']);
-			$checked = is_day_updated($exercise, $day);
-			if (!$checked) {
-				$res = add_exercise_3($day, $atripla);
+		if ($day == $today) {
+			if(!is_drug_updated($exercise, $day, $drug, $index)) {
+				$res = update_exercise($exercise, $day, $drug, $index);
 				echo $res;
 			} else {
 				echo false;
 			}
 		} else {
-			echo false;
+			$hour = date('G');
+			if ($today == $day + 1 && $hour < 3) {
+				if(!is_drug_updated($exercise, $day, $drug, $index)) {
+					$res = update_exercise($exercise, $day, $drug, $index);
+					echo $res;
+				} else {
+					echo false;
+				}
+			} else {
+				echo false;
+			}
 		}
+		// if ($exercise == 1 && $day == $today) {
+		// 	$truvada = secureString($_REQUEST['truvada']);
+		// 	$reyataz = secureString($_REQUEST['reyataz']);
+		// 	$norvir = secureString($_REQUEST['norvir']);
+		// 	$checked = is_day_updated($exercise, $day);
+		// 	if (!$checked) {
+		// 		$res = add_exercise_1($day, $truvada, $reyataz, $norvir);
+		// 		echo $res;
+		// 	} else {
+		// 		echo false;
+		// 	}
+		// } else if ($exercise == 2 && $day == $today) {
+		// 	$kaletra_1 = secureString($_REQUEST['kaletra_1']);
+		// 	$kaletra_2 = secureString($_REQUEST['kaletra_2']);
+		// 	$combivir_1 = secureString($_REQUEST['combivir_1']);
+		// 	$combivir_2 = secureString($_REQUEST['combivir_2']);
+		// 	$fuzeon_1 = secureString($_REQUEST['fuzeon_1']);
+		// 	$fuzeon_2 = secureString($_REQUEST['fuzeon_2']);
+		// 	$checked = is_day_updated($exercise, $day);
+		// 	if (!$checked) {
+		// 		$res = add_exercise_2($day, $kaletra_1, $kaletra_2, $combivir_1, $combivir_2, $fuzeon_1, $fuzeon_2);
+		// 		echo $res;
+		// 	} else {
+		// 		echo false;
+		// 	}
+		// } else if ($exercise == 3 && $day == $today) {
+		// 	$atripla = secureString($_REQUEST['atripla']);
+		// 	$checked = is_day_updated($exercise, $day);
+		// 	if (!$checked) {
+		// 		$res = add_exercise_3($day, $atripla);
+		// 		echo $res;
+		// 	} else {
+		// 		echo false;
+		// 	}
+		// } else {
+		// 	echo false;
+		// }
 	}
 
 	if ($command == "get_day") {

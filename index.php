@@ -62,7 +62,7 @@ if (session_status() == PHP_SESSION_NONE) {
             <div class="header-content-inner">
                 <h1>Adherence Activity</h1>
                 <hr>
-                <p>The NUS department of pharmacy built a new online system to help the students quickly understand the importance of adherence.</p>
+                <p>The NUS department of pharmacology built a new online system to help the students quickly understand the importance of adherence.</p>
                 <a href="#about" class="btn btn-primary btn-xl page-scroll">Learn More</a>
             </div>
         </div>

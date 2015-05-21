@@ -87,7 +87,40 @@
     <section id="schedule-table" exercise="2" day="1">
     	<div class="container protocol-instruction-text">
     		<div class="row text-center">
-    			<table class="table table-condensed table-hover">
+    			<div class="col-lg-2 col-lg-offset-3">
+    				<label class="drug-name">Kaletra</label>
+    				<div class="hour-indicator col-lg-6 col-lg-offset-3 kaletra-1"><?php show_drug_taken_time(2, 'KALETRA', 1)?></div>
+    				<div class="kaletra-update-1">
+    					<?php show_update_button(2, "KALETRA", 1); ?>
+    				</div>
+    				<div class="hour-indicator col-lg-6 col-lg-offset-3 kaletra-2"><?php show_drug_taken_time(2, 'KALETRA', 2)?></div>
+    				<div class="kaletra-update-2">
+    					<?php show_update_button(2, "KALETRA", 2); ?>
+    				</div>
+    			</div>
+    			<div class="col-lg-2">
+    				<label class="drug-name">Combivir</label>
+    				<div class="hour-indicator col-lg-6 col-lg-offset-3 combivir-1"><?php show_drug_taken_time(2, 'COMBIVIR', 1)?></div>
+    				<div class="combivir-update-1">
+    					<?php show_update_button(2, "COMBIVIR", 1); ?>
+    				</div>
+    				<div class="hour-indicator col-lg-6 col-lg-offset-3 combivir-2"><?php show_drug_taken_time(2, 'COMBIVIR', 2)?></div>
+    				<div class="combivir-update-2">
+    					<?php show_update_button(2, "COMBIVIR", 2); ?>
+    				</div>
+    			</div>
+    			<div class="col-lg-2">
+    				<label class="drug-name">Fuzeon</label>
+    				<div class="hour-indicator col-lg-6 col-lg-offset-3 fuzeon-1"><?php show_drug_taken_time(2, 'FUZEON', 1)?></div>
+    				<div class="fuzeon-update-1">
+    					<?php show_update_button(2, "FUZEON", 1); ?>
+    				</div>
+    				<div class="hour-indicator col-lg-6 col-lg-offset-3 fuzeon-2"><?php show_drug_taken_time(2, 'FUZEON', 2)?></div>
+    				<div class="fuzeon-update-2">
+    					<?php show_update_button(2, "FUZEON", 2); ?>
+    				</div>
+    			</div>
+    			<!-- <table class="table table-condensed table-hover">
 				    <thead>
 				      <tr>
 				      	<th class="td-drug-name"></th>
@@ -129,9 +162,9 @@
     		</div>
     		<div class="row text-center exercise-button-row">
     			<div class="col-lg-8 col-lg-offset-2 update-button">
-    				<?php show_update_button(2); ?>
+    				
     			</div>
-    		</div>
+    		</div> -->
     	</div>
     </section>
     

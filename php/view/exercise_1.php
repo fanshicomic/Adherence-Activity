@@ -97,14 +97,14 @@
     			<div class="col-lg-2">
     				<label class="drug-name">Reyataz</label>
     				<div class="hour-indicator col-lg-6 col-lg-offset-3 reyataz-1"><?php show_drug_taken_time(1, 'REYATAZ', 1)?></div>
-    				<div class="truvada-update">
+    				<div class="reyataz-update">
     					<?php show_update_button(1, "REYATAZ", 1); ?>
     				</div>
     			</div>
     			<div class="col-lg-2">
     				<label class="drug-name">Norvir</label>
     				<div class="hour-indicator col-lg-6 col-lg-offset-3 norvir-1"><?php show_drug_taken_time(1, 'NORVIR', 1)?></div>
-    				<div class="truvada-update">
+    				<div class="norvir-update">
     					<?php show_update_button(1, "NORVIR", 1); ?>
     				</div>
     			</div>

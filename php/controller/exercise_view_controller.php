@@ -596,12 +596,18 @@
 		$current = $_SESSION['E'.$exercise];
 		$today = get_current_day($exercise);
 		if ($current != $today) {
-			echo '';
+			$hour = date('G');
+			if ($today == $current + 1 && $hour < 3) {
+				$btn = '<a href="#" class="btn btn-primary btn-lg btn-update-exercise" exercise='.$exercise.' day='.$today.' drug="'.$drug.'" index='.$index.'>Update</a>';
+				echo $btn;
+			} else {
+				echo '';	
+			}
 		} else {
 			if (is_drug_updated($exercise, $today, $drug, $index)) {
 				echo '';
 			} else {
-				$btn = '<a href="#" class="btn btn-primary btn-lg btn-update-exercise" exercise='.$exercise.' day='.$today.' drug='.$drug.'>Update</a>';
+				$btn = '<a href="#" class="btn btn-primary btn-lg btn-update-exercise" exercise='.$exercise.' day='.$today.' drug="'.$drug.'" index='.$index.'>Update</a>';
 				echo $btn;
 			}
 		}
