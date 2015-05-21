@@ -592,14 +592,18 @@
 		echo get_atripla_table();
 	}
 
-	function show_update_button($exercise) {
+	function show_update_button($exercise, $drug, $index) {
 		$current = $_SESSION['E'.$exercise];
 		$today = get_current_day($exercise);
-		if (is_checked($exercise, $current) || $current != $today) {
+		if ($current != $today) {
 			echo '';
 		} else {
-			$btn = '<a href="#" class="btn btn-primary btn-lg btn-update-exercise" exercise='.$exercise.' day='.$current.'>Update</a>';
-			echo $btn;
+			if (is_drug_updated($exercise, $today, $drug, $index)) {
+				echo '';
+			} else {
+				$btn = '<a href="#" class="btn btn-primary btn-lg btn-update-exercise" exercise='.$exercise.' day='.$today.' drug='.$drug.'>Update</a>';
+				echo $btn;
+			}
 		}
 	}
 

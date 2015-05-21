@@ -80,7 +80,9 @@
 	if ($command == "change_update_button") {
 		$exercise = secureString($_REQUEST['exercise']);
 		$day = secureString($_SESSION['E'.$exercise]);
-		show_update_button($exercise);
+		$drug = secureString($_REQUEST['drug']);
+		$index = secureString($_REQUEST['index']);
+		show_update_button($exercise, $drug, $index);
 	}
 
 	if ($command == "get_drug_taken_time") {

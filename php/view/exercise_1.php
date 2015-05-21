@@ -90,17 +90,23 @@
     			<div class="col-lg-2 col-lg-offset-3">
     				<label class="drug-name">Truvada</label>
     				<div class="hour-indicator col-lg-6 col-lg-offset-3 truvada-1"><?php show_drug_taken_time(1, 'TRUVADA', 1)?></div>
-    				<a href="#" class="btn btn-primary btn-lg btn-update-exercise" exercise='1' day='1'>Update</a>
+    				<div class="truvada-update">
+    					<?php show_update_button(1, "TRUVADA", 1); ?>
+    				</div>
     			</div>
     			<div class="col-lg-2">
     				<label class="drug-name">Reyataz</label>
     				<div class="hour-indicator col-lg-6 col-lg-offset-3 reyataz-1"><?php show_drug_taken_time(1, 'REYATAZ', 1)?></div>
-    				<a href="#" class="btn btn-primary btn-lg btn-update-exercise" exercise='1' day='1'>Update</a>
+    				<div class="truvada-update">
+    					<?php show_update_button(1, "REYATAZ", 1); ?>
+    				</div>
     			</div>
     			<div class="col-lg-2">
     				<label class="drug-name">Norvir</label>
     				<div class="hour-indicator col-lg-6 col-lg-offset-3 norvir-1"><?php show_drug_taken_time(1, 'NORVIR', 1)?></div>
-    				<a href="#" class="btn btn-primary btn-lg btn-update-exercise" exercise='1' day='1'>Update</a>
+    				<div class="truvada-update">
+    					<?php show_update_button(1, "NORVIR", 1); ?>
+    				</div>
     			</div>
     		</div>
     	</div>
@@ -150,7 +156,7 @@
     		</div>
     		<div class="row text-center exercise-button-row">
     			<div class="col-lg-8 col-lg-offset-2 update-button">
-    				<?php show_update_button(1); ?>
+    				
     			</div>
     		</div>
     	</div>

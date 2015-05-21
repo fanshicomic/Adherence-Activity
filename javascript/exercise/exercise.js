@@ -194,7 +194,7 @@ function change_day(btn) {
 }
 
 function change_day_attr(exercise, day) {
-	$('.exercise-'+ exercise+ '-body').attr('day', day);
+	$('.exercise-'+exercise+ '-body').attr('day', day);
 	$('#schedule-table').attr('day', day);
 }
 
@@ -288,9 +288,41 @@ function change_update_button() {
 		type	:'POST', 
     	url		: "/pharmacy/project1/php/model/exercise_manager.php",
     	data    : {command : 'change_update_button',
-    			  exercise : exercise},
+    			  exercise : exercise,
+    				  drug : "TRUVADA",
+    				 index : 1},
     	success	: function(data) {
-    		$('.update-button').html(data);
+    		$('.truvada-update').html(data);
+    		$('.btn-update-exercise').click(function() {
+				update_exercise(this);
+			});
+		}
+	});
+	$.ajax({
+		async	: false,
+		type	:'POST', 
+    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+    	data    : {command : 'change_update_button',
+    			  exercise : exercise,
+    				  drug : "REYATAZ",
+    				 index : 1},
+    	success	: function(data) {
+    		$('.reyataz-update').html(data);
+    		$('.btn-update-exercise').click(function() {
+				update_exercise(this);
+			});
+		}
+	});
+	$.ajax({
+		async	: false,
+		type	:'POST', 
+    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+    	data    : {command : 'change_update_button',
+    			  exercise : exercise,
+    				  drug : "NORVIR",
+    				 index : 1},
+    	success	: function(data) {
+    		$('.norvir-update').html(data);
     		$('.btn-update-exercise').click(function() {
 				update_exercise(this);
 			});
