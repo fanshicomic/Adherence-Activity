@@ -144,3 +144,16 @@ section {
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
     background-color: #2980b9;
 }
+
+.drug-name {
+    font-size: 20px;
+} 
+
+.hour-indicator {
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: rgba(255,255,255, 0.7);
+    color: black;
+    font-size: 40px;
+}

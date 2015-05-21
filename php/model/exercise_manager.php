@@ -83,4 +83,17 @@
 		show_update_button($exercise);
 	}
 
+	if ($command == "get_drug_taken_time") {
+		$exercise = secureString($_REQUEST['exercise']);
+		$drug = secureString($_REQUEST['drug']);
+		$index = secureString($_REQUEST['index']);
+		$updated = is_drug_updated($exercise, $_SESSION['E'.$exercise], $drug, $index);
+		if ($updated) {
+			$hour = get_drug_taken_time($exercise, $_SESSION['E'.$exercise], $drug, $index);
+		} else {
+			$hour = "NA";
+		}
+		echo $hour;
+	}
+
 ?>

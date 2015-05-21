@@ -186,7 +186,8 @@ function change_day(btn) {
     	success	: function(data) {
     		change_day_attr(exercise, day);
     		change_day_table();
-    		change_exercise_table();
+    		// change_exercise_table();
+    		change_drug_taken_hour(exercise);
     		change_update_button();
 		}
 	});
@@ -195,6 +196,51 @@ function change_day(btn) {
 function change_day_attr(exercise, day) {
 	$('.exercise-'+ exercise+ '-body').attr('day', day);
 	$('#schedule-table').attr('day', day);
+}
+
+function change_drug_taken_hour(exercise) {
+	if (exercise == 1) {
+		$.ajax({
+		async	: false,
+		type	:'POST', 
+    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+    	data    : {command : 'get_drug_taken_time',
+    			  exercise : exercise,
+    				  drug : "TRUVADA",
+    				 index : 1},
+    	success	: function(data) {
+    		$('.truvada-1').html(data);
+		}
+		});
+		$.ajax({
+		async	: false,
+		type	:'POST', 
+    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+    	data    : {command : 'get_drug_taken_time',
+    			  exercise : exercise,
+    				  drug : "REYATAZ",
+    				 index : 1},
+    	success	: function(data) {
+    		$('.reyataz-1').html(data);
+		}
+		});
+		$.ajax({
+		async	: false,
+		type	:'POST', 
+    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+    	data    : {command : 'get_drug_taken_time',
+    			  exercise : exercise,
+    				  drug : "NORVIR",
+    				 index : 1},
+    	success	: function(data) {
+    		$('.norvir-1').html(data);
+		}
+		});
+	} else if (exercise == 2) {
+
+	} else if (exercise == 3) {
+
+	}
 }
 
 function change_day_table() {

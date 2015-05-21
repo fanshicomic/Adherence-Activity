@@ -194,6 +194,34 @@
         return $date !== NULL;
     }
 
+    function update_exercise($exercise, $day, $drug, $index, $hour) {
+        $pid = get_user_pid($exercise);
+        $date = date("Y-m-d");
+        $query = "UPDATE PROTOCOL_INSTANCE_$exercise SET DATE = '$date'";
+        if ($hour != -1) {
+            $query = $query .", ".$drug."_".$index." = " .$hour;
+        }
+        $query = $query ." WHERE P".$exercise."ID = '$pid' AND DAY = $day";
+        $res = update_data($query);
+        return $res;
+    }
+
+    function is_drug_updated($exercise, $day, $drug, $index) {
+        $pid = get_user_pid($exercise);
+        $query = "SELECT ".$drug."_".$index." FROM PROTOCOL_INSTANCE_$exercise WHERE P".$exercise."ID = '$pid' AND DAY = $day";
+        $res = fetch_data($query);
+        $hour = $res[$drug."_".$index];
+        return $hour !== NULL;
+    }
+
+    function get_drug_taken_time($exercise, $day, $drug, $index) {
+        $pid = get_user_pid($exercise);
+        $query = "SELECT ".$drug."_".$index." FROM PROTOCOL_INSTANCE_$exercise WHERE P".$exercise."ID = '$pid' AND DAY = $day";
+        $res = fetch_data($query);
+        $hour = $res[$drug."_".$index];
+        return $hour;
+    }
+
     function add_exercise_1($day, $truvada, $reyataz, $norvir) {
         $pid = get_user_pid(1);
         $date = date("Y-m-d");

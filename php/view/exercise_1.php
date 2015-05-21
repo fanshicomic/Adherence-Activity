@@ -84,7 +84,28 @@
     	</div>
     </section>
 
-    <section id="schedule-table" exercise="1" day="1">
+    <section id="schedule-table" exercise="1" day="1"> 
+    	<div class="container">
+    		<div class="row text-center">
+    			<div class="col-lg-2 col-lg-offset-3">
+    				<label class="drug-name">Truvada</label>
+    				<div class="hour-indicator col-lg-6 col-lg-offset-3 truvada-1"><?php show_drug_taken_time(1, 'TRUVADA', 1)?></div>
+    				<a href="#" class="btn btn-primary btn-lg btn-update-exercise" exercise='1' day='1'>Update</a>
+    			</div>
+    			<div class="col-lg-2">
+    				<label class="drug-name">Reyataz</label>
+    				<div class="hour-indicator col-lg-6 col-lg-offset-3 reyataz-1"><?php show_drug_taken_time(1, 'REYATAZ', 1)?></div>
+    				<a href="#" class="btn btn-primary btn-lg btn-update-exercise" exercise='1' day='1'>Update</a>
+    			</div>
+    			<div class="col-lg-2">
+    				<label class="drug-name">Norvir</label>
+    				<div class="hour-indicator col-lg-6 col-lg-offset-3 norvir-1"><?php show_drug_taken_time(1, 'NORVIR', 1)?></div>
+    				<a href="#" class="btn btn-primary btn-lg btn-update-exercise" exercise='1' day='1'>Update</a>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+    <!-- <section id="schedule-table" exercise="1" day="1">
     	<div class="container protocol-instruction-text">
     		<div class="row text-center">
     			<table class="table table-condensed table-hover">
@@ -133,7 +154,7 @@
     			</div>
     		</div>
     	</div>
-    </section>
+    </section> -->
     
     <!-- Plugin JavaScript -->
     <script src="../../javascript/creative/jquery.easing.min.js"></script>

@@ -642,4 +642,14 @@
 		}
 		echo $table;
 	}
+
+	function show_drug_taken_time($exercise, $drug, $index) {
+		$updated = is_drug_updated($exercise, $_SESSION['E'.$exercise], $drug, $index);
+		if ($updated) {
+			$hour = get_drug_taken_time($exercise, $_SESSION['E'.$exercise], $drug, $index);
+		} else {
+			$hour = "NA";
+		}
+		echo $hour;
+	}
 ?>
