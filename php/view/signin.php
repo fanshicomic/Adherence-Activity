@@ -1,6 +1,6 @@
 <?php
     require_once($_SERVER['DOCUMENT_ROOT'] .'/pharmacy/project1/php/controller/navbar_controller.php');
-    if (session_status() == PHP_SESSION_NONE) {
+    if(!isset($_SESSION)){
         session_start();
     }
 ?>
@@ -14,7 +14,7 @@
     <meta name="author" content="">
     
 	<title>Adherence Actitvity</title>
-	<!-- <link rel="icon" href="image/favicon.ico"> -->
+	<link rel="icon" href="/pharmacy/project1/img/AA-icon.ico">
 
 	<!-- JQuery -->
 	<script src="../../plugin/jQuery/jquery-2.1.3.min.js"></script>
