@@ -89,10 +89,10 @@
     		<div class="row text-center">
     			<div class="col-lg-2 col-lg-offset-5">
     				<label class="drug-name">Atripla</label>
-    				<div class="hour-indicator col-lg-6 col-lg-offset-3 atripla-1"><?php show_drug_taken_time(3, 'ATRIPLA', 1)?></div>
-    				<div>
-                        planned time: <?php show_drug_planned_time(3, 'ATRIPLA', 1)?>:00
-                    </div>
+    				<div class="hour-indicator col-lg-10 col-lg-offset-1 atripla-1"><?php show_drug_taken_time(3, 'ATRIPLA', 1)?></div>
+    				<p>
+                        Your plan: <?php show_drug_planned_time(3, 'ATRIPLA', 1)?>:00
+                    </p>
                     <div class="atripla-update">
     					<?php show_update_button(3, "ATRIPLA", 1); ?>
     				</div>
