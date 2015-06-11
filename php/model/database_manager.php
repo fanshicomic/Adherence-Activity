@@ -227,6 +227,14 @@
         return $hour;
     }
 
+    function get_drug_planned_time($exercise, $drug, $index) {
+        $pid = get_user_pid($exercise);
+        $query = "SELECT ".$drug."_".$index." FROM PROTOCOL_$exercise WHERE P".$exercise."ID = '$pid'";
+        $res = fetch_data($query);
+        $hour = $res[$drug."_".$index];
+        return $hour;
+    }
+
     function add_exercise_1($day, $truvada, $reyataz, $norvir) {
         $pid = get_user_pid(1);
         $date = date("Y-m-d");

@@ -71,7 +71,7 @@
     				<div class="row text-center">
     					<div class="text-left">
     						<h4>Instructions:</h4>
-		                	<p>White checks show the hours you planned to take "medicine". It is only for you reference. Please choose the hour that you took your medicine.</p>
+		                	<p>Click the update button to update the drug taken time.</p>
 		                </div>
 		    			<table class="day-table" exercise="2">
 		    				<tbody class="day-table-tbody">
@@ -90,33 +90,51 @@
     			<div class="col-lg-2 col-lg-offset-3">
     				<label class="drug-name">Kaletra</label>
     				<div class="hour-indicator col-lg-6 col-lg-offset-3 kaletra-1"><?php show_drug_taken_time(2, 'KALETRA', 1)?></div>
-    				<div class="kaletra-update-1">
+    				<div>
+                        planned time: <?php show_drug_planned_time(2, 'KALETRA', 1)?>:00
+                    </div>
+                    <div class="kaletra-update-1">
     					<?php show_update_button(2, "KALETRA", 1); ?>
     				</div>
     				<div class="hour-indicator col-lg-6 col-lg-offset-3 kaletra-2"><?php show_drug_taken_time(2, 'KALETRA', 2)?></div>
-    				<div class="kaletra-update-2">
+    				<div>
+                        planned time: <?php show_drug_planned_time(2, 'KALETRA', 2)?>:00
+                    </div>
+                    <div class="kaletra-update-2">
     					<?php show_update_button(2, "KALETRA", 2); ?>
     				</div>
     			</div>
     			<div class="col-lg-2">
     				<label class="drug-name">Combivir</label>
     				<div class="hour-indicator col-lg-6 col-lg-offset-3 combivir-1"><?php show_drug_taken_time(2, 'COMBIVIR', 1)?></div>
-    				<div class="combivir-update-1">
+    				<div>
+                        planned time: <?php show_drug_planned_time(2, 'COMBIVIR', 1)?>:00
+                    </div>
+                    <div class="combivir-update-1">
     					<?php show_update_button(2, "COMBIVIR", 1); ?>
     				</div>
     				<div class="hour-indicator col-lg-6 col-lg-offset-3 combivir-2"><?php show_drug_taken_time(2, 'COMBIVIR', 2)?></div>
-    				<div class="combivir-update-2">
+    				<div>
+                        planned time: <?php show_drug_planned_time(2, 'COMBIVIR', 2)?>:00
+                    </div>
+                    <div class="combivir-update-2">
     					<?php show_update_button(2, "COMBIVIR", 2); ?>
     				</div>
     			</div>
     			<div class="col-lg-2">
     				<label class="drug-name">Fuzeon</label>
     				<div class="hour-indicator col-lg-6 col-lg-offset-3 fuzeon-1"><?php show_drug_taken_time(2, 'FUZEON', 1)?></div>
-    				<div class="fuzeon-update-1">
+    				<div>
+                        planned time: <?php show_drug_planned_time(2, 'FUZEON', 1)?>:00
+                    </div>
+                    <div class="fuzeon-update-1">
     					<?php show_update_button(2, "FUZEON", 1); ?>
     				</div>
     				<div class="hour-indicator col-lg-6 col-lg-offset-3 fuzeon-2"><?php show_drug_taken_time(2, 'FUZEON', 2)?></div>
-    				<div class="fuzeon-update-2">
+    				<div>
+                        planned time: <?php show_drug_planned_time(2, 'FUZEON', 2)?>:00
+                    </div>
+                    <div class="fuzeon-update-2">
     					<?php show_update_button(2, "FUZEON", 2); ?>
     				</div>
     			</div>

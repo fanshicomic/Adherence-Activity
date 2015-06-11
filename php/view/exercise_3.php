@@ -71,7 +71,7 @@
     				<div class="row text-center">
     					<div class="text-left">
     						<h4>Instructions:</h4>
-		                	<p>White checks show the hours you planned to take "medicine". It is only for you reference. Please choose the hour that you took your medicine.</p>
+		                	<p>Click the update button to update the drug taken time.</p>
 		                </div>
 		    			<table class="day-table" exercise="3">
 		    				<tbody class="day-table-tbody">
@@ -90,7 +90,10 @@
     			<div class="col-lg-2 col-lg-offset-5">
     				<label class="drug-name">Atripla</label>
     				<div class="hour-indicator col-lg-6 col-lg-offset-3 atripla-1"><?php show_drug_taken_time(3, 'ATRIPLA', 1)?></div>
-    				<div class="atripla-update">
+    				<div>
+                        planned time: <?php show_drug_planned_time(3, 'ATRIPLA', 1)?>:00
+                    </div>
+                    <div class="atripla-update">
     					<?php show_update_button(3, "ATRIPLA", 1); ?>
     				</div>
     			</div>

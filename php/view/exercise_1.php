@@ -71,7 +71,7 @@
     				<div class="row text-center">
     					<div class="text-left">
     						<h4>Instructions:</h4>
-		                	<p>White checks show the hours you planned to take "medicine". It is only for you reference. Please choose the hour that you took your medicine.</p>
+		                	<p>Click the update button to update the drug taken time.</p>
 		                </div>
 		    			<table class="day-table" exercise="1">
 		    				<tbody class="day-table-tbody">
@@ -89,21 +89,36 @@
     		<div class="row text-center">
     			<div class="col-lg-2 col-lg-offset-3">
     				<label class="drug-name">Truvada</label>
-    				<div class="hour-indicator col-lg-6 col-lg-offset-3 truvada-1"><?php show_drug_taken_time(1, 'TRUVADA', 1)?></div>
+    				<div class="hour-indicator col-lg-6 col-lg-offset-3 truvada-1">
+                        <?php show_drug_taken_time(1, 'TRUVADA', 1)?>
+                    </div>
+                    <div>
+                        planned time: <?php show_drug_planned_time(1, 'TRUVADA', 1)?>:00
+                    </div>
     				<div class="truvada-update">
     					<?php show_update_button(1, "TRUVADA", 1); ?>
     				</div>
     			</div>
     			<div class="col-lg-2">
     				<label class="drug-name">Reyataz</label>
-    				<div class="hour-indicator col-lg-6 col-lg-offset-3 reyataz-1"><?php show_drug_taken_time(1, 'REYATAZ', 1)?></div>
+    				<div class="hour-indicator col-lg-6 col-lg-offset-3 reyataz-1">
+                        <?php show_drug_taken_time(1, 'REYATAZ', 1)?>
+                    </div>
+                    <div>
+                        planned time: <?php show_drug_planned_time(1, 'TRUVADA', 1)?>:00
+                    </div>
     				<div class="reyataz-update">
     					<?php show_update_button(1, "REYATAZ", 1); ?>
     				</div>
     			</div>
     			<div class="col-lg-2">
     				<label class="drug-name">Norvir</label>
-    				<div class="hour-indicator col-lg-6 col-lg-offset-3 norvir-1"><?php show_drug_taken_time(1, 'NORVIR', 1)?></div>
+    				<div class="hour-indicator col-lg-6 col-lg-offset-3 norvir-1">
+                        <?php show_drug_taken_time(1, 'NORVIR', 1)?>
+                    </div>
+                    <div>
+                        planned time: <?php show_drug_planned_time(1, 'TRUVADA', 1)?>:00
+                    </div>
     				<div class="norvir-update">
     					<?php show_update_button(1, "NORVIR", 1); ?>
     				</div>

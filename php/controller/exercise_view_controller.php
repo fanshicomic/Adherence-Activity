@@ -662,4 +662,9 @@
 		}
 		echo $hour;
 	}
+
+	function show_drug_planned_time($exercise, $drug, $index) {
+		$time = get_drug_planned_time($exercise, $drug, $index);
+		echo $time;
+	}
 ?>
