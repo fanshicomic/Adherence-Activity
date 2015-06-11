@@ -219,6 +219,7 @@ function change_day(btn) {
     		// change_exercise_table();
     		change_drug_taken_hour(exercise);
     		change_update_button();
+    		show_activity(exercise);
 		}
 	});
 }
@@ -524,6 +525,12 @@ function change_update_button() {
 	$('.btn-update-exercise').click(function() {
 		update_exercise(this);
 	});
+}
+
+function show_activity(exercise) {
+	var day = get_day(exercise);
+	$(".activity").hide();
+	$("#activity-"+day).show();
 }
 
 function register_button_event() {

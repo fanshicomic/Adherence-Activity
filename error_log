@@ -1,1 +1,0 @@
-[22-May-2015 14:36:50] PHP Fatal error:  Call to undefined function  session_status() in /home/neuroepi/public_html/pharmacy/project1/php/controller/navbar_controller.php on line 2

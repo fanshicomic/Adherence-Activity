@@ -71,7 +71,7 @@
     				<div class="row text-center">
     					<div class="text-left">
     						<h4>Instructions:</h4>
-		                	<p>Click the update button to update the drug taken time.</p>
+		                	<p>Click the update button to update the drug taken time. There are several activities and references at the bottom, take your time to read them.</p>
 		                </div>
 		    			<table class="day-table" exercise="1">
 		    				<tbody class="day-table-tbody">
@@ -176,6 +176,21 @@
     		</div>
     	</div>
     </section> -->
+    <section id="activity-1" class="activity">
+        <div class="container text-center">
+            <embed src="../../pdf/HIV_day_1_activity.pdf" width="600vw" height="800vh">     
+            <h2>References</h2>
+            <p>
+                <br><a href="http://aidsinfo.nih.gov/education-materials/fact-sheets/19/73/the-hiv-life-cycle">http://aidsinfo.nih.gov/education-materials/fact-sheets/19/73/the-hiv-life-cycle</a>
+                <br><a href="http://www.ncbi.nlm.nih.gov/books/NBK19451/">http://www.ncbi.nlm.nih.gov/books/NBK19451/</a>
+                <br><a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3234451/">http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3234451/</a>
+                <br><a href="https://www.aids.gov/hiv-aids-basics/hiv-aids-101/how-you-get-hiv-aids/">https://www.aids.gov/hiv-aids-basics/hiv-aids-101/how-you-get-hiv-aids/</a>
+                <br><a href="http://www.thelancet.com/journals/lancet/article/PIIS0140-6736(05)62505-6/fulltext">http://www.thelancet.com/journals/lancet/article/PIIS0140-6736(05)62505-6/fulltext</a>
+            </p>
+            <h2>Video link:</h2>
+            <label>See the HIV life cycle </label> <a href="http://www.hhmi.org/biointeractive/hiv-life-cycle">http://www.hhmi.org/biointeractive/hiv-life-cycle</a>
+        </div>
+    </setion>
     
     <!-- Plugin JavaScript -->
     <script src="../../javascript/creative/jquery.easing.min.js"></script>
@@ -187,5 +202,6 @@
 
     <!-- Custon JavaScript -->
     <script src="../../javascript/exercise/exercise.js"></script>
+    <script type="text/javascript">show_activity(1);</script>
 </body>
 </html>
