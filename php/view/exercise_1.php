@@ -66,7 +66,7 @@
     <section id="instruction">
     	<div class="container protocol-instruction-text">
     		<div class="row text-center">
-    			<h1>Protocol 1</h1>
+    			<h1 style="color:yellow">Protocol 1</h1>
     			<div class="text-left col-lg-6 col-lg-offset-3">
     				<div class="row text-center">
     					<div class="text-left">
@@ -179,7 +179,7 @@
     <section id="activity-1" class="activity">
         <div class="container text-center">
             <embed src="../../pdf/HIV_day_1_activity.pdf" width="600vw" height="800vh">     
-            <h2>References</h2>
+            <h2 style="color:yellow">References</h2>
             <p>
                 <br><a href="http://aidsinfo.nih.gov/education-materials/fact-sheets/19/73/the-hiv-life-cycle">http://aidsinfo.nih.gov/education-materials/fact-sheets/19/73/the-hiv-life-cycle</a>
                 <br><a href="http://www.ncbi.nlm.nih.gov/books/NBK19451/">http://www.ncbi.nlm.nih.gov/books/NBK19451/</a>
@@ -187,10 +187,36 @@
                 <br><a href="https://www.aids.gov/hiv-aids-basics/hiv-aids-101/how-you-get-hiv-aids/">https://www.aids.gov/hiv-aids-basics/hiv-aids-101/how-you-get-hiv-aids/</a>
                 <br><a href="http://www.thelancet.com/journals/lancet/article/PIIS0140-6736(05)62505-6/fulltext">http://www.thelancet.com/journals/lancet/article/PIIS0140-6736(05)62505-6/fulltext</a>
             </p>
-            <h2>Video link:</h2>
+            <h2 style="color:yellow">Video link:</h2>
             <label>See the HIV life cycle </label> <a href="http://www.hhmi.org/biointeractive/hiv-life-cycle">http://www.hhmi.org/biointeractive/hiv-life-cycle</a>
         </div>
-    </setion>
+    </section>
+
+    <section id="activity-2" class="activity">
+        <div class="container text-center">
+            <embed src="../../pdf/HIV_day_2_activity.pdf" width="600vw" height="800vh">     
+            <h2 style="color:yellow">References</h2>
+            <p>
+                <br><a href="http://www.thelancet.com/journals/lancet/article/PIIS0140-6736(05)62505-6/fulltext">http://www.thelancet.com/journals/lancet/article/PIIS0140-6736(05)62505-6/fulltext</a>
+                <br><a href="https://www.aids.gov/hiv-aids-basics/just-diagnosed-with-hiv-aids/treatment-options/overview-of-hiv-treatments/">https://www.aids.gov/hiv-aids-basics/just-diagnosed-with-hiv-aids/treatment-options/overview-of-hiv-treatments/</a>
+                <br><a href="http://www.ucsfhealth.org/conditions/aids/treatment.html">http://www.ucsfhealth.org/conditions/aids/treatment.html</a>
+                <br><a href="http://www.sciencedirect.com/science/article/pii/S0042682209006813">http://www.sciencedirect.com/science/article/pii/S0042682209006813</a>
+                <br><a href="http://www.thelancet.com/journals/lancet/article/PIIS0140-6736(05)62505-6/fulltext">http://www.thelancet.com/journals/lancet/article/PIIS0140-6736(05)62505-6/fulltext</a>
+                <br><a href="http://www.aidsbeacon.com/news/2011/05/18/advances-and-barriers-to-a-cure-for-hiv-aids-part-4-obstacles-in-finding-a-cure/">http://www.aidsbeacon.com/news/2011/05/18/advances-and-barriers-to-a-cure-for-hiv-aids-part-4-obstacles-in-finding-a-cure/</a>
+            </p>
+            <h2 style="color:yellow">Video link:</h2>
+            <p>See How HIV treatment works- Body & Soul Charity <a href="http://www.youtube.com/watch?v=06mQyXQlR08">http://www.youtube.com/watch?v=06mQyXQlR08</a>
+                <br>See Mechanisms of Action of Nucleoside Reverse Transcriptase Inhibitors (NRTIs) 
+                <br><a href="http://www.youtube.com/watch?v=cC9kyoAo1ac&list=PLMO1589WRspzDNTxlgE101XbH4tXeKZSU&index=1">http://www.youtube.com/watch?v=cC9kyoAo1ac&list=PLMO1589WRspzDNTxlgE101XbH4tXeKZSU&index=1</a>
+                <br>See Mechanisms of Action of Non-Nucleoside Reverse Transcriptase Inhibitors (NNRTIs) <a href="http://www.youtube.com/watch?v=G9FeQKcxVZY">http://www.youtube.com/watch?v=G9FeQKcxVZY</a>
+                <br>and <a href="http://www.youtube.com/watch?v=h7V1eVwxV_c">http://www.youtube.com/watch?v=h7V1eVwxV_c</a>
+                <br>See Mechanisms of Action of Protease Inhibitors (PIs) <a href="http://www.youtube.com/watch?v=kdNljZkGqu8">http://www.youtube.com/watch?v=kdNljZkGqu8</a>
+                <br>See CCR5 Antagonist <a href="http://www.youtube.com/watch?v=oneYI0fhGa0">http://www.youtube.com/watch?v=oneYI0fhGa0</a>
+                <br>and <a href="http://www.youtube.com/watch?v=95J4dLHXEzM">http://www.youtube.com/watch?v=95J4dLHXEzM</a>
+                <br>See Integrase Inhibitor <a href="http://www.youtube.com/watch?v=jUblObKMc8Q">http://www.youtube.com/watch?v=jUblObKMc8Q</a>
+            </p>
+        </div>
+    </section>
     
     <!-- Plugin JavaScript -->
     <script src="../../javascript/creative/jquery.easing.min.js"></script>

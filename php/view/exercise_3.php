@@ -66,7 +66,7 @@
     <section id="instruction">
     	<div class="container protocol-instruction-text">
     		<div class="row text-center">
-    			<h1>Protocol 3</h1>
+    			<h1 style="color:yellow">Protocol 3</h1>
     			<div class="text-left col-lg-6 col-lg-offset-3">
     				<div class="row text-center">
     					<div class="text-left">
