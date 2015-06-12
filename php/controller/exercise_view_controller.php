@@ -658,7 +658,7 @@
 		if ($updated) {
 			$hour = get_drug_taken_time($exercise, $_SESSION['E'.$exercise], $drug, $index);
 		} else {
-			$hour = "NA";
+			$hour = "N/A";
 		}
 		echo $hour;
 	}
