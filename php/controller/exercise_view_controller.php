@@ -57,7 +57,6 @@
 			}
 		}
 		return $current;
-		
 	}
 
 	function show_day_table($exercise) {

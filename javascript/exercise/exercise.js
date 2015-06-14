@@ -533,6 +533,34 @@ function show_activity(exercise) {
 	$("#activity-"+day).show();
 }
 
+function get_result(exercise) {
+	var res;
+	$.ajax({
+			async	: false,
+			type	:'POST', 
+	    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+	    	data    : {command : 'get_exercise_result',
+	    			  exercise : exercise},
+	    	success	: function(data) {
+	    		res = data;
+			}
+		});
+	return res;
+}
+
+function show_result(exercise) {
+	var res = get_result(exercise);
+	if (res == "Virus has been suppressed") {
+		swal({title: "Congratulation!", text: res, imageUrl: "/pharmacy/project1/img/heart-icon.png"});
+	} else if (res == "Resistance occurs") {
+		swal({title: "Your Result", text: res, imageUrl: "/pharmacy/project1/img/heart-icon.png"});
+	} else if (res == "Full blown AIDS") {
+		swal({title: "Your Result", text: res, imageUrl: "/pharmacy/project1/img/bacteria-icon.png"});
+	} else {
+
+	}
+}
+
 function register_button_event() {
 	$('.hour-check').click(function() {
 		toggle_check(this);

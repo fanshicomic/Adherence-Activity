@@ -291,4 +291,54 @@
         $res = update_data($query);
         return $res;
     }
+
+    function get_exercise_result($exercise) {
+        $times = 0;
+        if ($exercise == 1) {
+            $drug = array("TRUVADA", "REYATAZ", "NORVIR");
+            $number = 1;
+        } else if ($exercise == 2) {
+            $drug = array("FUZEON", "KALETRA", "COMBIVIR");
+            $number = 2;
+        } else if ($exercise == 3) {
+            $drug = array("ATRIPLA");
+            $number = 1;
+        } else {
+
+        }
+        $plan = array();
+        $real = array();
+        for ($i = 0; $i < count($drug) * $number; $i++) {
+            $plan[$i] = get_drug_planned_time($exercise, $drug[$i%3], floor($i/count($drug)) + 1);
+        }
+        for ($i = 0; $i < 7; $i++) {
+            for ($j = 0; $j < count($drug) * $number; $j++) {
+                $real[$j] = get_drug_taken_time($exercise, $i, $drug[$j%3], floor($j/count($drug)) + 1);
+                if (!is_following_schedule($plan[$j], $real[$j])) {
+                    $times += 1;
+                    break;
+                }
+            }
+        }
+        if ($times == 0) {
+            echo "Virus has been suppressed";
+        } else if ($times < 3) {
+            echo "Resistance occurs";
+        } else {
+            echo "Full blown AIDS";
+        }
+    }
+
+    function is_following_schedule($time_plan, $time_real) {
+        if (is_null($time_real)) {
+            return false;
+        }
+        $time_plan = strtotime($time_plan);
+        $time_real = strtotime($time_real);
+        $hour_plan = date("H",$time_plan);
+        $hour_real = date("H", $time_real);
+        $minute_real = date("i", $time_real);
+        // difference is within 1 hour
+        return (($hour_real - $hour_plan == 1 && $minute_real >= 30) || ($hour_plan == $hour_real && $$minute_real <= 30));
+    }
 ?>

@@ -120,4 +120,10 @@
 		echo $hour;
 	}
 
+	if ($command == "get_exercise_result") {
+		$exercise = secureString($_REQUEST['exercise']);
+		$res = get_exercise_result($exercise);
+		echo $res;
+	}
+
 ?>
