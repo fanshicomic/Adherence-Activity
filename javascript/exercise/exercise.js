@@ -553,11 +553,11 @@ function show_result(exercise) {
 	if (res == "Virus has been suppressed") {
 		swal({title: "Congratulation!", text: res, imageUrl: "/pharmacy/project1/img/heart-icon.png"});
 	} else if (res == "Resistance occurs") {
-		swal({title: "Your Result", text: res, imageUrl: "/pharmacy/project1/img/heart-icon.png"});
+		swal({title: "Your Result", text: res, imageUrl: "/pharmacy/project1/img/bacteria-icon.png"});
 	} else if (res == "Full blown AIDS") {
 		swal({title: "Your Result", text: res, imageUrl: "/pharmacy/project1/img/bacteria-icon.png"});
 	} else {
-
+		sweetAlert("Error", res, "error");
 	}
 }
 

@@ -311,7 +311,7 @@
         for ($i = 0; $i < count($drug) * $number; $i++) {
             $plan[$i] = get_drug_planned_time($exercise, $drug[$i%3], floor($i/count($drug)) + 1);
         }
-        for ($i = 0; $i < 7; $i++) {
+        for ($i = 1; $i < 8; $i++) {
             for ($j = 0; $j < count($drug) * $number; $j++) {
                 $real[$j] = get_drug_taken_time($exercise, $i, $drug[$j%3], floor($j/count($drug)) + 1);
                 if (!is_following_schedule($plan[$j], $real[$j])) {
@@ -333,12 +333,15 @@
         if (is_null($time_real)) {
             return false;
         }
-        $time_plan = strtotime($time_plan);
         $time_real = strtotime($time_real);
-        $hour_plan = date("H",$time_plan);
-        $hour_real = date("H", $time_real);
-        $minute_real = date("i", $time_real);
+        $hour_plan = $time_plan;
+        $hour_real = intval(date("H", $time_real));
+        $minute_real = intval(date("i", $time_real));
         // difference is within 1 hour
-        return (($hour_real - $hour_plan == 1 && $minute_real >= 30) || ($hour_plan == $hour_real && $$minute_real <= 30));
+        if ($hour_plan == 0) {
+            return (($hour_real == 23 && $minute_real >= 30) || ($hour_plan == $hour_real && $minute_real <= 30));
+        } else {
+            return (($hour_real - $hour_plan == 1 && $minute_real >= 30) || ($hour_plan == $hour_real && $minute_real <= 30));
+        }
     }
 ?>
