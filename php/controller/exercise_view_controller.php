@@ -666,4 +666,10 @@
 		$time = get_drug_planned_time($exercise, $drug, $index);
 		echo $time;
 	}
+
+	function has_exercise_finished($exercise) {
+        $day = get_current_day($exercise);
+        $updated = is_day_updated($exercise, 7);
+        return $day == -1 || ($day == 7 && $updated);
+    }
 ?>

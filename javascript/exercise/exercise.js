@@ -549,16 +549,33 @@ function get_result(exercise) {
 }
 
 function show_result(exercise) {
-	var res = get_result(exercise);
-	if (res == "Virus has been suppressed") {
-		swal({title: "Congratulation!", text: res, imageUrl: "/pharmacy/project1/img/heart-icon.png"});
-	} else if (res == "Resistance occurs") {
-		swal({title: "Your Result", text: res, imageUrl: "/pharmacy/project1/img/bacteria-icon.png"});
-	} else if (res == "Full blown AIDS") {
-		swal({title: "Your Result", text: res, imageUrl: "/pharmacy/project1/img/bacteria-icon.png"});
-	} else {
-		sweetAlert("Error", res, "error");
+	if (has_exercise_finished(exercise)) {
+		var res = get_result(exercise);
+		if (res == "Virus has been suppressed") {
+			swal({title: "Congratulation!", text: res, imageUrl: "/pharmacy/project1/img/heart-icon.png"});
+		} else if (res == "Resistance occurs") {
+			swal({title: "Your Result", text: res, imageUrl: "/pharmacy/project1/img/bacteria-icon.png"});
+		} else if (res == "Full blown AIDS") {
+			swal({title: "Your Result", text: res, imageUrl: "/pharmacy/project1/img/bacteria-icon.png"});
+		} else {
+			sweetAlert("Error", res, "error");
+		}
 	}
+}
+
+function has_exercise_finished(exercise) {
+	var finished;
+	$.ajax({
+			async	: false,
+			type	:'POST', 
+	    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+	    	data    : {command : 'get_exercise_result',
+	    			  exercise : exercise},
+	    	success	: function(data) {
+	    		finished = data;
+			}
+		});
+	return finished;
 }
 
 function register_button_event() {

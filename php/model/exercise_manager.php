@@ -126,4 +126,10 @@
 		echo $res;
 	}
 
+	if ($command == "has_exercise_finished") {
+		$exercise = secureString($_REQUEST['exercise']);
+		$res = has_exercise_finished($exercise);
+		echo $res;
+	}
+
 ?>
