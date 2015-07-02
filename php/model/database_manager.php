@@ -293,7 +293,8 @@
     }
 
     function get_exercise_result($exercise) {
-        $times = 0;
+        $not_follow = 0;
+        $forget = 0;
         if ($exercise == 1) {
             $drug = array("TRUVADA", "REYATAZ", "NORVIR");
             $number = 1;
@@ -314,34 +315,46 @@
         for ($i = 1; $i < 8; $i++) {
             for ($j = 0; $j < count($drug) * $number; $j++) {
                 $real[$j] = get_drug_taken_time($exercise, $i, $drug[$j%3], floor($j/count($drug)) + 1);
-                if (!is_following_schedule($plan[$j], $real[$j])) {
-                    $times += 1;
+                $is_following = is_following_schedule($plan[$j], $real[$j]);
+                if ((int)$is_following == -1) {
+                    $forget += 1;
                     break;
+                } else if (!$is_following) {
+                    $not_follow += 1;
+                    break;
+                } else {
+
                 }
             }
         }
-        if ($times == 0) {
+        if ($forget > 2) {
+            echo "Full blown AIDS";
+        } else if ($not_follow < 3) {
             echo "Virus has been suppressed";
-        } else if ($times < 3) {
+        } else if ($not_follow >= 3) {
             echo "Resistance occurs";
         } else {
-            echo "Full blown AIDS";
+            echo "Invalid result";
         }
     }
 
     function is_following_schedule($time_plan, $time_real) {
         if (is_null($time_real)) {
-            return false;
+            return -1;
         }
         $time_real = strtotime($time_real);
         $hour_plan = $time_plan;
         $hour_real = intval(date("H", $time_real));
-        $minute_real = intval(date("i", $time_real));
-        // difference is within 1 hour
-        if ($hour_plan == 0) {
-            return (($hour_real == 23 && $minute_real >= 30) || ($hour_plan == $hour_real && $minute_real <= 30));
+
+        // difference is +- 2 hours
+        if ($hour_plan >= 0 && $hour_plan <=1) {
+            return ($hour_real >= $hour_plan + 22 && $hour_real <= 23) ||($hour_real >= 0 && $hour_real <= 2);
+        } else if ($hour_plan == 2){
+            return ($hour_real >= 0 && $hour_real <= 2);
+        } else if ($hour_plan >= 22 && $hour_plan < 23) {
+            return ($hour_real >= $hour_plan - 2 && $hour_real <= 23) || ($hour_real >= 0 && $hour_real <= $hour_plan - 22);
         } else {
-            return (($hour_real - $hour_plan == 1 && $minute_real >= 30) || ($hour_plan == $hour_real && $minute_real <= 30));
+            return ($hour_real >= $hour_plan - 2 && $hour_real <= $hour_plan + 2);
         }
     }
 ?>

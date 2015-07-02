@@ -273,5 +273,6 @@
     <!-- Custon JavaScript -->
     <script src="../../javascript/exercise/exercise.js"></script>
     <script type="text/javascript">show_activity(2);</script>
+    <script type="text/javascript">show_result(2);</script>
 </body>
 </html>
