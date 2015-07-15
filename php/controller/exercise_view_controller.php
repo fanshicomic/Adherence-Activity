@@ -1,11 +1,11 @@
 <?php
-	require_once($_SERVER['DOCUMENT_ROOT'] .'/pharmacy/project1/php/model/database_manager.php');
+	require_once($_SERVER['DOCUMENT_ROOT'] .'/pharmacology/project1/php/model/database_manager.php');
 	
 	function user_validation($exercise) {
 		if (has_exercise($exercise)) {
 			update_current_day($exercise);
 		} else {
-			header("Location: /pharmacy/project1/php/view/protocol_".$exercise.".php");
+			header("Location: /pharmacology/project1/php/view/protocol_".$exercise.".php");
 		}
 	}
 

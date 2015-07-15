@@ -1,7 +1,7 @@
 <?php
 
-	require_once($_SERVER['DOCUMENT_ROOT'] .'/pharmacy/project1/php/model/database_manager.php');
-	require_once($_SERVER['DOCUMENT_ROOT'] .'/pharmacy/project1/php/controller/exercise_view_controller.php');
+	require_once($_SERVER['DOCUMENT_ROOT'] .'/pharmacology/project1/php/model/database_manager.php');
+	require_once($_SERVER['DOCUMENT_ROOT'] .'/pharmacology/project1/php/controller/exercise_view_controller.php');
 		
 	$command = "";
 

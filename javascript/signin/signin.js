@@ -24,7 +24,7 @@ function is_valid_password(id, password) {
 	$.ajax({
 		async	: false,
 		type	:'POST', 
-    	url		: "/pharmacy/project1/php/model/account_manager.php",
+    	url		: "/pharmacology/project1/php/model/account_manager.php",
     	data    : {command : 'is_valid_password',
     			   		 id: id,
     			  password : password},
@@ -43,7 +43,7 @@ function signin_and_redirect_user(id) {
 	$.ajax({
 		async	: false,
 		type	:'POST', 
-    	url		: "/pharmacy/project1/php/model/account_manager.php",
+    	url		: "/pharmacology/project1/php/model/account_manager.php",
     	data    : {command : 'signin',
     			   		 id: id},
     	success	: function(data) {

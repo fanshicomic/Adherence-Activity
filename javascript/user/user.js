@@ -21,7 +21,7 @@ function delete_user_exercise_record(btn) {
 	    		$.ajax({
 					async	: false,
 					type	:'POST', 
-			    	url		: "/pharmacy/project1/php/model/user_manager.php",
+			    	url		: "/pharmacology/project1/php/model/user_manager.php",
 			    	data    : {command : 'delete_user_record',
 			    				protocol : protocol},
 			    	success	: function(data) {
@@ -33,7 +33,7 @@ function delete_user_exercise_record(btn) {
 		    				confirmButtonText: "OK",   
 		    				closeOnConfirm: false }, 
 		    				function(){
-		    					window.location.href='/pharmacy/project1/php/view/user.php';
+		    					window.location.href='/pharmacology/project1/php/view/user.php';
 		    				});
 			    		} else {
 			    			swal("Oops...", 

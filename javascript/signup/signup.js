@@ -1,5 +1,5 @@
 $(function() {
-	$.getScript('/pharmacy/project1/javascript/signin/signin.js', function() {});
+	$.getScript('/pharmacology/project1/javascript/signin/signin.js', function() {});
 	$('.btn-signup').click(function() {
 		signup();
 	})
@@ -29,7 +29,7 @@ function is_user_existing(id) {
 	$.ajax({
 		async	: false,
 		type	:'POST', 
-    	url		: "/pharmacy/project1/php/model/account_manager.php",
+    	url		: "/pharmacology/project1/php/model/account_manager.php",
     	data    : {command : 'is_user_existing',
     			   		 id: id},
     	success	: function(data) {
@@ -75,7 +75,7 @@ function create_user(id, password) {
 	$.ajax({
         async   : false,
         type    :'POST', 
-        url     : "/pharmacy/project1/php/model/account_manager.php",
+        url     : "/pharmacology/project1/php/model/account_manager.php",
         data    : {command	: 'create_user',
             			id 	: id,
             	   password : password },

@@ -21,7 +21,7 @@ function new_exercise(btn) {
 	$.ajax({
 		async	: false,
 		type	:'POST', 
-    	url		: "/pharmacy/project1/php/model/protocol_manager.php",
+    	url		: "/pharmacology/project1/php/model/protocol_manager.php",
     	data    : {command : 'is_logged_in'},
     	success	: function(data) {
     		if (data == 1) {
@@ -138,7 +138,7 @@ function save_schedule(protocol) {
 		$.ajax({
 			async	: false,
 			type	:'POST', 
-	    	url		: "/pharmacy/project1/php/model/protocol_manager.php",
+	    	url		: "/pharmacology/project1/php/model/protocol_manager.php",
 	    	data    : {	command : 'save_schedule',
 	    				protocol: protocol,
 	    			   	truvada : truvada,
@@ -155,7 +155,7 @@ function save_schedule(protocol) {
 	    				confirmButtonText: "OK",   
 	    				closeOnConfirm: false }, 
 	    				function(){
-	    					window.location.href = '/pharmacy/project1/php/view/exercise_'+ protocol +'.php';
+	    					window.location.href = '/pharmacology/project1/php/view/exercise_'+ protocol +'.php';
 	    				});
 	    		} else {
 	    			swal({   
@@ -170,7 +170,7 @@ function save_schedule(protocol) {
 	    				closeOnCancel: false }, 
 	    				function(isConfirm){   
 	    					if (isConfirm) {     
-	    						 window.location.href = '/pharmacy/project1/php/view/exercise_'+ protocol +'.php';
+	    						 window.location.href = '/pharmacology/project1/php/view/exercise_'+ protocol +'.php';
 	    					} else {     
 	    						swal("Cancelled", 
 	    							"The action has been cancelled", 
@@ -190,7 +190,7 @@ function save_schedule(protocol) {
 		$.ajax({
 			async	: false,
 			type	:'POST', 
-	    	url		: "/pharmacy/project1/php/model/protocol_manager.php",
+	    	url		: "/pharmacology/project1/php/model/protocol_manager.php",
 	    	data    : {	command : 'save_schedule',
 	    				protocol: protocol,
 	    			   	kaletra_1 : kaletra_1,
@@ -210,7 +210,7 @@ function save_schedule(protocol) {
 	    				confirmButtonText: "OK",   
 	    				closeOnConfirm: false }, 
 	    				function(){
-	    					window.location.href = '/pharmacy/project1/php/view/exercise_2.php';
+	    					window.location.href = '/pharmacology/project1/php/view/exercise_2.php';
 	    				});
 	    		} else {
 	    			swal({   
@@ -240,7 +240,7 @@ function save_schedule(protocol) {
 		$.ajax({
 			async	: false,
 			type	:'POST', 
-	    	url		: "/pharmacy/project1/php/model/protocol_manager.php",
+	    	url		: "/pharmacology/project1/php/model/protocol_manager.php",
 	    	data    : {	command : 'save_schedule',
 	    				protocol: protocol,
 	    			   	atripla : atripla},
@@ -255,7 +255,7 @@ function save_schedule(protocol) {
 	    				confirmButtonText: "OK",   
 	    				closeOnConfirm: false }, 
 	    				function(){
-	    					window.location.href = '/pharmacy/project1/php/view/exercise_3.php';
+	    					window.location.href = '/pharmacology/project1/php/view/exercise_3.php';
 	    				});
 	    		} else {
 	    			swal({   
@@ -291,7 +291,7 @@ function continue_exercise(btn) {
 	$.ajax({
 		async	: false,
 		type	:'POST', 
-    	url		: "/pharmacy/project1/php/model/protocol_manager.php",
+    	url		: "/pharmacology/project1/php/model/protocol_manager.php",
     	data    : {command : 'is_logged_in'},
     	success	: function(data) {
     		if (data == 1) {
@@ -306,7 +306,7 @@ function continue_exercise(btn) {
 		$.ajax({
 			async	: false,
 			type	:'POST', 
-	    	url		: "/pharmacy/project1/php/model/protocol_manager.php",
+	    	url		: "/pharmacology/project1/php/model/protocol_manager.php",
 	    	data    : {command : 'can_continue',
 	    				protocol : protocol},
 	    	success	: function(data) {

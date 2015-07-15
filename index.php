@@ -1,5 +1,5 @@
 <?php
-    require_once($_SERVER['DOCUMENT_ROOT'] .'/pharmacy/project1/php/controller/navbar_controller.php');
+    require_once($_SERVER['DOCUMENT_ROOT'] .'/pharmacology/project1/php/controller/navbar_controller.php');
     if(!isset($_SESSION)){
         session_start();
     }
@@ -13,8 +13,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     
-	<title>Adherence Actitvity</title>
-	<link rel="icon" href="/pharmacy/project1/img/AA-icon.ico">
+	<title>Understanding HIV anti-HIV drugs and the importance of adherence</title>
+	<link rel="icon" href="/pharmacology/project1/img/AA-icon.ico">
 
 	<!-- JQuery -->
 	<script src="plugin/jQuery/jquery-2.1.3.min.js"></script>
@@ -60,7 +60,7 @@
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <h1>Adherence Activity</h1>
+                <h2>Understanding HIV, anti-HIV drugs and the importance of adherence</h2>
                 <hr>
                 <p>The NUS department of pharmacology built a new online system to help the students quickly understand the importance of adherence.</p>
                 <a href="#about" class="btn btn-primary btn-xl page-scroll">Learn More</a>
@@ -72,29 +72,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h3 class="section-heading">HIV and antiretroviral therapy</h3>
+                    <h3 class="section-heading">Understanding HIV, anti-HIV drugs and the importance of adherence</h3>
                     <hr class="light">
-                    <p class="text-faded">HIV (human immunodeficiency virus) infection is incurable; no treatment can eradicate the virus from the body. It is not a lethal disease by itself, but if untreated, HIV can gradually weaken the immune system until it is no longer functional. At this point, the patient has AIDS (acquired immune deficiency syndrome), and other types of infections can easily occur.</p>
-                    <p class="text-faded">HIV antiretroviral drug therapy can suppress HIV and delay the onset of AIDS for many years.</p>
-                    <p class="text-faded">Because HIV has a high mutation rate, treating a patient with only one drug can inadvertently select for a mutant drug- resistant strain of HIV . Multi-drug therapies are prescribed so that even if a mutant strain resistant to one drug arises, it will still be suppressed by the other drugs.</p>
+                    <p class="text-faded">Every time you fall sick and visit the doctor, have you ever wondered why you have to complete your course of anti-biotic/anti-viral medication? What would happen if you did not adhere to the stipulated timings and/or missed a few drug dosages?</p>
+                    <p class="text-faded">In the following activity, you will be simulating drug dosages daily where you will have to log in and take a (virtual) drug as if you were a real patient, using HIV as an example. We will take a look at the effects of HIV drugs and learn more about HIV as well in the daily activities which are required to be finished in order to “complete the drug dosage” for the day. At the end of the 7 days of activities you will be able to see an overview of how the drug works and the different outcomes depending on whether you adhered to the schedule, or if you missed a few dosages.</p>
                 </div>
             </div>
-        	</div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h3 class="section-heading">What is adherence? Why is it important?</h3>
-                    <hr class="light">
-                    <p class="text-faded">Adherence is the measure of how well a patient sticks to a treatment program.</p>
-                    <p class="text-faded">In HIV antiretroviral therapy, it is very important to adhere to the treatment program to keep the virus suppressed. If the drug treatment is interrupted for any reason, there is a risk that the number of viruses in the body will rebound and include drug-resistant strains. Therefore, in the long run, poorly adhering to treatment may be worse than not being treated at all.</p>
-                </div>
-			</div>
 			<div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h3 class="section-heading">Activity instructions</h3>
                     <hr class="light">
-                    <p class="text-faded">In this activity, you will participate in a simulation of HIV antiretroviral drug therapy. You will experience firsthand how easy or difficult it is to fully adhere to a treatment program.</p>
-                    <p class="text-faded">You have been assigned one of three treatment protocols of varying complexity. One aim of the study is to see if students adhere better to simpler treatment protocols.</p>
-                    <p class="text-faded">Check the enclosed activity data sheet for your protocol assignment. Instead of actual retroviral drugs, you will use substitutes: tic tac mints. Follow the protocol for 7 days and take the simulated “medicine” at appropriate times.</p>
-                    <p class="text-faded">On the activity data sheet, record the time and the date each time you take a dose of “medicine. ” Keep the record honestly and accurately. This is not a contest to see who’s best at adhering to the treatment protocol.</p>
+                    <p class="text-faded">In this activity, you will participate in a simulation of HIV antiretroviral drug therapy. You will experience firsthand how easy or difficult it is to fully adhere to a treatment program. You can choose one of three treatment protocols of varying complexity.</p>
+                    <p class="text-faded">First, you will have to create an account with your matriculation number as a user name (e.g. A1234567Z) and your own preferred password. Next, select one of the three drug protocols for your drug simulation (note that there is no major difference between the drug protocols, 3 were made just for a wider variety of choices). After that, click on ‘New Exercise” and choose the timings by clicking the respective ticks in each drug row. Do take note of the different drug instructions (e.g. to be taken after meals, etc.) when selecting your timing. When all your timings have been selected, click on “Plan schedule and start” to begin the activity. (Choose 1 protocol and stick to the same protocol for the next 7 days).</p>
+                    <p class="text-faded">Log in daily to take the drug protocol by clicking “Continue exercise”. Click the “Update” button on the respective drug to confirm ingestion of the drug. Please remember there are daily activities that have to be completed in addition to the drug simulation exercise!</p>
                 </div>
             </div>
             <div class="row">

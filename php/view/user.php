@@ -1,6 +1,6 @@
 <?php
-    require_once($_SERVER['DOCUMENT_ROOT'] .'/pharmacy/project1/php/controller/navbar_controller.php');
-    require_once($_SERVER['DOCUMENT_ROOT'] .'/pharmacy/project1/php/controller/user_view_controller.php');
+    require_once($_SERVER['DOCUMENT_ROOT'] .'/pharmacology/project1/php/controller/navbar_controller.php');
+    require_once($_SERVER['DOCUMENT_ROOT'] .'/pharmacology/project1/php/controller/user_view_controller.php');
     if(!isset($_SESSION)){
         session_start();
     }
@@ -14,8 +14,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     
-	<title>Adherence Actitvity</title>
-	<link rel="icon" href="/pharmacy/project1/img/AA-icon.ico">
+	<title>Understanding HIV, anti-HIV drugs and the importance of adherence</title>
+	<link rel="icon" href="/pharmacology/project1/img/AA-icon.ico">
 
 	<!-- JQuery -->
 	<script src="../../plugin/jQuery/jquery-2.1.3.min.js"></script>
@@ -70,7 +70,7 @@
 		                	<h2 class="user-welcome">Hi <?php echo $_SESSION['uid'];?></h2>
 		                	<div class="row exercise-row-1 text-left">
                                 <div class="col-lg-4">
-                                    <h3><a href="/pharmacy/project1/php/view/exercise_1.php">Exercise 1: </a></h3>
+                                    <h3><a href="/pharmacology/project1/php/view/exercise_1.php">Exercise 1: </a></h3>
                                 </div>
                                 <div class="col-lg-6 col-day">
                                     <?php show_exercise_day(1); ?>
@@ -81,7 +81,7 @@
                             </div>
                             <div class="row exercise-row-2 text-left">
                                 <div class="col-lg-4">
-                                    <h3><a href="/pharmacy/project1/php/view/exercise_2.php">Exercise 2: </a></h3>
+                                    <h3><a href="/pharmacology/project1/php/view/exercise_2.php">Exercise 2: </a></h3>
                                 </div>
                                 <div class="col-lg-6 col-day">
                                     <?php show_exercise_day(2); ?>
@@ -92,7 +92,7 @@
                             </div>
                             <div class="row exercise-row-3 text-left">
                                 <div class="col-lg-4">
-                                    <h3><a href="/pharmacy/project1/php/view/exercise_3.php">Exercise 3: </a></h3>
+                                    <h3><a href="/pharmacology/project1/php/view/exercise_3.php">Exercise 3: </a></h3>
                                 </div>
                                 <div class="col-lg-6 col-day">
                                     <?php show_exercise_day(3); ?>

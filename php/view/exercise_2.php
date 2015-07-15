@@ -1,6 +1,6 @@
 <?php
-	require_once($_SERVER['DOCUMENT_ROOT'] .'/pharmacy/project1/php/controller/navbar_controller.php');
-	require_once($_SERVER['DOCUMENT_ROOT'] .'/pharmacy/project1/php/controller/exercise_view_controller.php');
+	require_once($_SERVER['DOCUMENT_ROOT'] .'/pharmacology/project1/php/controller/navbar_controller.php');
+	require_once($_SERVER['DOCUMENT_ROOT'] .'/pharmacology/project1/php/controller/exercise_view_controller.php');
 	if(!isset($_SESSION)){
         session_start();
     }
@@ -15,8 +15,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     
-	<title>Adherence Actitvity</title>
-	<link rel="icon" href="/pharmacy/project1/img/AA-icon.ico">
+	<title>Understanding HIV, anti-HIV drugs and the importance of adherence</title>
+	<link rel="icon" href="/pharmacology/project1/img/AA-icon.ico">
 
 	<!-- JQuery -->
 	<script src="../../plugin/jQuery/jquery-2.1.3.min.js"></script>
@@ -250,14 +250,84 @@
     </section>
 
     <section id="activity-5" class="activity">
-        <div class="container text-center">     
-            <h2>PK-PD of HIV drugs</h2>
+        <div class="container">     
+            <h2 class="text-center">Adherence issues and modes of resistance</h2>
             <p class="col-xs-offset-3 col-xs-6">
-                Atripla is the first multi-class antiretroviral drug available in the United States and represents the first collaboration between two U.S. pharmaceutical companies to combine their patented anti-HIV drugs into one product. 
-                The drug retails in the United States for US$1,850 for a one-month supply. 
-                An equivalent two pill regimen is available in developing countries at a price of about US$1.00 per day, as Gilead Sciences has licensed the patents covering emtricitabine/tenofovir to the Medicines Patent Pool and Merck and Co makes efavirenz available in developing countries at a reduced price. 
-                It was approved by the U.S. FDA on July 12, 2006. In the UK, the drug cost to the NHS is £626.90 per month as of March 2012. 
-                Combining the three drugs into a single, once-daily pill reduces pill burden and simplifies dosing schedules, and therefore has the potential to increase adherence to antiretroviral therapy.
+                “Treatment adherence” is another way of saying “taking your HIV drugs as instructed”. Treatment adherence is extremely important because it affects how well your HIV medications decrease your viral load. The lower your viral load, the healthier you are likely to be. This is because the drugs help to prevent the viruses from replicating inside your body by attacking different viral mechanisms. 
+                Adherence also helps to prevent drug resistance. If you skip a dose of your medication—even once—the virus can take that opportunity to replicate, and make more HIV. When you skip doses, you may develop strains of HIV that are resistant to the medications you are currently taking—and possibly even to medications you haven’t taken yet. If this happens, it could leave you with fewer treatment options. Usually people with busy lifestyles have adherence issues as they may forget to take the medications when they are too busy, but people with existing diseases may also have problems with the drugs. 
+                As HIV is an RNA virus, the genome of the virus is subjected to mutations very easily. Constant mutations may eventually cause a particular virus to develop resistance to a certain drug and the virus will then replicate further and produce even more resistant viruses. While taking antiviral drugs will not offer a 100% prevention against HIV, it will at least help to halt the progress of infection and block the replication of as many viruses as possible.
+            </p>
+        </div>
+    </section>
+
+    <section id="activity-6" class="activity">
+        <div class="container">     
+            <h2 class="text-center">Adverse Effects</h2>
+            <p class="col-xs-offset-3 col-xs-6">
+                Generally AIDS patients will exhibit one or more of the following symptoms:
+            </p>
+            <ul class="col-xs-offset-3 col-xs-6">
+                <li>Fever</li>
+                <li>Headache</li>
+                <li>Muscle aches</li>
+                <li>Rash</li>
+                <li>Chills</li>
+                <li>Sore throat</li>
+                <li>Mouth or genital ulcers</li>
+                <li>Swollen lymph glands, mainly on the neck</li>
+                <li>Joint pain</li>
+                <li>Night sweats</li>
+                <li>Diarrhoea</li>
+            </ul>
+            <p class="col-xs-offset-3 col-xs-6">
+                Additionally, HIV antiviral medication can also cause the following side effects:
+            </p>
+            <ul class="col-xs-offset-3 col-xs-6">
+                <li>Anaemia (abnormality in red blood cells)</li>
+                <li>Diarrhoea</li>
+                <li>Dizziness</li>
+                <li>Fatigue</li>
+                <li>Headaches</li>
+                <li>Nausea and vomiting</li>
+                <li>Pain and nerve problems</li>
+                <li>Rash</li>
+            </ul>
+            <p class="col-xs-offset-3 col-xs-6">
+                <br>In severe cases, some medication may cause 
+                <br>Hepatoxicity [All FDA-approved NRTIs (especially Zerit (stavudine), Videx (didanosine), and Retrovir (zidovudine)), NNRTIs (Viramune (nevirapine)), and PIs]; Hyperglycaemia (Mostly protease inhibitors); 
+                <br>Hyperlipidaemia (PIs such as Norvir); 
+                <br>Lactic Acidosis (Mostly in pregnant and overweight people, caused by Zerit and Videx and Rebetol); 
+                <br>Lipodystrophy (PIs and NRTIs) Osteonecrosis, Osteopenia, and Osteoporosis (protease inhibitors (PIs). 
+                You may also be at increased risk if you: • are female • take steroids or certain other medications • smoke • drink excessive amounts of alcohol • have low body weight)
+            </p>
+        </div>
+    </section>
+
+    <section id="activity-7" class="activity">
+        <div class="container">     
+            <h2 class="text-center">New treatments, fun facts -HIV treatments (protein-based)</h2>
+            <ol class="col-xs-offset-2 col-xs-8">
+                <li>For one, AIDS patients cannot transmit HIV through physical contact of skin, e.g. shaking hands, hugging or sharing utensils. So there is no need to shun them like the plague.</li>
+                <li>While HIV destroys the immune system gradually, a healthy lifestyle and diet can help to alleviate the condition of AIDS.</li>
+                <li>Worldwide there are an estimated 40 million HIV infected patients, of which about 2.1 million of them are aged below 15.</li>
+                <li>In 2007, a man named Timothy Ray Brown who was afflicted with leukemia and HIV infection was cured of HIV after receiving a bone marrow transplant. How exactly it happened is still being studied.</li>
+                <li>AIDS is the most studied disease in history, yet until today a cure has yet to be found.</li>
+                <li>Conspiracy theories have circulated in the past saying that the CIA genetically engineered HIV in order to wipe out Africans and homosexuals. This theory has since been discredited.</li>
+            </ol>
+            <p class="col-xs-offset-2 col-xs-8">
+                Although there is not enough evidence to suggest that it helps to suppress the virus, Complementary and Alternative Medicine (CAM) usage in the treatment of AIDS has seen a popularity spike in the recent years. Many of the ‘treatments’ included:
+            </p>
+            <ul class="col-xs-offset-2 col-xs-8">
+                <li>Adopting a healthy lifestyle</li>
+                <li>Exercise</li>
+                <li>Dietary supplements</li>
+                <li>Counselling</li>
+                <li>Herbal Medicine</li>
+                <li>Megavitamins</li>
+                <li>Prayer</li>
+            </ul>
+            <p class="col-xs-offset-2 col-xs-8">
+                While we do not know if CAM really helps patients in restricting viral replication, it has been reported that a significant number (~70%) of people who use CAM report a much improved quality of life. This has led to suggestions that CAM helps boost the immune system (which is the target of HIV) and helps to lessen the symptoms and issues commonly associated with AIDS.
             </p>
         </div>
     </section>

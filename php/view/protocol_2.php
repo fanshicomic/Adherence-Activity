@@ -1,5 +1,5 @@
 <?php
-	require_once($_SERVER['DOCUMENT_ROOT'] .'/pharmacy/project1/php/controller/navbar_controller.php');
+	require_once($_SERVER['DOCUMENT_ROOT'] .'/pharmacology/project1/php/controller/navbar_controller.php');
 	if(!isset($_SESSION)){
         session_start();
     }
@@ -13,8 +13,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     
-	<title>Adherence Actitvity</title>
-	<link rel="icon" href="/pharmacy/project1/img/AA-icon.ico">
+	<title>Understanding HIV, anti-HIV drugs and the importance of adherence</title>
+	<link rel="icon" href="/pharmacology/project1/img/AA-icon.ico">
 
 	<!-- JQuery -->
 	<script src="../../plugin/jQuery/jquery-2.1.3.min.js"></script>
@@ -70,7 +70,8 @@
 	                <h4>Instructions:</h4>
 	                <p>Truvada: Take one tablet every 12 hours.
 	                <br>Reyataz: Take one tablet every 12 hours.
-	                <br>Fuzeon: Mix a packet with 8 oz of water, let stand for 10 minutes, and then drink it. Take it every 12 hours.</p>
+	                <br>Fuzeon: Mix a packet with 8 oz of water, let stand for 10 minutes, and then drink it. Take it every 12 hours.
+	                <br>In this protocol, you will have to ingest all 3 drugs as treatment. Hence, please plan your schedule according to the drug instructions given above and stick to the schedule planed.
 	                <p class="warning-msg transparent">Your schedule seems violate some rules. Please read the instruction carefully.</p>
             	</div>
     		</div>
@@ -115,7 +116,7 @@
 				        <td class="td-hour hour">2</td>
 				      </tr>
 				      <tr>
-				        <td class="td-drug-name td-border-right">Kaletra (spearmints tic tac)</td>
+				        <td class="td-drug-name td-border-right">Kaletra</td>
 				        <td class="td-hour td-clickable kaletra"></td>
 				        <td class="td-hour td-clickable kaletra"></td>
 				        <td class="td-hour td-clickable kaletra"></td>
@@ -139,7 +140,7 @@
 				        <td class="td-hour td-clickable kaletra"></td>
 				      </tr>
 				      <tr>
-				        <td class="td-drug-name td-border-right">Combivir (cinnamon tic tac)</td>
+				        <td class="td-drug-name td-border-right">Combivir</td>
 				        <td class="td-hour td-clickable combivir"></td>
 				        <td class="td-hour td-clickable combivir"></td>
 				        <td class="td-hour td-clickable combivir"></td>
@@ -163,7 +164,7 @@
 				        <td class="td-hour td-clickable combivir"></td>
 				      </tr>
 				      <tr>
-				        <td class="td-drug-name td-border-right">Fuzeon (Kool-Aid)</td>
+				        <td class="td-drug-name td-border-right">Fuzeon</td>
 				        <td class="td-hour td-clickable fuzeon"></td>
 				        <td class="td-hour td-clickable fuzeon"></td>
 				        <td class="td-hour td-clickable fuzeon"></td>

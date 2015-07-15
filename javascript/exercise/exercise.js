@@ -21,7 +21,7 @@ function get_day(exercise) {
 	$.ajax({
 			async	: false,
 			type	:'POST', 
-	    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+	    	url		: "/pharmacology/project1/php/model/exercise_manager.php",
 	    	data    : {	command : 'get_day',
 	    				exercise: exercise},
 	    	success	: function(data) {
@@ -101,7 +101,7 @@ function save_exercise(exercise, day, drug, index) {
 	// 	$.ajax({
 	// 		async	: false,
 	// 		type	:'POST', 
-	//     	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+	//     	url		: "/pharmacology/project1/php/model/exercise_manager.php",
 	//     	data    : {	command : 'save_exercise',
 	//     				exercise: exercise,
 	//     					day	: day,
@@ -126,7 +126,7 @@ function save_exercise(exercise, day, drug, index) {
 	// 	$.ajax({
 	// 		async	: false,
 	// 		type	:'POST', 
-	//     	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+	//     	url		: "/pharmacology/project1/php/model/exercise_manager.php",
 	//     	data    : {	command : 'save_exercise',
 	//     				exercise: exercise,
 	//     					day	: day,
@@ -149,7 +149,7 @@ function save_exercise(exercise, day, drug, index) {
 	// 	$.ajax({
 	// 		async	: false,
 	// 		type	:'POST', 
-	//     	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+	//     	url		: "/pharmacology/project1/php/model/exercise_manager.php",
 	//     	data    : {	command : 'save_exercise',
 	//     				exercise: exercise,
 	//     					day	: day,
@@ -169,7 +169,7 @@ function save_exercise(exercise, day, drug, index) {
 	$.ajax({
 			async	: false,
 			type	:'POST', 
-	    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+	    	url		: "/pharmacology/project1/php/model/exercise_manager.php",
 	    	data    : {	command : 'save_exercise',
 	    				exercise: exercise,
 	    					day	: day,
@@ -185,7 +185,7 @@ function save_exercise(exercise, day, drug, index) {
 	    				confirmButtonText: "OK",   
 	    				closeOnConfirm: false }, 
 	    				function(){
-	    					window.location.href = '/pharmacy/project1/php/view/exercise_'+ exercise +'.php';
+	    					window.location.href = '/pharmacology/project1/php/view/exercise_'+ exercise +'.php';
 	    				});
 	    		} else {
 	    			console.log(data);
@@ -209,7 +209,7 @@ function change_day(btn) {
 	$.ajax({
 		async	: false,
 		type	:'POST', 
-    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+    	url		: "/pharmacology/project1/php/model/exercise_manager.php",
     	data    : {command : 'change_day',
     			  exercise : exercise,
     				   day : day},
@@ -234,7 +234,7 @@ function change_drug_taken_hour(exercise) {
 		$.ajax({
 		async	: false,
 		type	:'POST', 
-    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+    	url		: "/pharmacology/project1/php/model/exercise_manager.php",
     	data    : {command : 'get_drug_taken_time',
     			  exercise : exercise,
     				  drug : "TRUVADA",
@@ -246,7 +246,7 @@ function change_drug_taken_hour(exercise) {
 		$.ajax({
 		async	: false,
 		type	:'POST', 
-    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+    	url		: "/pharmacology/project1/php/model/exercise_manager.php",
     	data    : {command : 'get_drug_taken_time',
     			  exercise : exercise,
     				  drug : "REYATAZ",
@@ -258,7 +258,7 @@ function change_drug_taken_hour(exercise) {
 		$.ajax({
 		async	: false,
 		type	:'POST', 
-    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+    	url		: "/pharmacology/project1/php/model/exercise_manager.php",
     	data    : {command : 'get_drug_taken_time',
     			  exercise : exercise,
     				  drug : "NORVIR",
@@ -271,7 +271,7 @@ function change_drug_taken_hour(exercise) {
 		$.ajax({
 		async	: false,
 		type	:'POST', 
-    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+    	url		: "/pharmacology/project1/php/model/exercise_manager.php",
     	data    : {command : 'get_drug_taken_time',
     			  exercise : exercise,
     				  drug : "KALETRA",
@@ -283,7 +283,7 @@ function change_drug_taken_hour(exercise) {
 		$.ajax({
 		async	: false,
 		type	:'POST', 
-    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+    	url		: "/pharmacology/project1/php/model/exercise_manager.php",
     	data    : {command : 'get_drug_taken_time',
     			  exercise : exercise,
     				  drug : "COMBIVIR",
@@ -295,7 +295,7 @@ function change_drug_taken_hour(exercise) {
 		$.ajax({
 		async	: false,
 		type	:'POST', 
-    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+    	url		: "/pharmacology/project1/php/model/exercise_manager.php",
     	data    : {command : 'get_drug_taken_time',
     			  exercise : exercise,
     				  drug : "FUZEON",
@@ -307,7 +307,7 @@ function change_drug_taken_hour(exercise) {
 		$.ajax({
 		async	: false,
 		type	:'POST', 
-    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+    	url		: "/pharmacology/project1/php/model/exercise_manager.php",
     	data    : {command : 'get_drug_taken_time',
     			  exercise : exercise,
     				  drug : "KALETRA",
@@ -319,7 +319,7 @@ function change_drug_taken_hour(exercise) {
 		$.ajax({
 		async	: false,
 		type	:'POST', 
-    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+    	url		: "/pharmacology/project1/php/model/exercise_manager.php",
     	data    : {command : 'get_drug_taken_time',
     			  exercise : exercise,
     				  drug : "COMBIVIR",
@@ -331,7 +331,7 @@ function change_drug_taken_hour(exercise) {
 		$.ajax({
 		async	: false,
 		type	:'POST', 
-    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+    	url		: "/pharmacology/project1/php/model/exercise_manager.php",
     	data    : {command : 'get_drug_taken_time',
     			  exercise : exercise,
     				  drug : "FUZEON",
@@ -344,7 +344,7 @@ function change_drug_taken_hour(exercise) {
 		$.ajax({
 		async	: false,
 		type	:'POST', 
-    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+    	url		: "/pharmacology/project1/php/model/exercise_manager.php",
     	data    : {command : 'get_drug_taken_time',
     			  exercise : exercise,
     				  drug : "ATRIPLA",
@@ -361,7 +361,7 @@ function change_day_table() {
 	$.ajax({
 		async	: false,
 		type	:'POST', 
-    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+    	url		: "/pharmacology/project1/php/model/exercise_manager.php",
     	data    : {command : 'change_day_table',
     			  exercise : exercise},
     	success	: function(data) {
@@ -378,7 +378,7 @@ function change_exercise_table() {
 	$.ajax({
 		async	: false,
 		type	:'POST', 
-    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+    	url		: "/pharmacology/project1/php/model/exercise_manager.php",
     	data    : {command : 'change_exercise_table',
     			  exercise : exercise},
     	success	: function(data) {
@@ -400,7 +400,7 @@ function change_update_button() {
 		$.ajax({
 			async	: false,
 			type	:'POST', 
-	    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+	    	url		: "/pharmacology/project1/php/model/exercise_manager.php",
 	    	data    : {command : 'change_update_button',
 	    			  exercise : exercise,
 	    				  drug : "TRUVADA",
@@ -412,7 +412,7 @@ function change_update_button() {
 		$.ajax({
 			async	: false,
 			type	:'POST', 
-	    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+	    	url		: "/pharmacology/project1/php/model/exercise_manager.php",
 	    	data    : {command : 'change_update_button',
 	    			  exercise : exercise,
 	    				  drug : "REYATAZ",
@@ -424,7 +424,7 @@ function change_update_button() {
 		$.ajax({
 			async	: false,
 			type	:'POST', 
-	    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+	    	url		: "/pharmacology/project1/php/model/exercise_manager.php",
 	    	data    : {command : 'change_update_button',
 	    			  exercise : exercise,
 	    				  drug : "NORVIR",
@@ -437,7 +437,7 @@ function change_update_button() {
 		$.ajax({
 			async	: false,
 			type	:'POST', 
-	    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+	    	url		: "/pharmacology/project1/php/model/exercise_manager.php",
 	    	data    : {command : 'change_update_button',
 	    			  exercise : exercise,
 	    				  drug : "KALETRA",
@@ -449,7 +449,7 @@ function change_update_button() {
 		$.ajax({
 			async	: false,
 			type	:'POST', 
-	    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+	    	url		: "/pharmacology/project1/php/model/exercise_manager.php",
 	    	data    : {command : 'change_update_button',
 	    			  exercise : exercise,
 	    				  drug : "COMBIVIR",
@@ -461,7 +461,7 @@ function change_update_button() {
 		$.ajax({
 			async	: false,
 			type	:'POST', 
-	    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+	    	url		: "/pharmacology/project1/php/model/exercise_manager.php",
 	    	data    : {command : 'change_update_button',
 	    			  exercise : exercise,
 	    				  drug : "FUZEON",
@@ -473,7 +473,7 @@ function change_update_button() {
 		$.ajax({
 			async	: false,
 			type	:'POST', 
-	    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+	    	url		: "/pharmacology/project1/php/model/exercise_manager.php",
 	    	data    : {command : 'change_update_button',
 	    			  exercise : exercise,
 	    				  drug : "KALETRA",
@@ -485,7 +485,7 @@ function change_update_button() {
 		$.ajax({
 			async	: false,
 			type	:'POST', 
-	    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+	    	url		: "/pharmacology/project1/php/model/exercise_manager.php",
 	    	data    : {command : 'change_update_button',
 	    			  exercise : exercise,
 	    				  drug : "COMBIVIR",
@@ -497,7 +497,7 @@ function change_update_button() {
 		$.ajax({
 			async	: false,
 			type	:'POST', 
-	    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+	    	url		: "/pharmacology/project1/php/model/exercise_manager.php",
 	    	data    : {command : 'change_update_button',
 	    			  exercise : exercise,
 	    				  drug : "FUZEON",
@@ -510,7 +510,7 @@ function change_update_button() {
 		$.ajax({
 			async	: false,
 			type	:'POST', 
-	    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+	    	url		: "/pharmacology/project1/php/model/exercise_manager.php",
 	    	data    : {command : 'change_update_button',
 	    			  exercise : exercise,
 	    				  drug : "ATRIPLA",
@@ -538,7 +538,7 @@ function get_result(exercise) {
 	$.ajax({
 			async	: false,
 			type	:'POST', 
-	    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
+	    	url		: "/pharmacology/project1/php/model/exercise_manager.php",
 	    	data    : {command : 'get_exercise_result',
 	    			  exercise : exercise},
 	    	success	: function(data) {
@@ -552,11 +552,11 @@ function show_result(exercise) {
 	if (has_exercise_finished(exercise)) {
 		var res = get_result(exercise);
 		if (res == "Virus has been suppressed") {
-			swal({title: "Congratulation!", text: res, imageUrl: "/pharmacy/project1/img/heart-icon.png"});
+			swal({title: "Congratulation!", text: res, imageUrl: "/pharmacology/project1/img/heart-icon.png"});
 		} else if (res == "Resistance occurs") {
-			swal({title: "Your Result", text: res, imageUrl: "/pharmacy/project1/img/bacteria-icon.png"});
+			swal({title: "Your Result", text: res, imageUrl: "/pharmacology/project1/img/bacteria-icon.png"});
 		} else if (res == "Full blown AIDS") {
-			swal({title: "Your Result", text: res, imageUrl: "/pharmacy/project1/img/bacteria-icon.png"});
+			swal({title: "Your Result", text: res, imageUrl: "/pharmacology/project1/img/bacteria-icon.png"});
 		} else {
 			sweetAlert("Error", res, "error");
 		}
@@ -568,8 +568,8 @@ function has_exercise_finished(exercise) {
 	$.ajax({
 			async	: false,
 			type	:'POST', 
-	    	url		: "/pharmacy/project1/php/model/exercise_manager.php",
-	    	data    : {command : 'get_exercise_result',
+	    	url		: "/pharmacology/project1/php/model/exercise_manager.php",
+	    	data    : {command : 'has_exercise_finished',
 	    			  exercise : exercise},
 	    	success	: function(data) {
 	    		finished = data;

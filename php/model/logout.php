@@ -4,7 +4,7 @@
 	}
 	if(session_destroy()) {
 		// echo $_SERVER['DOCUMENT_ROOT'];
-		header("Location: /pharmacy/project1/index.php"); 
+		header("Location: /pharmacology/project1/index.php"); 
 		die();
 	}
 ?>

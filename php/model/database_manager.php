@@ -1,5 +1,5 @@
 <?php	
-	require_once($_SERVER['DOCUMENT_ROOT'] .'/pharmacy/project1/connection.php');
+	require_once($_SERVER['DOCUMENT_ROOT'] .'/pharmacology/project1/connection.php');
 
 	function fetch_data($query) {
 		global $db;

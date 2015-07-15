@@ -1,10 +1,10 @@
 <?php
-    require_once($_SERVER['DOCUMENT_ROOT'] .'/pharmacy/project1/php/controller/exercise_view_controller.php');
-	require_once($_SERVER['DOCUMENT_ROOT'] .'/pharmacy/project1/php/model/database_manager.php');
+    require_once($_SERVER['DOCUMENT_ROOT'] .'/pharmacology/project1/php/controller/exercise_view_controller.php');
+	require_once($_SERVER['DOCUMENT_ROOT'] .'/pharmacology/project1/php/model/database_manager.php');
 	function show_exercise_day($protocol) {
 		$exist = exist_protocol($protocol);
 		if (!$exist) {
-			$href='/pharmacy/project1/php/view/protocol_'.$protocol.'.php';
+			$href='/pharmacology/project1/php/view/protocol_'.$protocol.'.php';
 			echo '<a href="'.$href.'"><h4>Start exercise</h4></a>';
 		} else {
 			$day = get_current_day($protocol);
