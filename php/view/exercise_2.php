@@ -71,7 +71,7 @@
     				<div class="row text-center">
     					<div class="text-left">
     						<h4>Instructions:</h4>
-		                	<p>Click the update button to update the drug taken time.</p>
+		                	<p>Click the update button to signify the ingestion of the tablet and update the drug taken time.</p>
 		                </div>
 		    			<table class="day-table" exercise="2">
 		    				<tbody class="day-table-tbody">

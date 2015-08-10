@@ -68,9 +68,9 @@
     			<div class="text-left col-lg-8 col-lg-offset-2">
 	    			<h3>Drug name: Truvada, Reyataz & Norvir</h3>
 	                <h4>Instructions:</h4>
-	                <p>Truvada: Take or discard one tablet once a day with or without food.
-	                <br>Reyataz: Take or discard two tablets once a day with food.
-	                <br>Norvir: Take or discard one tablet once a day with Reyataz.
+	                <p>Truvada: Take one tablet once a day with or without food.
+	                <br>Reyataz: Take two tablets once a day with food.
+	                <br>Norvir: Take one tablet once a day with Reyataz.
 	                <br>In this protocol, you will have to ingest all 3 drugs as treatment. Hence, please plan your schedule according to the drug instructions given above and stick to the schedule planed.
 	                <p class="warning-msg transparent">Your schedule seems violate some rules. Please read the instruction carefully.</p>
             	</div>
